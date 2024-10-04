@@ -1,13 +1,18 @@
 // src/pages/Home.js
-import React from 'react';
+import React, { useState } from 'react';
+import Navbar from '../components/Navbar'; // Incluimos el Navbar
 
 function Home() {
+  const [message] = useState('GALICHESS FANTASY');
+
   return (
     <div>
-      <h2>Bienvenido a My Chess Fantasy</h2>
-      <p>Gestiona tu equipo de ajedrez y compite con otros usuarios.</p>
+      <Navbar /> {/* Aquí tu barra de navegación */}
+      <h2>{message}</h2>
+      {/* Otros componentes, como Standings, Transfers, etc. */}
     </div>
   );
 }
 
 export default Home;
+

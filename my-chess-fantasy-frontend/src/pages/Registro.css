@@ -1,0 +1,103 @@
+/* src/pages/Registro.css */
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo para los botones */
+.toggle-btn {
+  background-color: #e02424;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  width: 300px;
+  margin-bottom: 10px; /* Espacio entre los botones */
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  display: block;
+}
+
+.toggle-btn.inactive {
+  background-color: #ccc; /* Color gris para "Ya tengo cuenta" cuando no está activo */
+  color: #333;
+}
+
+.toggle-btn.active {
+  background-color: #e02424; /* Rojo cuando está activo */
+  color: white;
+}
+
+.toggle-btn:hover {
+  background-color: #d01010;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 300px;
+  background-color: transparent;
+}
+
+.input-field {
+  background-color: transparent;
+  border: 2px solid #333;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.input-field::placeholder {
+  color: #aaa;
+}
+
+.submit-btn {
+  background-color: #e02424;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #d01010;
+}
