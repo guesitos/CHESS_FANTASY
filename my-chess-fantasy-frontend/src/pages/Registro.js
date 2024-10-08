@@ -10,6 +10,7 @@ function Registro() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleCreateAccountClick = () => {
     setActiveForm(activeForm === 'register' ? null : 'register');
@@ -22,6 +23,14 @@ function Registro() {
   // Validación del registro de cuenta
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
+    console.log("Intentando registrar el usuario con email:", email);
+    console.log("API URL (registro):", process.env.REACT_APP_API_URL);
+
+    // Validar si la URL de la API está definida
+    if (!process.env.REACT_APP_API_URL) {
+      setErrorMessage('La URL de la API no está definida. Verifique el archivo .env.');
+      return;
+    }
 
     // Validar si las contraseñas coinciden
     if (password !== confirmPassword) {
@@ -30,6 +39,8 @@ function Registro() {
     }
 
     try {
+      setIsLoading(true);
+      console.log("Enviando solicitud a:", `${process.env.REACT_APP_API_URL}/users/register`);
       const response = await fetch(`${process.env.REACT_APP_API_URL}/users/register`, {
         method: 'POST',
         headers: {
@@ -38,23 +49,38 @@ function Registro() {
         body: JSON.stringify({ email, password, confirmPassword }),
       });
 
-      const data = await response.json();
-      if (response.status === 400) {
-        setErrorMessage(data.message);
-      } else {
-        navigate('/home'); // Redirige a la página principal solo si es exitoso
+      console.log("Respuesta del servidor:", response);
+      if (!response.ok) {
+        console.error("Código de estado del error (registro):", response.status);
+        const data = await response.json();
+        setErrorMessage(data.message || 'Error desconocido');
+        return;
       }
+
+      const data = await response.json();
+      navigate('/home'); // Redirige a la página principal solo si es exitoso
     } catch (error) {
-      setErrorMessage('Error en la conexión con el servidor');
+      console.error("Error en la conexión con el servidor (registro):", error);
+      setErrorMessage(`Error en la conexión con el servidor: ${error.message}`);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   // Validación del login
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
-  
+    console.log("Enviando solicitud a:", `${process.env.REACT_APP_API_URL}/users/login`);
+    console.log("API URL (login):", process.env.REACT_APP_API_URL);
+
+    // Validar si la URL de la API está definida
+    if (!process.env.REACT_APP_API_URL) {
+      setErrorMessage('La URL de la API no está definida. Verifique el archivo .env.');
+      return;
+    }
+
     try {
-      console.log("Enviando solicitud a:", `${process.env.REACT_APP_API_URL}/users/login`);
+      setIsLoading(true);
       const response = await fetch(`${process.env.REACT_APP_API_URL}/users/login`, {
         method: 'POST',
         headers: {
@@ -62,21 +88,24 @@ function Registro() {
         },
         body: JSON.stringify({ email, password }),
       });
-  
-      const data = await response.json();
-      console.log("Respuesta del servidor:", data);
-  
-      if (response.status === 400) {
-        setErrorMessage(data.message);
-      } else {
-        navigate('/home');
+
+      console.log("Respuesta del servidor:", response);
+      if (!response.ok) {
+        console.error("Código de estado del error (login):", response.status);
+        const data = await response.json();
+        setErrorMessage(data.message || 'Error desconocido');
+        return;
       }
+
+      const data = await response.json();
+      navigate('/home');
     } catch (error) {
-      console.error("Error en la conexión con el servidor:", error);
-      setErrorMessage('Error en la conexión con el servidor');
+      console.error("Error en la conexión con el servidor (login):", error);
+      setErrorMessage(`Error en la conexión con el servidor: ${error.message}`);
+    } finally {
+      setIsLoading(false);
     }
   };
-  
 
   return (
     <div className="home-container">
@@ -117,7 +146,7 @@ function Registro() {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
             {errorMessage && <p className="error-message">{errorMessage}</p>}
-            <button type="submit" className="submit-btn">Regístrate</button>
+            <button type="submit" className="submit-btn" disabled={isLoading}>{isLoading ? 'Registrando...' : 'Regístrate'}</button>
           </form>
         )}
 
@@ -146,7 +175,7 @@ function Registro() {
               onChange={(e) => setPassword(e.target.value)}
             />
             {errorMessage && <p className="error-message">{errorMessage}</p>}
-            <button type="submit" className="submit-btn">Iniciar Sesión</button>
+            <button type="submit" className="submit-btn" disabled={isLoading}>{isLoading ? 'Iniciando...' : 'Iniciar Sesión'}</button>
           </form>
         )}
       </div>
