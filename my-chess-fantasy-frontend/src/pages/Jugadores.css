@@ -1,0 +1,232 @@
+/* Estilos generales */
+.jugadores-container {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.jugadores-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo del input de búsqueda */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+/* Lista de jugadores */
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Estilo de la tarjeta del jugador */
+.player-card {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.player-card:hover {
+  transform: scale(1.02);
+}
+
+/* Asignación de áreas en la cuadrícula */
+.player-card {
+  grid-template-areas:
+    "club photo details match";
+}
+
+.club-info {
+  grid-area: club;
+}
+
+.player-photo {
+  grid-area: photo;
+}
+
+.player-details {
+  grid-area: details;
+}
+
+.match-info {
+  grid-area: match;
+}
+
+/* Primera columna: Información del club */
+.club-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.club-logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.division-tag {
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* Segunda columna: Foto del jugador */
+.player-photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.tablero-number {
+  position: absolute;
+  bottom: 0px;
+  right: 175px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  border: 2px solid #fff;
+}
+
+/* Tercera columna: Detalles del jugador */
+.player-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.player-details h3 {
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.player-details p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+/* Cuarta columna: Información de partidas */
+.match-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.match-points {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+.match-rectangle {
+  width: 18px;
+  height: 30px;
+  background-color: #666;
+  margin: 0 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.9em;
+  border-radius: 3px;
+}
+
+.total-points {
+  background-color: #00cc66;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Media Queries para Responsividad */
+
+/* Ajuste para pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+  .player-card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "club photo"
+      "details details"
+      "match match";
+  }
+
+  .match-points {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Ajuste para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .player-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "club"
+      "photo"
+      "details"
+      "match";
+  }
+
+  .player-card {
+    gap: 15px;
+  }
+
+  .club-info,
+  .player-photo,
+  .player-details,
+  .match-info {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .player-details h3 {
+    font-size: 1.2em;
+  }
+
+  .player-details p {
+    font-size: 0.9em;
+  }
+
+  .match-points {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
