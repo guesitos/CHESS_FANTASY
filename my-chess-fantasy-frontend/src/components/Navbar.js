@@ -13,6 +13,7 @@ function Navbar() {
           <Nav.Link as={Link} to="/">Inicio</Nav.Link>
           <Nav.Link as={Link} to="/standings">Clasificaciones</Nav.Link>
           <Nav.Link as={Link} to="/transfers">Fichajes</Nav.Link>
+          <Nav.Link as={Link} to="/jugadores">Jugadores</Nav.Link>
           {/* Añade más enlaces según tus páginas */}
         </Nav>
       </BootstrapNavbar.Collapse>
