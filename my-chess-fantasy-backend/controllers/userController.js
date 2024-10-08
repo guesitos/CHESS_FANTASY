@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const mysql = require('mysql2');  // Cambia esto para usar mysql2 en lugar de mysql
+const mysql = require('mysql2');
 require('dotenv').config();  // Asegúrate de cargar dotenv para leer las variables de entorno
 
 // Configura la conexión a la base de datos MySQL
@@ -8,7 +8,7 @@ const db = mysql.createConnection({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  port: process.env.DB_PORT || 3306,  // Usamos el puerto de la variable de entorno o el 3306 por defecto
+  port: process.env.DB_PORT || 3306,
 });
 
 // Conectar a la base de datos y manejar errores
@@ -24,36 +24,46 @@ db.connect((err) => {
 const registerUser = (req, res) => {
   const { email, password, confirmPassword } = req.body;
 
+  console.log('Datos recibidos para el registro:', { email, password, confirmPassword });
+
+  // Verificar que todos los campos están definidos
+  if (!email || !password || !confirmPassword) {
+    return res.status(400).json({ message: 'Todos los campos son requeridos' });
+  }
+
   // Verificar si las contraseñas coinciden
   if (password !== confirmPassword) {
+    console.error('Las contraseñas no coinciden');
     return res.status(400).json({ message: 'Las contraseñas no coinciden' });
   }
 
   // Verificar si el correo ya está registrado
   db.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
     if (err) {
-      console.error('Error al buscar el correo:', err);
-      return res.status(500).json({ message: 'Error en el servidor' });
+      console.error('Error al buscar el correo en la base de datos:', err);
+      return res.status(500).json({ message: 'Error en el servidor al buscar el correo.' });
     }
-    
+
     if (results.length > 0) {
-      return res.status(400).json({ message: 'El correo ya está registrado' });
+      console.error('El correo ya está registrado:', email);
+      return res.status(400).json({ message: 'El correo ya está registrado.' });
     }
 
     // Encriptar la contraseña antes de guardarla
     bcrypt.hash(password, 10, (err, hashedPassword) => {
       if (err) {
         console.error('Error al encriptar la contraseña:', err);
-        return res.status(500).json({ message: 'Error en el servidor' });
+        return res.status(500).json({ message: 'Error en el servidor al encriptar la contraseña.' });
       }
 
       // Insertar usuario en la base de datos
       db.query('INSERT INTO users (email, password) VALUES (?, ?)', [email, hashedPassword], (err) => {
         if (err) {
-          console.error('Error al insertar el usuario:', err);
-          return res.status(500).json({ message: 'Error en el servidor' });
+          console.error('Error al insertar el usuario en la base de datos:', err);
+          return res.status(500).json({ message: 'Error en el servidor al insertar el usuario.' });
         }
-        res.status(201).json({ message: 'Usuario registrado con éxito' });
+        console.log('Usuario registrado con éxito:', email);
+        res.status(201).json({ message: 'Usuario registrado con éxito.' });
       });
     });
   });
@@ -63,15 +73,23 @@ const registerUser = (req, res) => {
 const loginUser = (req, res) => {
   const { email, password } = req.body;
 
+  console.log('Datos recibidos para login:', { email });
+
+  // Verificar que los campos están definidos
+  if (!email || !password) {
+    return res.status(400).json({ message: 'Todos los campos son requeridos' });
+  }
+
   // Verificar si el correo está registrado
   db.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
     if (err) {
-      console.error('Error al buscar el correo:', err);
-      return res.status(500).json({ message: 'Error en el servidor' });
+      console.error('Error al buscar el correo en la base de datos:', err);
+      return res.status(500).json({ message: 'Error en el servidor al buscar el correo.' });
     }
 
     if (results.length === 0) {
-      return res.status(400).json({ message: 'Correo no encontrado' });
+      console.error('Correo no encontrado:', email);
+      return res.status(400).json({ message: 'Correo no encontrado.' });
     }
 
     // Verificar la contraseña
@@ -79,17 +97,20 @@ const loginUser = (req, res) => {
     bcrypt.compare(password, user.password, (err, isMatch) => {
       if (err) {
         console.error('Error al comparar contraseñas:', err);
-        return res.status(500).json({ message: 'Error en el servidor' });
+        return res.status(500).json({ message: 'Error en el servidor al comparar las contraseñas.' });
       }
 
       if (!isMatch) {
-        return res.status(400).json({ message: 'Contraseña incorrecta' });
+        console.error('Contraseña incorrecta para el usuario:', email);
+        return res.status(400).json({ message: 'Contraseña incorrecta.' });
       }
 
       // Si todo es correcto, responder con éxito
-      res.status(200).json({ message: 'Inicio de sesión exitoso' });
+      console.log('Inicio de sesión exitoso:', email);
+      res.status(200).json({ message: 'Inicio de sesión exitoso.' });
     });
   });
 };
 
 module.exports = { registerUser, loginUser };
+
