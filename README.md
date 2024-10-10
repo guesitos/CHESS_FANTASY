@@ -56,7 +56,7 @@ npm run dev
 ```
 
 #### 5.Módulo Scraper - FIDE Ratings Scraper
-Para obtener y actualizar datos de jugadores de ajedrez, utiliza el FIDE Ratings Scraper.
+Para obtener y actualizar datos de jugadores de ajedrez, utiliza el FIDE Ratings Scraper: https://github.com/xRuiAlves/fide-ratings-scraper/tree/master.
 
 Instalación del Scraper
 ```bash
