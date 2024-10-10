@@ -1,148 +1,179 @@
 // scrapePlayers.js
 
-const axios = require('axios');
+const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
-const { exec } = require('child_process');
-const util = require('util');
-const { poolPlayers } = require('./db'); // Asegúrate de que esta ruta es correcta
+const winston = require('winston');
+const { exec } = require('child_process'); // Importamos 'exec' para ejecutar el script de Python
+const mysql = require('mysql2/promise');
+require('dotenv').config(); // Cargar variables de entorno
 
-// Promisificar exec para usar async/await
-const execPromise = util.promisify(exec);
+// Configurar winston para logs detallados
+const logger = winston.createLogger({
+  level: 'debug',
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.printf(({ timestamp, level, message }) => {
+      return `${timestamp} [${level.toUpperCase()}]: ${message}`;
+    })
+  ),
+  transports: [
+    new winston.transports.Console(),
+    new winston.transports.File({ filename: 'scrape_players.log' })
+  ]
+});
 
-/**
- * Función para obtener el ELO FIDE de un jugador dado su FIDE ID
- * Utiliza fide-ratings-scraper mediante child_process
- * @param {string} fideId - El ID FIDE del jugador
- * @returns {Promise<string>} - El ELO FIDE o '-' en caso de error
- */
-async function getPlayerElo(fideId) {
-  try {
-    const { stdout, stderr } = await execPromise(`fide-ratings-scraper get elo ${fideId}`);
-    if (stderr) {
-      console.error(`Error ejecutando scraper para FIDE ID ${fideId}:`, stderr);
-      return '-';
-    }
-    const data = JSON.parse(stdout);
-    return data.standard_elo || '-';
-  } catch (error) {
-    console.error(`Error obteniendo ELO para FIDE ID ${fideId}:`, error.message);
-    return '-';
-  }
+// Función para normalizar cadenas
+function normalizeString(str) {
+  return str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Elimina acentos
+    .toUpperCase()
+    .replace(/[^A-Z\s]/g, '') // Elimina caracteres no alfabéticos
+    .replace(/\s+/g, ' ') // Reemplaza múltiples espacios por uno solo
+    .trim();
 }
 
-/**
- * Función principal para realizar el scraping y actualizar la base de datos
- */
+// Función para ejecutar el script de Python
+function runPythonScript() {
+  return new Promise((resolve, reject) => {
+    logger.info('Ejecutando el script de Python para procesar el XML...');
+    const env = { ...process.env }; // Pasamos las variables de entorno
+    exec('python3 ./Lists/Crear_tabla_players_fide.py', { env }, (error, stdout, stderr) => {
+      if (error) {
+        logger.error(`Error al ejecutar el script de Python: ${error.message}`);
+        logger.error(`stderr: ${stderr}`);
+        reject(error);
+      } else {
+        logger.info('Script de Python ejecutado con éxito.');
+        logger.debug(`Salida del script de Python: ${stdout}`);
+        resolve();
+      }
+    });
+  });
+}
+
+// Función principal
 async function scrapePlayers() {
   try {
-    // URL de la página que deseas scrapear
-    const URL = 'https://xefega.fegaxa.org/index.php/index/index/'; // Reemplaza con la URL real si es diferente
+    // Configuración de la base de datos utilizando variables de entorno
+    const dbConfig = {
+      host: process.env.DB_CHESS_HOST || 'localhost',
+      user: process.env.DB_CHESS_USER || 'chess_user',
+      password: process.env.DB_CHESS_PASSWORD,
+      database: process.env.DB_CHESS_NAME || 'chess_players_db',
+      port: process.env.DB_CHESS_PORT || 3306
+    };
 
-    // Hacer una solicitud HTTP para obtener el contenido de la página
-    const { data } = await axios.get(URL);
+    logger.info('Comenzando el proceso de búsqueda de FIDE IDs...');
 
-    // Cargar el HTML en Cheerio
-    const $ = cheerio.load(data);
+    // Ejecutar el script de Python antes de continuar
+    await runPythonScript();
 
-    let currentClub = 'BENCHOSHEY PEREIRO DE AGUIAR'; // Valor por defecto
-    let currentDivision = 'División de Honor'; // Valor por defecto
+    // Conectar a la base de datos
+    const connection = await mysql.createConnection(dbConfig);
 
-    // Iterar sobre cada fila dentro de .container-fluid
-    $('.container-fluid > .row').each((i, row) => {
-      const alertDiv = $(row).find('.alert.alert-success, .alert.alert-warning').text().trim();
+    // Obtener los jugadores sin fide_id de la base de datos
+    const [players] = await connection.execute('SELECT license_number, first_name, last_name FROM players WHERE fide_id IS NULL');
 
-      // Detectar cambios en club o división
-      if (alertDiv) {
-        if (alertDiv.toLowerCase().includes('división de honra') || alertDiv.toLowerCase().includes('división de honor')) {
-          currentDivision = 'División de Honor';
+    // Configurar Puppeteer
+    const browser = await puppeteer.launch({ headless: true });
+    const page = await browser.newPage();
+
+    // Configurar un User-Agent personalizado
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36');
+
+    for (const player of players) {
+      // Normalizar nombres
+      const firstName = normalizeString(player.first_name);
+      const lastName = normalizeString(player.last_name);
+      const fullName = `${firstName} ${lastName}`;
+
+      logger.info(`Buscando FIDE ID para: ${fullName}`);
+
+      // Construir la URL de búsqueda en Google
+      const searchUrl = `https://www.google.com/search?q=${encodeURIComponent('site:ratings.fide.com/profile ' + fullName)}`;
+
+      try {
+        await page.goto(searchUrl, { waitUntil: 'domcontentloaded' });
+
+        // Esperar a que aparezca el contenido de los resultados de búsqueda
+        await page.waitForSelector('div');
+
+        // Obtener el contenido HTML de la página de resultados de Google
+        const content = await page.content();
+        const $ = cheerio.load(content);
+
+        // Buscar el enlace que contiene el perfil FIDE
+        const fideLink = $('a').filter((i, el) => {
+          const href = $(el).attr('href');
+          return href && href.includes('ratings.fide.com/profile') && href.match(/\/profile\/\d+/);
+        }).first();
+
+        const fideIdMatch = fideLink.attr('href') ? fideLink.attr('href').match(/\/profile\/(\d+)/) : null;
+
+        if (fideIdMatch) {
+          const fideId = fideIdMatch[1];
+          logger.info(`FIDE ID encontrado para ${fullName}: ${fideId}`);
+
+          // Actualizar el fide_id en la base de datos
+          await connection.execute(
+            'UPDATE players SET fide_id = ? WHERE license_number = ?',
+            [fideId, player.license_number]
+          );
+          logger.info(`FIDE ID para ${fullName} actualizado correctamente en la base de datos.`);
         } else {
-          currentClub = alertDiv; // Asignar el nombre del club
+          logger.warn(`No se encontró FIDE ID para ${fullName} en la búsqueda de Google.`);
+          // Intentar buscar en la lista FIDE
+          await searchInFideList(connection, player, fullName);
         }
+      } catch (searchError) {
+        logger.error(`Error al buscar FIDE ID para ${fullName} en Google: ${searchError.message}`);
+        // Intentar buscar en la lista FIDE
+        await searchInFideList(connection, player, fullName);
       }
+    }
 
-      // Buscar tablas con la clase 'results' dentro de esta fila
-      $(row).find('table.results').each(async (j, table) => {
-        // Iterar sobre cada fila de la tabla
-        $(table).find('tbody tr').each(async (k, playerRow) => {
-          const columns = $(playerRow).find('td');
-
-          const tableroText = $(columns[0]).text().trim();
-          const tablero = parseInt(tableroText, 10);
-          const license_number = $(columns[1]).text().trim();
-          const first_name = $(columns[2]).text().trim();
-          const last_name = $(columns[3]).text().trim();
-          // const elo_fide_table = $(columns[4]).text().trim(); // Ya no necesitamos este campo
-
-          // Validar que los campos necesarios no estén vacíos
-          if (!license_number || !first_name || !last_name) {
-            console.warn(`Datos incompletos para jugador en tablero ${tableroText}, saltando.`);
-            return;
-          }
-
-          // Validaciones adicionales
-          if (isNaN(tablero) || tablero <= 0) {
-            console.warn(`Número de tablero inválido (${tableroText}) para jugador ${first_name} ${last_name}, saltando.`);
-            return;
-          }
-
-          if (!/^\d+$/.test(license_number)) {
-            console.warn(`Número de licencia inválido (${license_number}) para jugador ${first_name} ${last_name}, saltando.`);
-            return;
-          }
-
-          // Crear un objeto jugador
-          const player = {
-            tablero,
-            fide_id: null, // Inicialmente null, se actualizará más adelante
-            license_number, // Usaremos este campo para verificar la existencia
-            first_name,
-            last_name,
-            club: currentClub, // Asignar el club basado en la fila actual
-            division: currentDivision, // Asignar la división basada en la fila actual
-            photo_url: null, // Inicialmente null, se puede actualizar más tarde
-            valor: 0, // Inicializado en 0, se calculará posteriormente
-            total_points: 0, // Inicializado en 0, se calculará posteriormente
-            created_at: new Date(),
-          };
-
-          try {
-            // Verificar si el jugador ya existe en la base de datos basado en license_number
-            const [existingPlayers] = await poolPlayers.query('SELECT * FROM players WHERE license_number = ?', [player.license_number]);
-
-            if (existingPlayers.length > 0) {
-              // Jugador ya existe, actualizar campos necesarios (ej. club, división)
-              console.log(`Jugador con License Number ${player.license_number} ya existe, actualizando información.`);
-
-              await poolPlayers.query(
-                'UPDATE players SET first_name = ?, last_name = ?, club = ?, division = ?, updated_at = ? WHERE license_number = ?',
-                [player.first_name, player.last_name, player.club, player.division, new Date(), player.license_number]
-              );
-              console.log(`Información para License Number ${player.license_number} actualizada correctamente.`);
-            } else {
-              // Jugador no existe, insertar nuevo registro
-              console.log(`Jugador ${player.first_name} ${player.last_name} no existe, insertando.`);
-
-              // No tenemos fide_id ahora, lo dejamos como NULL
-              await poolPlayers.query('INSERT INTO players SET ?', player);
-              console.log(`Jugador ${player.first_name} ${player.last_name} insertado con éxito.`);
-            }
-          } catch (dbError) {
-            console.error(`Error al insertar/actualizar jugador ${player.first_name} ${player.last_name}:`, dbError);
-          }
-        });
-      });
-    });
-
-    console.log('Scraping completado.');
+    await browser.close();
+    await connection.end();
+    logger.info('Proceso de búsqueda de FIDE IDs completado.');
   } catch (error) {
-    console.error('Error al realizar el scraping:', error.message);
+    logger.error('Error durante el proceso de búsqueda de FIDE IDs: ' + error.message);
   }
 }
 
-// Exportar la función scrapePlayers para usarla en el scheduler si es necesario
+// Función para buscar el FIDE ID en la tabla 'fide_players'
+async function searchInFideList(connection, player, fullName) {
+  // La tabla 'fide_players' ya debería estar actualizada por el script de Python
+
+  // Normalizar el nombre del jugador
+  const playerFirstNameNormalized = normalizeString(player.first_name);
+  const playerLastNameNormalized = normalizeString(player.last_name);
+
+  // Buscar en la tabla fide_players
+  const [rows] = await connection.execute(
+    'SELECT fide_id FROM fide_players WHERE first_name_normalized = ? AND last_name_normalized = ?',
+    [playerFirstNameNormalized, playerLastNameNormalized]
+  );
+
+  if (rows.length > 0) {
+    const fideId = rows[0].fide_id;
+    logger.info(`FIDE ID encontrado en la lista FIDE para ${fullName}: ${fideId}`);
+
+    // Actualizar el fide_id en la tabla players
+    await connection.execute(
+      'UPDATE players SET fide_id = ? WHERE license_number = ?',
+      [fideId, player.license_number]
+    );
+    logger.info(`FIDE ID para ${fullName} actualizado correctamente en la base de datos.`);
+  } else {
+    logger.warn(`No se encontró FIDE ID para ${fullName} en la lista FIDE.`);
+  }
+}
+
+// Exportar la función
 module.exports = scrapePlayers;
 
-// Ejecutar la función de scraping si el script se ejecuta directamente
+// Ejecutar la función principal si el script se ejecuta directamente
 if (require.main === module) {
   scrapePlayers();
 }

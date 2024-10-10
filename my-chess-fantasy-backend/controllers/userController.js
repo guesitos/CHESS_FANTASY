@@ -1,3 +1,4 @@
+// controllers/userController.js
 const bcrypt = require('bcrypt');
 const mysql = require('mysql2');
 require('dotenv').config();  // Asegúrate de cargar dotenv para leer las variables de entorno
@@ -113,4 +114,3 @@ const loginUser = (req, res) => {
 };
 
 module.exports = { registerUser, loginUser };
-
