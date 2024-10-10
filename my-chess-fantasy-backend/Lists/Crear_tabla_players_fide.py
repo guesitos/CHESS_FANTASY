@@ -1,9 +1,9 @@
-#Crear_tabla_players_fide.py
-
 import xml.etree.ElementTree as ET
 import mysql.connector
 import os
 import sys
+import requests
+import zipfile
 from dotenv import load_dotenv
 
 # Cargar las variables de entorno desde el archivo .env
@@ -36,7 +36,38 @@ def check_player_existence(cursor, first_name, last_name):
 
     return results
 
+def download_and_extract_xml():
+    url = 'https://ratings.fide.com/download/players_list_xml_foa.zip'
+    zip_path = 'players_list_xml_foa.zip'
+    xml_filename = 'players_list_xml_foa.xml'
+
+    # Eliminar el archivo XML anterior si existe
+    if os.path.exists(xml_filename):
+        os.remove(xml_filename)
+        print(f"Archivo anterior '{xml_filename}' eliminado.")
+
+    # Descargar el archivo ZIP
+    response = requests.get(url)
+    if response.status_code == 200:
+        with open(zip_path, 'wb') as file:
+            file.write(response.content)
+        print(f"Archivo '{zip_path}' descargado.")
+
+        # Extraer el archivo XML del ZIP
+        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+            zip_ref.extract(xml_filename)
+        print(f"Archivo '{xml_filename}' extraído del ZIP.")
+
+        # Eliminar el archivo ZIP
+        os.remove(zip_path)
+    else:
+        print(f"Error al descargar el archivo: {response.status_code}")
+        sys.exit(1)
+
 def main():
+    # Descargar y extraer el archivo XML
+    download_and_extract_xml()
+
     # Obtener la configuración de la base de datos desde variables de entorno
     host = os.getenv('DB_CHESS_HOST', 'localhost')
     user = os.getenv('DB_CHESS_USER', 'chess_user')
