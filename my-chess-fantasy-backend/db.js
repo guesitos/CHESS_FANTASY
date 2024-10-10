@@ -29,4 +29,3 @@ const poolPlayers = mysql.createPool({
 
 // Exportar los pools
 module.exports = { poolUsers, poolPlayers };
-

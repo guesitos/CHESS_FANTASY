@@ -4,10 +4,13 @@ const express = require('express');
 const cors = require('cors');
 const userRoutes = require('./routes/userRoutes');
 const chessPlayerRoutes = require('./routes/chessPlayerRoutes'); // Importar las rutas de jugadores
-const { dbUsers, dbPlayers } = require('./db'); // Importar las conexiones desde db.js
+const { poolUsers, poolPlayers } = require('./db'); // Importar las conexiones desde db.js
 require('dotenv').config();  // Cargar variables de entorno
 
 const fideScraper = require('fide-ratings-scraper'); // Importar el scraper
+const scrapePlayers = require('./scrapePlayers');
+const { getAllPlayers, updateAllPlayersElo } = require('./controllers/chessPlayerController');
+const { checkAndFixCapitalization, verifyAndAddMissingPlayers, removeNonMatchingPlayers } = require('./Reviewer'); // Importar funciones de Reviewer
 
 const app = express();
 
@@ -42,7 +45,7 @@ app.get('/api/chess_players/search', (req, res) => {
   }
 
   const query = 'SELECT * FROM fide_players WHERE first_name = ? AND last_name = ?';
-  dbPlayers.query(query, [firstName, lastName], (err, results) => {
+  poolPlayers.query(query, [firstName, lastName], (err, results) => {
     if (err) {
       console.error('Error al buscar el jugador en la base de datos:', err);
       res.status(500).send('Error en el servidor');
@@ -74,6 +77,20 @@ app.get('/api/chess_players/details', async (req, res) => {
 
 // Servidor escuchando en el puerto 5000
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
+
+  try {
+    console.log('Iniciando revisión de capitalización y verificación de jugadores...');
+    await checkAndFixCapitalization();
+    await verifyAndAddMissingPlayers();
+    await removeNonMatchingPlayers(); // Eliminar jugadores obsoletos que no están en Players_list.js
+    console.log('Revisión y verificación de jugadores completada. Iniciando scraping y actualización del ELO FIDE...');
+    await scrapePlayers();
+    console.log('Scraping inicial de jugadores completado. Iniciando actualización del ELO FIDE...');
+    await updateAllPlayersElo();
+    console.log('Actualización inicial de ELO FIDE completada.');
+  } catch (error) {
+    console.error('Error al realizar la revisión, scraping inicial o la actualización del ELO FIDE:', error);
+  }
 });
