@@ -38,6 +38,9 @@ my-chess-fantasy-backend/build/
 my-chess-fantasy-frontend/dist/
 my-chess-fantasy-backend/dist/
 
+#Arhivos .log
+.log
+
 # Ignorar archivos grandes y específicos
 fide-ratings-scraper/
 
