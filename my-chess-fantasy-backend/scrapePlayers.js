@@ -33,24 +33,44 @@ function normalizeString(str) {
     .trim();
 }
 
+const { spawn } = require('child_process');
+
 // Función para ejecutar el script de Python
 function runPythonScript() {
   return new Promise((resolve, reject) => {
     logger.info('Ejecutando el script de Python para procesar el XML...');
     const env = { ...process.env }; // Pasamos las variables de entorno
-    exec('python3 ./Lists/Crear_tabla_players_fide.py', { env }, (error, stdout, stderr) => {
-      if (error) {
-        logger.error(`Error al ejecutar el script de Python: ${error.message}`);
-        logger.error(`stderr: ${stderr}`);
-        reject(error);
+
+    const pythonProcess = spawn('python3', ['./Lists/Crear_tabla_players_fide.py'], { env });
+
+    // Captura de salida estándar
+    pythonProcess.stdout.on('data', (data) => {
+      logger.info(`Salida del script de Python: ${data.toString()}`);
+    });
+
+    // Captura de errores (stderr)
+    pythonProcess.stderr.on('data', (data) => {
+      const message = data.toString();
+      if (message.includes('[ERROR]')) {
+        logger.error(`Error del script de Python: ${message}`);
       } else {
+        logger.info(`Salida del script de Python: ${message}`);
+      }
+    });
+
+    // Manejar el cierre del proceso
+    pythonProcess.on('close', (code) => {
+      if (code === 0) {
         logger.info('Script de Python ejecutado con éxito.');
-        logger.debug(`Salida del script de Python: ${stdout}`);
         resolve();
+      } else {
+        logger.error(`El script de Python terminó con código de salida: ${code}`);
+        reject(new Error(`El script de Python terminó con código de salida: ${code}`));
       }
     });
   });
 }
+
 
 // Función principal
 async function scrapePlayers() {

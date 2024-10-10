@@ -42,6 +42,7 @@ my-chess-fantasy-backend/dist/
 scrape_players.log
 reviewer.log
 players_list_xml_foa.xml
+players_list_xml_foa.zip
 
 # Ignorar archivos grandes y específicos
 fide-ratings-scraper/
