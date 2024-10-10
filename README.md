@@ -23,3 +23,65 @@ El proyecto se compone de tres módulos principales:
 ```bash
 git clone https://github.com/guesitos/CHESS_FANTASY.git
 cd CHESS_FANTASY
+```
+#### 2. Instalar Dependencias
+Para el Frontend:
+```bash
+cd my-chess-fantasy-frontend
+npm install
+```
+Para el Backend:
+```bash
+cd my-chess-fantasy-backend
+npm install
+```
+#### 3.Configurar Variables de Entorno
+Crea un archivo .env en la carpeta my-chess-fantasy-backend con las siguientes variables:
+makefile
+```bash
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=tu_contraseña
+DB_NAME=chess_fantasy
+```
+
+#### 4.Iniciar la Aplicación
+Frontend:
+```bash
+npm start
+```
+Backend:
+```bash
+npm run dev
+```
+
+#### 5.Módulo Scraper - FIDE Ratings Scraper
+Para obtener y actualizar datos de jugadores de ajedrez, utiliza el FIDE Ratings Scraper.
+
+Instalación del Scraper
+```bash
+npm install -g fide-ratings-scraper
+```
+Uso del Scraper
+```bash
+fide-ratings-scraper get info 1503014
+fide-ratings-scraper api
+```
+
+Rutas API Disponibles:
+
+Obtener información completa del jugador:
+```bash
+GET /player/{fide_number}/info
+```
+Ejemplo de respuesta:
+```bash
+{
+    "name": "Doe, John",
+    "federation": "Portugal",
+    "standard_elo": 1700,
+    "rapid_elo": 1650,
+    "blitz_elo": 1750,
+    "world_rank_all_players": 180000
+}
+```
