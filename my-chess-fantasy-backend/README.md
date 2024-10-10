@@ -27,15 +27,19 @@ Este proyecto es una aplicación de backend que gestiona datos de usuarios y jug
 
 ## Configuración e Instalación
 
-1. Clona el repositorio:
-   ```bash
+### 1. Clona el repositorio:
+```bash
    git clone URL REPO
    cd cd PROYECTO
+```
 
-2. Instala las dependencias:
+### 2. Instala las dependencias:
+```bash
     npm install
+```    
 
-3. Configura el entorno con un .env adecuado:
+### 3. Configura el entorno con un .env adecuado:
+```bash
     # Configuración base de datos de usuarios
     DB_HOST=localhost
     DB_USER=chess_user
@@ -49,9 +53,12 @@ Este proyecto es una aplicación de backend que gestiona datos de usuarios y jug
     DB_CHESS_PASSWORD=contraseña
     DB_CHESS_NAME=chess_players_db
     DB_CHESS_PORT=3306
+```    
 
-4. Ejecuta el servidor principal del backend:
+### 4. Ejecuta el servidor principal del backend:
+```bash
     node server.js
+```    
 
 
 ## Uso
