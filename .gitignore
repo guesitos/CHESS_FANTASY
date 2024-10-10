@@ -4,8 +4,6 @@ Como el scraper ahora se instalará de forma independiente, puedes añadir la ca
 ```gitignore
 # Node.js dependencies
 /node_modules
-/my-chess-fantasy-frontend/node_modules
-/my-chess-fantasy-backend/node_modules
 
 # Env files
 *.env
@@ -17,6 +15,33 @@ Como el scraper ahora se instalará de forma independiente, puedes añadir la ca
 # Build
 /frontend/my-chess-fantasy-frontend/build
 /backend/my-chess-fantasy-backend/build
+
+# Excluir node_modules y archivos temporales
+/frontend/my-chess-fantasy-frontend/node_modules
+/backend/my-chess-fantasy-backend/node_modules
+
+# Excluir archivos grandes específicos
+/frontend/my-chess-fantasy-frontend/node_modules/.cache/default-development/3.pack
+/backend/my-chess-fantasy-backend/Lists/players_list_xml_foa.xml
+
+# Ignorar node_modules en ambos proyectos frontend y backend
+my-chess-fantasy-frontend/node_modules/
+my-chess-fantasy-backend/node_modules/
+
+# Ignorar cache
+my-chess-fantasy-frontend/node_modules/.cache/
+my-chess-fantasy-backend/node_modules/.cache/
+
+# Ignorar build y dist
+my-chess-fantasy-frontend/build/
+my-chess-fantasy-backend/build/
+my-chess-fantasy-frontend/dist/
+my-chess-fantasy-backend/dist/
+
+# Ignorar archivos grandes y específicos
+my-chess-fantasy-backend/scrape_players.log
+my-chess-fantasy-backend/Lists/
+fide-ratings-scraper/
 
 # Misc
 .DS_Store
