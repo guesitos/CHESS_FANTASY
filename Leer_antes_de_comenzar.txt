@@ -1,0 +1,32 @@
+Se describe brevemente el flujo de trabajo:
+
+1. Trabajar con Branch:
+
+Utiliza ramas para desarrollar las nuevas características o corregir errores, en lugar de trabajar directamente en la rama principal (main o master).
+Nombra las ramas de manera descriptiva, por ejemplo, feature/nueva-funcionalidad o bugfix/correccion-error. Algo así puede simplificar las cosas.
+
+2. Realizar Pull Requests
+
+Crea una PR para cada nueva funcionalidad o corrección de error. Esto permite revisar y aprobar los cambios antes de fusionarlos con la rama principal.
+Asegúrate de que el PR incluya una descripción clara de los cambios y de las razones detrás de ellos.
+
+3. Describir buenos README
+
+Esto podría simplificar mucho la tarea al trabajar mucha gente diferente, y animar a alguien que tiene poco contexto a poder desarrollar una tarea pequeña y aportar.
+
+4. Protección de datos
+
+Ojo con gitignore y los archivos .env, claves API o configuraciones locales.
+
+5. Commits descriptivos
+
+Escribir mensajes de commit claros y descriptivos, siguiendo una convención de estilo (por ejemplo, [fix], [add], [update]).
+
+6. Control de Acceso
+
+Por ahora igual es mejor limitar los permisos de los colaboradores para que solo puedan trabajar en sus propias ramas y crear PRs.
+Solo el propietario o administradores deben poder fusionar PRs en la rama principal. Si alguien quiere tomar el rol de controlador también es bienvenido.
+
+7. Ideas
+
+Cualquier idea de buena práctica y de cualquiera que tenga mucha experiencia (o poca) es bienvenida :)
