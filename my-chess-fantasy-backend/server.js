@@ -9,7 +9,7 @@ require('dotenv').config();  // Cargar variables de entorno
 
 const fideScraper = require('fide-ratings-scraper'); // Importar el scraper
 const scrapePlayers = require('./scrapePlayers');
-const { getAllPlayers, updateAllPlayersElo } = require('./controllers/chessPlayerController');
+const { updateAllPlayersElo } = require('./controllers/chessPlayerController');
 const { checkAndFixCapitalization, verifyAndAddMissingPlayers, removeNonMatchingPlayers } = require('./Reviewer'); // Importar funciones de Reviewer
 
 const app = express();
@@ -35,27 +35,6 @@ app.use('/api/users', userRoutes);
 
 // Rutas para la gestión de jugadores
 app.use('/api/chess_players', chessPlayerRoutes); // Nueva ruta para jugadores
-
-// Endpoint para buscar jugador por nombre y apellido
-app.get('/api/chess_players/search', (req, res) => {
-  const { firstName, lastName } = req.query;
-
-  if (!firstName || !lastName) {
-    return res.status(400).send('Debe proporcionar nombre y apellido');
-  }
-
-  const query = 'SELECT * FROM fide_players WHERE first_name = ? AND last_name = ?';
-  poolPlayers.query(query, [firstName, lastName], (err, results) => {
-    if (err) {
-      console.error('Error al buscar el jugador en la base de datos:', err);
-      res.status(500).send('Error en el servidor');
-    } else if (results.length === 0) {
-      res.status(404).send('Jugador no encontrado');
-    } else {
-      res.json(results[0]);
-    }
-  });
-});
 
 // Endpoint para obtener información detallada del jugador usando el ID FIDE
 app.get('/api/chess_players/details', async (req, res) => {

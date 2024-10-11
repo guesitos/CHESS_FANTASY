@@ -11,3 +11,4 @@ router.get('/', getAllPlayers);
 router.get('/search', searchPlayers);
 
 module.exports = router;
+
