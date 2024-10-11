@@ -3,6 +3,31 @@
 const { poolPlayers } = require('../db'); // Importar el pool de conexiones
 const { exec } = require('child_process'); // Importar exec para ejecutar comandos
 
+// Función para buscar jugadores por nombre o apellido
+const searchPlayers = (req, res) => {
+  const { search } = req.query;
+
+  if (!search) {
+    return res.status(400).send('Debe proporcionar un término de búsqueda');
+  }
+
+  // Realizar la búsqueda en la base de datos usando LIKE para encontrar coincidencias parciales
+  const query = `
+    SELECT * FROM players
+    WHERE first_name LIKE ? OR last_name LIKE ?
+  `;
+  const searchTerm = `%${search}%`;
+
+  poolPlayers.query(query, [searchTerm, searchTerm], (err, results) => {
+    if (err) {
+      console.error('Error al buscar los jugadores en la base de datos:', err);
+      res.status(500).send('Error en el servidor');
+    } else {
+      res.json(results);
+    }
+  });
+};
+
 // Función para obtener el ELO FIDE de un jugador dado su FIDE ID
 function getPlayerElo(fideId) {
   return new Promise((resolve, reject) => {
@@ -72,4 +97,5 @@ module.exports = {
   getAllPlayers,
   fetchAllPlayers,
   updateAllPlayersElo,
+  searchPlayers,
 };
