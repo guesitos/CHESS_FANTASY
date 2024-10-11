@@ -12,14 +12,38 @@
   margin-bottom: 20px;
 }
 
+/* Contenedor del input de búsqueda y botón */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
 /* Estilo del input de búsqueda */
 .search-input {
-  width: 100%;
+  flex: 1; /* Hace que el input ocupe todo el espacio disponible */
   padding: 10px;
-  margin-bottom: 20px;
   border-radius: 5px;
   border: none;
   font-size: 16px;
+}
+
+/* Botón de búsqueda (lupa) */
+.search-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button span {
+  font-size: 20px;
 }
 
 /* Lista de jugadores */

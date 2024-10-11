@@ -11,7 +11,7 @@ const poolUsers = mysql.createPool({
   database: process.env.DB_NAME,
   port: process.env.DB_PORT || 3306,
   waitForConnections: true,
-  connectionLimit: 10,
+  connectionLimit: 100,
   queueLimit: 0
 });
 
@@ -23,7 +23,7 @@ const poolPlayers = mysql.createPool({
   database: process.env.DB_CHESS_NAME,
   port: process.env.DB_CHESS_PORT || 3306,
   waitForConnections: true,
-  connectionLimit: 10,
+  connectionLimit: 100,
   queueLimit: 0
 });
 

@@ -19,6 +19,8 @@ function Jugadores() {
       url += `/search?search=${encodeURIComponent(query)}`;
     }
 
+    console.log(`Fetching players from URL: ${url}`); // Log para verificar la URL
+
     fetch(url)
       .then(response => {
         if (!response.ok) {
@@ -27,6 +29,7 @@ function Jugadores() {
         return response.json();
       })
       .then(data => {
+        console.log('Jugadores encontrados:', data); // Log para verificar los datos recibidos
         setPlayers(data);
       })
       .catch(error => console.error('Error al obtener los jugadores:', error));
@@ -38,12 +41,16 @@ function Jugadores() {
   }, []);
 
   const handleSearchClick = () => {
-    // Al hacer clic en la lupa, hacemos la solicitud al backend con el término de búsqueda
+    // Limpiar los resultados anteriores antes de iniciar la nueva búsqueda
+    setPlayers([]);
+    console.log(`Iniciando búsqueda con el término: ${searchTerm}`);
     fetchPlayers(searchTerm);
   };
 
-  const handleKeyPress = (event) => {
+  const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
+      setPlayers([]); // Limpiar los resultados anteriores
+      console.log(`Presionando Enter para buscar: ${searchTerm}`);
       handleSearchClick();
     }
   };
@@ -53,7 +60,7 @@ function Jugadores() {
       <Navbar />
 
       <div className="jugadores-container">
-        <h2>Jugadores</h2>
+        <h2>Jugadores de la Fantasy</h2>
         <div className="search-container">
           <input
             type="text"
@@ -61,16 +68,16 @@ function Jugadores() {
             className="search-input"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyDown} // Cambiado de onKeyPress a onKeyDown
           />
           <button onClick={handleSearchClick} className="search-button">
             <span role="img" aria-label="Buscar">🔍</span>
           </button>
         </div>
         <div className="players-list">
-          {players.length > 0 ? (
+          {players && players.length > 0 ? (
             players.map(player => (
-              <div key={player.tablero} className="player-card">
+              <div key={`${player.tablero}-${player.fide_id}`} className="player-card">
                 {/* Primera columna: Información del club */}
                 <div className="club-info">
                   <img src={clubLogo} alt="Club" className="club-logo" />

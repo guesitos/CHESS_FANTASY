@@ -4,7 +4,7 @@ const { poolPlayers } = require('../db'); // Importar el pool de conexiones
 const { exec } = require('child_process'); // Importar exec para ejecutar comandos
 
 // Función para buscar jugadores por nombre o apellido
-const searchPlayers = (req, res) => {
+const searchPlayers = async (req, res) => {
   const { search } = req.query;
 
   console.log(`Término de búsqueda recibido: ${search}`); // Log para verificar el término de búsqueda recibido
@@ -22,16 +22,27 @@ const searchPlayers = (req, res) => {
 
   console.log(`Ejecutando consulta: ${query} con parámetros ${searchTerm}, ${searchTerm}`); // Log para verificar la consulta
 
-  poolPlayers.query(query, [searchTerm, searchTerm], (err, results) => {
-    if (err) {
-      console.error('Error al buscar los jugadores en la base de datos:', err);
-      console.log(`Resultados obtenidos: ${results.length}`); // Log para verificar el número de resultados
-      res.status(500).send('Error en el servidor');
-    } else {
-      console.log(`Resultados obtenidos: ${results.length}`); // Log para verificar el número de resultados
-      res.json(results);
-    }
-  });
+  let connection;
+
+  try {
+    // Obtener una conexión del pool
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para búsqueda de jugadores');
+
+    // Realizar la consulta
+    const [results] = await connection.query(query, [searchTerm, searchTerm]);
+    
+    console.log(`Resultados obtenidos: ${results.length}`); // Log para verificar el número de resultados
+    console.log('Enviando los siguientes resultados al cliente:', results);
+    res.json(results);
+  } catch (err) {
+    console.error('Error al buscar los jugadores en la base de datos:', err);
+    res.status(500).send('Error en el servidor');
+  } finally {
+    // Liberar la conexión después de realizar la consulta, independientemente del resultado
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada');
+  }
 };
 
 // Función para obtener el ELO FIDE de un jugador dado su FIDE ID
@@ -56,26 +67,42 @@ function getPlayerElo(fideId) {
 
 // Actualizar el ELO FIDE de todos los jugadores
 async function updateAllPlayersElo() {
+  let connection;
+
   try {
-    const [results] = await poolPlayers.query('SELECT * FROM players');
+    // Obtener una conexión del pool
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para actualizar el ELO FIDE');
+
+    const [results] = await connection.query('SELECT * FROM players');
 
     // Actualizar el ELO FIDE de cada jugador
     for (const player of results) {
       if (player.fide_id) {
         const eloFide = await getPlayerElo(player.fide_id);
-        await poolPlayers.query('UPDATE players SET elo_fide = ?, first_name = UPPER(first_name), last_name = UPPER(last_name) WHERE fide_id = ?', [eloFide, player.fide_id]);
+        await connection.query('UPDATE players SET elo_fide = ?, first_name = UPPER(first_name), last_name = UPPER(last_name) WHERE fide_id = ?', [eloFide, player.fide_id]);
         console.log(`ELO FIDE actualizado para el jugador ${player.first_name} ${player.last_name}: ${eloFide}`);
       }
     }
   } catch (error) {
     console.error('Error al actualizar el ELO FIDE de los jugadores:', error);
+  } finally {
+    // Liberar la conexión después de realizar la actualización
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de la actualización del ELO FIDE');
   }
 }
 
 // Función para obtener todos los jugadores sin depender de req y res
 async function fetchAllPlayers() {
+  let connection;
+
   try {
-    const [results] = await poolPlayers.query('SELECT * FROM players');
+    // Obtener una conexión del pool
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para obtener todos los jugadores');
+
+    const [results] = await connection.query('SELECT * FROM players');
     results.forEach(player => {
       player.first_name = player.first_name.toUpperCase();
       player.last_name = player.last_name.toUpperCase();
@@ -84,6 +111,10 @@ async function fetchAllPlayers() {
   } catch (error) {
     console.error('Error al obtener jugadores:', error);
     throw error;
+  } finally {
+    // Liberar la conexión después de la consulta
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de obtener jugadores');
   }
 }
 
