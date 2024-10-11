@@ -1,7 +1,7 @@
 # WEB Fantasy Chess
 
 ## Descripción
-**WEB Fantasy Chess** es una aplicación que combina elementos de Fantasy Sports con el mundo del ajedrez. Los usuarios pueden seleccionar jugadores y crear equipos basados en partidas de ajedrez reales, puntuando según los resultados y el desempeño de los jugadores.
+**WEB Fantasy Chess** es la idea una aplicación que combina elementos de Fantasy Sports con el mundo del ajedrez. El objetivo es que los usuarios pueden seleccionar jugadores y crear equipos basados en partidas de ajedrez reales, puntuando según los resultados y el desempeño de los jugadores.
 
 ## Estructura del Proyecto
 El proyecto se compone de tres módulos principales:
