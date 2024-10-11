@@ -30,3 +30,27 @@ Solo el propietario o administradores deben poder fusionar PRs en la rama princi
 7. Ideas
 
 Cualquier idea de buena práctica y de cualquiera que tenga mucha experiencia (o poca) es bienvenida :)
+
+
+
+# INSTRUCCIONES BÁSICAS #
+
+1. Descarga el repo y revisa el Readme. Ten en orden el proyecto y las dependencias.
+
+2. Crea una nueva rama para actualizar lo que tu quieras!
+
+git checkout -b feature/nueva-funcionalidad
+
+3. Realiza cambios en tu archivo, añade los cambios, y luego haz un commit:
+
+git add .
+git commit -m "[add] Nueva funcionalidad para..."
+
+4. Sube la rama al repositorio remoto
+
+git push origin feature/nueva-funcionalidad
+
+5. Crea la PR
+
+Ve a GitHub, selecciona la rama que acabas de subir y elige la opción de crear un Pull Request.
+Añade una descripción y asigna a alguien para la revisión, si es necesario. Por defecto sería el owner.
