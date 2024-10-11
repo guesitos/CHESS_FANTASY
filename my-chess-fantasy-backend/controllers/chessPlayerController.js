@@ -7,6 +7,8 @@ const { exec } = require('child_process'); // Importar exec para ejecutar comand
 const searchPlayers = (req, res) => {
   const { search } = req.query;
 
+  console.log(`Término de búsqueda recibido: ${search}`); // Log para verificar el término de búsqueda recibido
+
   if (!search) {
     return res.status(400).send('Debe proporcionar un término de búsqueda');
   }
@@ -18,11 +20,15 @@ const searchPlayers = (req, res) => {
   `;
   const searchTerm = `%${search}%`;
 
+  console.log(`Ejecutando consulta: ${query} con parámetros ${searchTerm}, ${searchTerm}`); // Log para verificar la consulta
+
   poolPlayers.query(query, [searchTerm, searchTerm], (err, results) => {
     if (err) {
       console.error('Error al buscar los jugadores en la base de datos:', err);
+      console.log(`Resultados obtenidos: ${results.length}`); // Log para verificar el número de resultados
       res.status(500).send('Error en el servidor');
     } else {
+      console.log(`Resultados obtenidos: ${results.length}`); // Log para verificar el número de resultados
       res.json(results);
     }
   });
