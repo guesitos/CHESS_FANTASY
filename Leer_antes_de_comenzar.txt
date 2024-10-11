@@ -33,7 +33,7 @@ Cualquier idea de buena práctica y de cualquiera que tenga mucha experiencia (o
 
 
 
-# INSTRUCCIONES BÁSICAS #
+# INSTRUCCIONES BÁSICAS # (El repo se hará público antes de que esto aplique)
 
 1. Descarga el repo y revisa el Readme. Ten en orden el proyecto y las dependencias.
 
