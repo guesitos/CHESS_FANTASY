@@ -13,12 +13,19 @@ function Jugadores() {
   // Función para obtener jugadores desde la base de datos
   const fetchPlayers = (query = '') => {
     let url = `${process.env.REACT_APP_API_URL}/chess_players`;
+
+    // Si hay un término de búsqueda, agregamos /search y el término de búsqueda como parámetro
     if (query) {
-      url += `?search=${query}`;
+      url += `/search?search=${encodeURIComponent(query)}`;
     }
 
     fetch(url)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error al buscar jugadores');
+        }
+        return response.json();
+      })
       .then(data => {
         setPlayers(data);
       })
