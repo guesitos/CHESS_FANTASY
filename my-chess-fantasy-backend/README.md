@@ -1,6 +1,6 @@
-# Proyecto de Gestión de Jugadores de Ajedrez y Usuarios
+# INFORMACIÓN BACKEND (IR ACTUALIZANDO)
 
-Este proyecto es una aplicación de backend que gestiona datos de usuarios y jugadores de ajedrez, incluyendo la programación de tareas automáticas para scraping y actualización de ELO FIDE. También incluye la funcionalidad de registro y autenticación de usuarios.
+Backend que gestiona datos de usuarios y jugadores de ajedrez, incluyendo la programación de tareas automáticas para scraping y actualización de ELO FIDE. También incluye la funcionalidad de registro y autenticación de usuarios, generación de valores de mercado, ... En resumen, todas las funcionalidades de la WEB
 
 ## Tabla de Contenidos
 - [Estructura del Proyecto](#estructura-del-proyecto)
