@@ -10,7 +10,7 @@ require('dotenv').config();  // Cargar variables de entorno
 
 const fideScraper = require('fide-ratings-scraper'); // Importar el scraper
 const scrapePlayers = require('./scrapePlayers');
-const { updateAllPlayersElo } = require('./controllers/chessPlayerController');
+const { updateAllPlayersElo, getAllClubs, getAllTableros } = require('./controllers/chessPlayerController');
 const { checkAndFixCapitalization, verifyAndAddMissingPlayers, removeNonMatchingPlayers } = require('./Reviewer'); // Importar funciones de Reviewer
 
 const app = express();
@@ -54,6 +54,10 @@ app.get('/api/chess_players/details', async (req, res) => {
     res.status(500).send('Error en el servidor al obtener información del jugador');
   }
 });
+
+// Nuevas rutas para obtener los clubes y tableros únicos
+app.get('/api/chess_players/clubs', getAllClubs);
+app.get('/api/chess_players/tableros', getAllTableros);
 
 // Servidor escuchando en el puerto 5000
 const PORT = process.env.PORT || 5000;

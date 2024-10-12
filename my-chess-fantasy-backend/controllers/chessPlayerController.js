@@ -3,43 +3,102 @@
 const { poolPlayers } = require('../db'); // Importar el pool de conexiones
 const { exec } = require('child_process'); // Importar exec para ejecutar comandos
 
-// Función para buscar jugadores por nombre o apellido
+// Función para buscar jugadores por varios filtros
 const searchPlayers = async (req, res) => {
-  const { search } = req.query;
+  const { search, club, eloMin, eloMax, division, tablero, page = 1, limit = 20 } = req.query;
 
-  console.log(`Término de búsqueda recibido: ${search}`); // Log para verificar el término de búsqueda recibido
+  console.log(`Término de búsqueda recibido: ${search}, club: ${club}, ELO mínimo: ${eloMin}, ELO máximo: ${eloMax}, división: ${division}, tablero: ${tablero}, página: ${page}, límite: ${limit}`);
 
-  if (!search) {
-    return res.status(400).send('Debe proporcionar un término de búsqueda');
+  const offset = (page - 1) * limit;
+
+  let query = `SELECT * FROM players WHERE 1=1`;
+  const params = [];
+
+  if (search && search.trim() !== '') {
+    query += ` AND (first_name LIKE ? OR last_name LIKE ?)`;
+    params.push(`%${search}%`, `%${search}%`);
   }
 
-  // Realizar la búsqueda en la base de datos usando LIKE para encontrar coincidencias parciales
-  const query = `
-    SELECT * FROM players
-    WHERE first_name LIKE ? OR last_name LIKE ?
-  `;
-  const searchTerm = `%${search}%`;
+  if (club && club.trim() !== '') {
+    query += ` AND club = ?`;
+    params.push(club);
+  }
 
-  console.log(`Ejecutando consulta: ${query} con parámetros ${searchTerm}, ${searchTerm}`); // Log para verificar la consulta
+  if (eloMin && eloMin.trim() !== '') {
+    query += ` AND elo_fide >= ?`;
+    params.push(Number(eloMin));
+  }
+
+  if (eloMax && eloMax.trim() !== '') {
+    query += ` AND elo_fide <= ?`;
+    params.push(Number(eloMax));
+  }
+
+  if (division && division.trim() !== '') {
+    query += ` AND division = ?`;
+    params.push(division);
+  }
+
+  if (tablero && tablero.trim() !== '') {
+    query += ` AND tablero = ?`;
+    params.push(Number(tablero));
+  }
+
+  query += ` LIMIT ? OFFSET ?`;
+  params.push(Number(limit), Number(offset));
 
   let connection;
 
   try {
-    // Obtener una conexión del pool
     connection = await poolPlayers.getConnection();
     console.log('Conexión a la base de datos obtenida para búsqueda de jugadores');
 
     // Realizar la consulta
-    const [results] = await connection.query(query, [searchTerm, searchTerm]);
-    
-    console.log(`Resultados obtenidos: ${results.length}`); // Log para verificar el número de resultados
-    console.log('Enviando los siguientes resultados al cliente:', results);
-    res.json(results);
+    const [results] = await connection.query(query, params);
+
+    // Calcular el total de páginas
+    let totalPlayersQuery = `SELECT COUNT(*) as count FROM players WHERE 1=1`;
+    const totalParams = [];
+
+    if (search && search.trim() !== '') {
+      totalPlayersQuery += ` AND (first_name LIKE ? OR last_name LIKE ?)`;
+      totalParams.push(`%${search}%`, `%${search}%`);
+    }
+
+    if (club && club.trim() !== '') {
+      totalPlayersQuery += ` AND club = ?`;
+      totalParams.push(club);
+    }
+
+    if (eloMin && eloMin.trim() !== '') {
+      totalPlayersQuery += ` AND elo_fide >= ?`;
+      totalParams.push(Number(eloMin));
+    }
+
+    if (eloMax && eloMax.trim() !== '') {
+      totalPlayersQuery += ` AND elo_fide <= ?`;
+      totalParams.push(Number(eloMax));
+    }
+
+    if (division && division.trim() !== '') {
+      totalPlayersQuery += ` AND division = ?`;
+      totalParams.push(division);
+    }
+
+    if (tablero && tablero.trim() !== '') {
+      totalPlayersQuery += ` AND tablero = ?`;
+      totalParams.push(Number(tablero));
+    }
+
+    const [totalResults] = await connection.query(totalPlayersQuery, totalParams);
+    const totalPlayers = totalResults[0].count;
+    const totalPages = Math.ceil(totalPlayers / limit);
+
+    res.json({ players: results, totalPages });
   } catch (err) {
     console.error('Error al buscar los jugadores en la base de datos:', err);
     res.status(500).send('Error en el servidor');
   } finally {
-    // Liberar la conexión después de realizar la consulta, independientemente del resultado
     if (connection) connection.release();
     console.log('Conexión a la base de datos liberada');
   }
@@ -129,10 +188,46 @@ async function getAllPlayers(req, res) {
   }
 }
 
+// Función para obtener todos los clubes únicos
+async function getAllClubs(req, res) {
+  let connection;
+  try {
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para obtener todos los clubes');
+    const [results] = await connection.query('SELECT DISTINCT club FROM players');
+    res.json(results);
+  } catch (error) {
+    console.error('Error al obtener clubes:', error);
+    res.status(500).send('Error en el servidor al obtener clubes');
+  } finally {
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de obtener clubes');
+  }
+}
+
+// Función para obtener todos los tableros únicos
+async function getAllTableros(req, res) {
+  let connection;
+  try {
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para obtener todos los tableros');
+    const [results] = await connection.query('SELECT DISTINCT tablero FROM players');
+    res.json(results);
+  } catch (error) {
+    console.error('Error al obtener tableros:', error);
+    res.status(500).send('Error en el servidor al obtener tableros');
+  } finally {
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de obtener tableros');
+  }
+}
+
 // Exportar las funciones del controlador
 module.exports = {
   getAllPlayers,
   fetchAllPlayers,
   updateAllPlayersElo,
   searchPlayers,
+  getAllClubs,
+  getAllTableros,
 };

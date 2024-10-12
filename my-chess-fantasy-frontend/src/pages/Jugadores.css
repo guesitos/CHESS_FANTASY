@@ -1,4 +1,5 @@
-/* src/pages/Jugadores.css
+/* src/pages/Jugadores.css */
+
 /* Estilos generales */
 .jugadores-container {
   padding: 20px;
@@ -19,14 +20,44 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 /* Estilo del input de búsqueda */
 .search-input {
-  flex: 1; /* Hace que el input ocupe todo el espacio disponible */
+  flex: 2;
   padding: 10px;
   border-radius: 5px;
   border: none;
+  font-size: 16px;
+  background-color: #555;
+  color: #fff;
+}
+
+/* Estilo del botón de búsqueda avanzada */
+.advanced-search-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.advanced-search-button:hover {
+  background-color: #218838;
+}
+
+/* Estilo de los selectores */
+.filter-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #555;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -41,10 +72,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
 }
 
 .search-button span {
   font-size: 20px;
+}
+
+/* Botón de restablecer */
+.reset-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #c82333;
+}
+
+/* Estilos del contenedor de búsqueda avanzada */
+.advanced-search-container {
+  background-color: #444;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.filters-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Lista de jugadores */
@@ -135,7 +206,7 @@
 
 .tablero-number {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   right: 175px;
   background-color: #007bff;
   color: #fff;
@@ -201,6 +272,39 @@
   font-weight: bold;
 }
 
+/* Estilos para la paginación */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.pagination-info {
+  color: #fff;
+  font-size: 1em;
+}
+
 /* Media Queries para Responsividad */
 
 /* Ajuste para pantallas medianas (hasta 1024px) */
@@ -211,6 +315,10 @@
       "club photo"
       "details details"
       "match match";
+  }
+
+  .filters-form {
+    grid-template-columns: 1fr;
   }
 
   .match-points {
