@@ -132,6 +132,28 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para el contenedor de ordenación */
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre la etiqueta y el desplegable */
+  margin-bottom: 20px; /* Espacio debajo de la sección de ordenación */
+}
+
+.sort-container label {
+  font-size: 1em;
+  color: #f0f0f0;
+}
+
+.sort-container select {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background-color: #3b3b4f;
+  color: #fff;
+  font-size: 14px;
+}
+
 /* Lista de jugadores */
 .players-list {
   display: flex;
@@ -231,7 +253,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  gap: 5px;
+  gap: 8px; /* Aumentar ligeramente el espaciado */
 }
 
 .player-details h3 {
@@ -247,6 +269,12 @@ body {
   margin: 0;
   font-size: 1em;
   color: #d1d1e0;
+}
+
+/* Estilo específico para el campo Club */
+.player-details p:nth-child(4) {
+  color: #06d6a0; /* Cambiar el color para resaltar */
+  font-weight: bold;
 }
 
 .match-info {
@@ -325,9 +353,8 @@ body {
   .player-card {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "club photo"
-      "details details"
-      "match match";
+      "club photo spacer details"
+      "club photo spacer match";
     width: 100%;
   }
 
@@ -338,6 +365,11 @@ body {
   .match-points {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  /* Ajuste para sort-container en pantallas medianas */
+  .sort-container {
+    margin-bottom: 15px; /* Reducir margen en pantallas medianas */
   }
 }
 
@@ -376,6 +408,19 @@ body {
   .match-points {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  /* Ajuste para sort-container en pantallas pequeñas */
+  .sort-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px; /* Reducir espacio en pantallas pequeñas */
+    margin-bottom: 15px; /* Ajustar margen */
+  }
+
+  .sort-container label,
+  .sort-container select {
+    width: 100%;
   }
 }
 

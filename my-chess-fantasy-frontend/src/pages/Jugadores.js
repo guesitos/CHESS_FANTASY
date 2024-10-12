@@ -22,6 +22,7 @@ function Jugadores() {
   const [clubs, setClubs] = useState([]);
   const [tableros, setTableros] = useState([]);
   const [sortOption, setSortOption] = useState('');
+  const [error, setError] = useState(null); // Estado para manejar errores
 
   const playersPerPage = 20;
 
@@ -37,11 +38,12 @@ function Jugadores() {
     sort = ''
   ) => {
     setIsLoading(true);
+    setError(null); // Resetear error antes de una nueva búsqueda
     let url = `${process.env.REACT_APP_API_URL}/chess_players/search`;
 
     // Construir la URL con los filtros
     const params = new URLSearchParams();
-    if (searchTerm && searchTerm.trim() !== '') params.append('searchTerm', searchTerm); // Cambio aquí
+    if (searchTerm && searchTerm.trim() !== '') params.append('searchTerm', searchTerm);
     if (club && club.trim() !== '') params.append('club', club);
     if (eloMin && eloMin.trim() !== '') params.append('eloMin', eloMin);
     if (eloMax && eloMax.trim() !== '') params.append('eloMax', eloMax);
@@ -68,7 +70,10 @@ function Jugadores() {
         setPlayers(data.players);
         setTotalPages(data.totalPages);
       })
-      .catch(error => console.error('Error al obtener los jugadores:', error))
+      .catch(error => {
+        console.error('Error al obtener los jugadores:', error);
+        setError('Hubo un problema al buscar jugadores. Por favor, intenta de nuevo.');
+      })
       .finally(() => setIsLoading(false));
   };
 
@@ -167,7 +172,7 @@ function Jugadores() {
           <select id="sort" value={sortOption} onChange={handleSortChange} className="sort-select">
             <option value="">Seleccione una opción</option>
             <option value="elo">ELO FIDE</option>
-            <option value="club">Club (alfabético)</option>
+            <option value="club">Club</option>
             <option value="apellido">Apellido</option>
             <option value="puntos_jornada">Puntos Jornada 1</option>
             <option value="puntos_totales">Puntos Totales</option>
@@ -236,6 +241,7 @@ function Jugadores() {
             </Form>
           </div>
         )}
+        {error && <p className="error-message">{error}</p>} {/* Mostrar mensaje de error */}
         {isLoading ? (
           <p>Cargando jugadores...</p>
         ) : (
@@ -266,6 +272,7 @@ function Jugadores() {
                     <h3>{`${player.last_name}, ${player.first_name}`}</h3>
                     <p>Valor: {player.valor || '-'}</p>
                     <p>ELO FIDE: {player.elo_fide || '-'}</p>
+                    <p> {player.club || '-'}</p> {/* Nuevo campo para el Club */}
                   </div>
 
                   {/* Cuarta columna: Información de partidas */}
@@ -301,3 +308,4 @@ function Jugadores() {
 }
 
 export default Jugadores;
+
