@@ -5,18 +5,19 @@ const { exec } = require('child_process'); // Importar exec para ejecutar comand
 
 // Función para buscar jugadores por varios filtros
 const searchPlayers = async (req, res) => {
-  const { search, club, eloMin, eloMax, division, tablero, page = 1, limit = 20 } = req.query;
+  // Desestructurar 'searchTerm' en lugar de 'search'
+  const { searchTerm, club, eloMin, eloMax, division, tablero, page = 1, limit = 20, sort } = req.query;
 
-  console.log(`Término de búsqueda recibido: ${search}, club: ${club}, ELO mínimo: ${eloMin}, ELO máximo: ${eloMax}, división: ${division}, tablero: ${tablero}, página: ${page}, límite: ${limit}`);
+  console.log(`Término de búsqueda recibido: ${searchTerm}, club: ${club}, ELO mínimo: ${eloMin}, ELO máximo: ${eloMax}, división: ${division}, tablero: ${tablero}, página: ${page}, límite: ${limit}, orden: ${sort}`);
 
   const offset = (page - 1) * limit;
 
-  let query = `SELECT * FROM players WHERE 1=1`;
+  let query = `SELECT *, CASE WHEN elo_fide = 'NotRated' THEN 0 ELSE CAST(elo_fide AS SIGNED) END AS elo_fide_numeric FROM players WHERE 1=1`;
   const params = [];
 
-  if (search && search.trim() !== '') {
+  if (searchTerm && searchTerm.trim() !== '') {
     query += ` AND (first_name LIKE ? OR last_name LIKE ?)`;
-    params.push(`%${search}%`, `%${search}%`);
+    params.push(`%${searchTerm}%`, `%${searchTerm}%`);
   }
 
   if (club && club.trim() !== '') {
@@ -25,12 +26,12 @@ const searchPlayers = async (req, res) => {
   }
 
   if (eloMin && eloMin.trim() !== '') {
-    query += ` AND elo_fide >= ?`;
+    query += ` AND elo_fide_numeric >= ?`;
     params.push(Number(eloMin));
   }
 
   if (eloMax && eloMax.trim() !== '') {
-    query += ` AND elo_fide <= ?`;
+    query += ` AND elo_fide_numeric <= ?`;
     params.push(Number(eloMax));
   }
 
@@ -42,6 +43,31 @@ const searchPlayers = async (req, res) => {
   if (tablero && tablero.trim() !== '') {
     query += ` AND tablero = ?`;
     params.push(Number(tablero));
+  }
+
+  // Agregar la lógica de ordenación
+  if (sort && sort.trim() !== '') {
+    switch (sort) {
+      case 'elo':
+        query += ` ORDER BY elo_fide_numeric DESC`;
+        break;
+      case 'club':
+        query += ` ORDER BY club ASC`;
+        break;
+      case 'apellido':
+        query += ` ORDER BY last_name ASC`;
+        break;
+      case 'puntos_jornada':
+        query += ` ORDER BY points_jornada_1 DESC`;
+        break;
+      case 'puntos_totales':
+        query += ` ORDER BY total_points DESC`;
+        break;
+      default:
+        break;
+    }
+  } else {
+    query += ` ORDER BY last_name ASC`; // Orden predeterminado
   }
 
   query += ` LIMIT ? OFFSET ?`;
@@ -60,9 +86,9 @@ const searchPlayers = async (req, res) => {
     let totalPlayersQuery = `SELECT COUNT(*) as count FROM players WHERE 1=1`;
     const totalParams = [];
 
-    if (search && search.trim() !== '') {
+    if (searchTerm && searchTerm.trim() !== '') {
       totalPlayersQuery += ` AND (first_name LIKE ? OR last_name LIKE ?)`;
-      totalParams.push(`%${search}%`, `%${search}%`);
+      totalParams.push(`%${searchTerm}%`, `%${searchTerm}%`);
     }
 
     if (club && club.trim() !== '') {
@@ -71,12 +97,12 @@ const searchPlayers = async (req, res) => {
     }
 
     if (eloMin && eloMin.trim() !== '') {
-      totalPlayersQuery += ` AND elo_fide >= ?`;
+      totalPlayersQuery += ` AND CASE WHEN elo_fide = 'NotRated' THEN 0 ELSE CAST(elo_fide AS SIGNED) END >= ?`;
       totalParams.push(Number(eloMin));
     }
 
     if (eloMax && eloMax.trim() !== '') {
-      totalPlayersQuery += ` AND elo_fide <= ?`;
+      totalPlayersQuery += ` AND CASE WHEN elo_fide = 'NotRated' THEN 0 ELSE CAST(elo_fide AS SIGNED) END <= ?`;
       totalParams.push(Number(eloMax));
     }
 
@@ -101,6 +127,57 @@ const searchPlayers = async (req, res) => {
   } finally {
     if (connection) connection.release();
     console.log('Conexión a la base de datos liberada');
+  }
+};
+
+// Función para obtener todos los jugadores
+const getAllPlayers = async (req, res) => {
+  let connection;
+  try {
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para obtener todos los jugadores');
+    const [results] = await connection.query('SELECT * FROM players');
+    res.json(results);
+  } catch (error) {
+    console.error('Error al obtener jugadores:', error);
+    res.status(500).send('Error en el servidor al obtener jugadores');
+  } finally {
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de obtener jugadores');
+  }
+};
+
+// Función para obtener todos los clubes únicos
+const getAllClubs = async (req, res) => {
+  let connection;
+  try {
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para obtener todos los clubes');
+    const [results] = await connection.query('SELECT DISTINCT club FROM players ORDER BY club ASC');
+    res.json(results);
+  } catch (error) {
+    console.error('Error al obtener clubes:', error);
+    res.status(500).send('Error en el servidor al obtener clubes');
+  } finally {
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de obtener clubes');
+  }
+};
+
+// Función para obtener todos los tableros únicos
+const getAllTableros = async (req, res) => {
+  let connection;
+  try {
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para obtener todos los tableros');
+    const [results] = await connection.query('SELECT DISTINCT tablero FROM players ORDER BY tablero ASC');
+    res.json(results);
+  } catch (error) {
+    console.error('Error al obtener tableros:', error);
+    res.status(500).send('Error en el servidor al obtener tableros');
+  } finally {
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de obtener tableros');
   }
 };
 
@@ -174,51 +251,6 @@ async function fetchAllPlayers() {
     // Liberar la conexión después de la consulta
     if (connection) connection.release();
     console.log('Conexión a la base de datos liberada después de obtener jugadores');
-  }
-}
-
-// Obtener todos los jugadores y devolver su información (como controlador de ruta)
-async function getAllPlayers(req, res) {
-  try {
-    const results = await fetchAllPlayers();
-    res.json(results);
-  } catch (error) {
-    console.error('Error al obtener jugadores:', error);
-    res.status(500).send('Error en el servidor al obtener jugadores');
-  }
-}
-
-// Función para obtener todos los clubes únicos
-async function getAllClubs(req, res) {
-  let connection;
-  try {
-    connection = await poolPlayers.getConnection();
-    console.log('Conexión a la base de datos obtenida para obtener todos los clubes');
-    const [results] = await connection.query('SELECT DISTINCT club FROM players');
-    res.json(results);
-  } catch (error) {
-    console.error('Error al obtener clubes:', error);
-    res.status(500).send('Error en el servidor al obtener clubes');
-  } finally {
-    if (connection) connection.release();
-    console.log('Conexión a la base de datos liberada después de obtener clubes');
-  }
-}
-
-// Función para obtener todos los tableros únicos
-async function getAllTableros(req, res) {
-  let connection;
-  try {
-    connection = await poolPlayers.getConnection();
-    console.log('Conexión a la base de datos obtenida para obtener todos los tableros');
-    const [results] = await connection.query('SELECT DISTINCT tablero FROM players');
-    res.json(results);
-  } catch (error) {
-    console.error('Error al obtener tableros:', error);
-    res.status(500).send('Error en el servidor al obtener tableros');
-  } finally {
-    if (connection) connection.release();
-    console.log('Conexión a la base de datos liberada después de obtener tableros');
   }
 }
 

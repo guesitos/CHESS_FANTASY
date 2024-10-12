@@ -21,17 +21,27 @@ function Jugadores() {
   const [totalPages, setTotalPages] = useState(1);
   const [clubs, setClubs] = useState([]);
   const [tableros, setTableros] = useState([]);
+  const [sortOption, setSortOption] = useState('');
 
   const playersPerPage = 20;
 
   // Función para obtener jugadores desde la base de datos
-  const fetchPlayers = (query = '', club = '', eloMin = '', eloMax = '', division = '', tablero = '', page = 1) => {
+  const fetchPlayers = (
+    searchTerm = '',
+    club = '',
+    eloMin = '',
+    eloMax = '',
+    division = '',
+    tablero = '',
+    page = 1,
+    sort = ''
+  ) => {
     setIsLoading(true);
-    let url = `${process.env.REACT_APP_API_URL}/chess_players`;
+    let url = `${process.env.REACT_APP_API_URL}/chess_players/search`;
 
     // Construir la URL con los filtros
     const params = new URLSearchParams();
-    if (query && query.trim() !== '') params.append('search', query);
+    if (searchTerm && searchTerm.trim() !== '') params.append('searchTerm', searchTerm); // Cambio aquí
     if (club && club.trim() !== '') params.append('club', club);
     if (eloMin && eloMin.trim() !== '') params.append('eloMin', eloMin);
     if (eloMax && eloMax.trim() !== '') params.append('eloMax', eloMax);
@@ -39,11 +49,10 @@ function Jugadores() {
     if (tablero && tablero.trim() !== '') params.append('tablero', tablero);
     params.append('page', page);
     params.append('limit', playersPerPage);
+    if (sort && sort.trim() !== '') params.append('sort', sort);
 
     // Agregar los parámetros si existen
-    if (params.toString()) {
-      url += `/search?${params.toString()}`;
-    }
+    url += `?${params.toString()}`;
 
     console.log(`Fetching players from URL: ${url}`); // Log para verificar la URL
 
@@ -65,8 +74,8 @@ function Jugadores() {
 
   useEffect(() => {
     // Obtener todos los jugadores al cargar el componente
-    fetchPlayers(searchTerm, selectedClub, eloMin, eloMax, selectedDivision, selectedTablero, currentPage);
-  }, [searchTerm, selectedClub, eloMin, eloMax, selectedDivision, selectedTablero, currentPage]);
+    fetchPlayers(searchTerm, selectedClub, eloMin, eloMax, selectedDivision, selectedTablero, currentPage, sortOption);
+  }, [searchTerm, selectedClub, eloMin, eloMax, selectedDivision, selectedTablero, currentPage, sortOption]);
 
   useEffect(() => {
     // Obtener los clubes y tableros al cargar el componente
@@ -84,7 +93,7 @@ function Jugadores() {
   const handleSearchClick = () => {
     setPlayers([]); // Limpiar los resultados anteriores antes de iniciar la nueva búsqueda
     console.log(`Iniciando búsqueda con el término: ${searchTerm}`);
-    fetchPlayers(searchTerm, selectedClub, eloMin, eloMax, selectedDivision, selectedTablero, 1);
+    fetchPlayers(searchTerm, selectedClub, eloMin, eloMax, selectedDivision, selectedTablero, 1, sortOption);
     setCurrentPage(1);
   };
 
@@ -95,8 +104,9 @@ function Jugadores() {
     setEloMax('');
     setSelectedDivision('');
     setSelectedTablero('');
+    setSortOption('');
     setCurrentPage(1);
-    fetchPlayers('', '', '', '', '', '', 1); // Obtener todos los jugadores de nuevo
+    fetchPlayers('', '', '', '', '', '', 1, ''); // Obtener todos los jugadores de nuevo
   };
 
   const handleKeyDown = (event) => {
@@ -123,6 +133,10 @@ function Jugadores() {
     }
   };
 
+  const handleSortChange = (e) => {
+    setSortOption(e.target.value);
+  };
+
   return (
     <>
       <Navbar />
@@ -147,6 +161,17 @@ function Jugadores() {
           <button onClick={toggleAdvancedSearch} className="advanced-search-button">
             Búsqueda avanzada
           </button>
+        </div>
+        <div className="sort-container">
+          <label htmlFor="sort">Ordenar por:</label>
+          <select id="sort" value={sortOption} onChange={handleSortChange} className="sort-select">
+            <option value="">Seleccione una opción</option>
+            <option value="elo">ELO FIDE</option>
+            <option value="club">Club (alfabético)</option>
+            <option value="apellido">Apellido</option>
+            <option value="puntos_jornada">Puntos Jornada 1</option>
+            <option value="puntos_totales">Puntos Totales</option>
+          </select>
         </div>
         {showAdvancedSearch && (
           <div className="advanced-search-container">

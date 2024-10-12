@@ -3,6 +3,8 @@
 const express = require('express');
 const cors = require('cors');
 const readline = require('readline'); // Importar readline para la interacción en la terminal
+const morgan = require('morgan'); // Opcional: Para registro de solicitudes
+const helmet = require('helmet'); // Opcional: Para mejorar la seguridad
 const userRoutes = require('./routes/userRoutes');
 const chessPlayerRoutes = require('./routes/chessPlayerRoutes'); // Importar las rutas de jugadores
 const { poolUsers, poolPlayers } = require('./db'); // Importar las conexiones desde db.js
@@ -15,10 +17,26 @@ const { checkAndFixCapitalization, verifyAndAddMissingPlayers, removeNonMatching
 
 const app = express();
 
-// Configuración de CORS más específica
+// Opcional: Mejorar la seguridad con helmet
+app.use(helmet());
+
+// Opcional: Registrar solicitudes HTTP con morgan
+app.use(morgan('combined'));
+
+// Configuración de CORS más específica con whitelist
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001']; // Añade aquí otros orígenes si es necesario
+
 app.use(cors({
-  origin: '*',  // Permite todas las solicitudes, para desarrollo únicamente
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: function(origin, callback) {
+    // Permitir solicitudes sin origen (como mobile apps o curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'La política de CORS para este sitio no permite el acceso desde el origen especificado.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 }));
 
@@ -55,10 +73,6 @@ app.get('/api/chess_players/details', async (req, res) => {
   }
 });
 
-// Nuevas rutas para obtener los clubes y tableros únicos
-app.get('/api/chess_players/clubs', getAllClubs);
-app.get('/api/chess_players/tableros', getAllTableros);
-
 // Servidor escuchando en el puerto 5000
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, async () => {
@@ -93,4 +107,10 @@ app.listen(PORT, async () => {
     // Cerrar la interfaz de readline
     rl.close();
   });
+});
+
+// Middleware para manejo de errores (Opcional)
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Algo salió mal!');
 });
