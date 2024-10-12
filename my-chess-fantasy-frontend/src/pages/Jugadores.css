@@ -1,8 +1,17 @@
+/* src/pages/Jugadores.css */
+
+/* Importar tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
 /* Estilos generales */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .jugadores-container {
   padding: 20px;
-  background-color: #333;
-  color: #fff;
+  background-color: #1e1e2f;  /* Fondo oscuro con un tono azul profundo para un look más elegante y de ajedrez */
+  color: #f0f0f0;
   min-height: 100vh;
   width: 100%;
 }
@@ -10,6 +19,8 @@
 .jugadores-container h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #f9a826;  /* Color dorado para resaltar el título, inspirado en los colores de las piezas de ajedrez */
+  font-family: 'Roboto Slab', serif;
 }
 
 /* Contenedor del input de búsqueda y botón */
@@ -18,85 +29,167 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
+  background-color: #2c2c3e;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* Estilo del input de búsqueda */
 .search-input {
-  flex: 1; /* Hace que el input ocupe todo el espacio disponible */
-  padding: 10px;
-  border-radius: 5px;
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
+  background-color: #3b3b4f;
+  color: #fff;
+}
+
+/* Estilo del botón de búsqueda avanzada */
+.advanced-search-button {
+  background-color: #6a4c93;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.advanced-search-button:hover {
+  background-color: #5b3b82;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del contenedor de búsqueda avanzada */
+.advanced-search-container {
+  background-color: #2c2c3e;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.filters-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo de los selectores */
+.filter-select {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background-color: #3b3b4f;
+  color: #fff;
+  font-size: 14px;
 }
 
 /* Botón de búsqueda (lupa) */
 .search-button {
-  background-color: #007bff;
+  background-color: #6a4c93;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-button:hover {
+  background-color: #5b3b82;
+  transform: scale(1.05);
 }
 
 .search-button span {
-  font-size: 20px;
+  font-size: 18px;
+}
+
+/* Botón de restablecer */
+.reset-button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #d62828;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el contenedor de ordenación */
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre la etiqueta y el desplegable */
+  margin-bottom: 20px; /* Espacio debajo de la sección de ordenación */
+}
+
+.sort-container label {
+  font-size: 1em;
+  color: #f0f0f0;
+}
+
+.sort-container select {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background-color: #3b3b4f;
+  color: #fff;
+  font-size: 14px;
 }
 
 /* Lista de jugadores */
 .players-list {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
 /* Estilo de la tarjeta del jugador */
 .player-card {
-  background-color: #444;
+  background-color: #2c2c3e;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 0.7fr 0.5fr 0.3fr 2.5fr;
+  grid-template-areas:
+    "club photo spacer details"
+    "club photo spacer match";
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .player-card:hover {
   transform: scale(1.02);
 }
 
-/* Asignación de áreas en la cuadrícula */
-.player-card {
-  grid-template-areas:
-    "club photo details match";
-}
-
 .club-info {
   grid-area: club;
-}
-
-.player-photo {
-  grid-area: photo;
-}
-
-.player-details {
-  grid-area: details;
-}
-
-.match-info {
-  grid-area: match;
-}
-
-/* Primera columna: Información del club */
-.club-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .club-logo {
@@ -106,8 +199,8 @@
 }
 
 .division-tag {
-  background-color: #ffcc00;
-  color: #000;
+  background-color: #f9a826;
+  color: #1e1e2f;
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -118,29 +211,31 @@
   font-size: 0.9em;
 }
 
-/* Segunda columna: Foto del jugador */
 .player-photo {
+  grid-area: photo;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: -15px; /* Mover hacia la izquierda para acercarlo al logo del club */
 }
 
 .player-image {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .tablero-number {
   position: absolute;
-  bottom: 0px;
-  right: 175px;
-  background-color: #007bff;
+  bottom: -15px; /* Ajustar para que esté más cerca del logo del club */
+  right: 0;
+  background-color: #3a86ff;
   color: #fff;
   border-radius: 50%;
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,40 +243,57 @@
   border: 2px solid #fff;
 }
 
-/* Tercera columna: Detalles del jugador */
+.spacer {
+  grid-area: spacer;
+}
+
 .player-details {
+  grid-area: details;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
+  gap: 8px; /* Aumentar ligeramente el espaciado */
 }
 
 .player-details h3 {
   margin: 0;
   font-size: 1.4em;
+  color: #f9a826;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Roboto Slab', serif;
 }
 
 .player-details p {
-  margin: 5px 0;
+  margin: 0;
   font-size: 1em;
+  color: #d1d1e0;
 }
 
-/* Cuarta columna: Información de partidas */
+/* Estilo específico para el campo Club */
+.player-details p:nth-child(4) {
+  color: #06d6a0; /* Cambiar el color para resaltar */
+  font-weight: bold;
+}
+
 .match-info {
+  grid-area: match;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 10px;
 }
 
 .match-points {
   display: flex;
   flex-wrap: nowrap;
-  margin-bottom: 10px;
 }
 
 .match-rectangle {
   width: 18px;
   height: 30px;
-  background-color: #666;
+  background-color: #6a4c93;
   margin: 0 1px;
   display: flex;
   align-items: center;
@@ -192,12 +304,46 @@
 }
 
 .total-points {
-  background-color: #00cc66;
+  background-color: #06d6a0;
   padding: 5px 10px;
   border-radius: 5px;
-  color: #fff;
+  color: #1e1e2f;
   font-size: 1em;
   font-weight: bold;
+}
+
+/* Estilos para la paginación */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #6a4c93;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #5b3b82;
+  transform: scale(1.05);
+}
+
+.pagination-info {
+  color: #f0f0f0;
+  font-size: 1em;
 }
 
 /* Media Queries para Responsividad */
@@ -205,16 +351,25 @@
 /* Ajuste para pantallas medianas (hasta 1024px) */
 @media (max-width: 1024px) {
   .player-card {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "club photo"
-      "details details"
-      "match match";
+      "club photo spacer details"
+      "club photo spacer match";
+    width: 100%;
+  }
+
+  .filters-form {
+    grid-template-columns: 1fr;
   }
 
   .match-points {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  /* Ajuste para sort-container en pantallas medianas */
+  .sort-container {
+    margin-bottom: 15px; /* Reducir margen en pantallas medianas */
   }
 }
 
@@ -227,6 +382,7 @@
       "photo"
       "details"
       "match";
+    width: 100%;
   }
 
   .player-card {
@@ -242,7 +398,7 @@
   }
 
   .player-details h3 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .player-details p {
@@ -253,4 +409,31 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  /* Ajuste para sort-container en pantallas pequeñas */
+  .sort-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px; /* Reducir espacio en pantallas pequeñas */
+    margin-bottom: 15px; /* Ajustar margen */
+  }
+
+  .sort-container label,
+  .sort-container select {
+    width: 100%;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.player-card {
+  animation: fadeIn 0.5s ease-in-out;
 }

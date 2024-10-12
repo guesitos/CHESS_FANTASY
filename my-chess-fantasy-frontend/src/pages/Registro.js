@@ -1,3 +1,4 @@
+// src/pages/Registro.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Registro.css';
