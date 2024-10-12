@@ -2,10 +2,10 @@
 
 const { poolPlayers } = require('../db'); // Importar el pool de conexiones
 const { exec } = require('child_process'); // Importar exec para ejecutar comandos
+const path = require('path'); // Para manejar rutas de archivos
 
 // Función para buscar jugadores por varios filtros
 const searchPlayers = async (req, res) => {
-  // Desestructurar 'searchTerm' en lugar de 'search'
   const { searchTerm, club, eloMin, eloMax, division, tablero, page = 1, limit = 20, sort } = req.query;
 
   console.log(`Término de búsqueda recibido: ${searchTerm}, club: ${club}, ELO mínimo: ${eloMin}, ELO máximo: ${eloMax}, división: ${division}, tablero: ${tablero}, página: ${page}, límite: ${limit}, orden: ${sort}`);
@@ -201,7 +201,7 @@ function getPlayerElo(fideId) {
   });
 }
 
-// Actualizar el ELO FIDE de todos los jugadores
+// Función para actualizar el ELO FIDE de todos los jugadores
 async function updateAllPlayersElo() {
   let connection;
 
@@ -216,7 +216,10 @@ async function updateAllPlayersElo() {
     for (const player of results) {
       if (player.fide_id) {
         const eloFide = await getPlayerElo(player.fide_id);
-        await connection.query('UPDATE players SET elo_fide = ?, first_name = UPPER(first_name), last_name = UPPER(last_name) WHERE fide_id = ?', [eloFide, player.fide_id]);
+        await connection.query(
+          'UPDATE players SET elo_fide = ?, first_name = UPPER(first_name), last_name = UPPER(last_name) WHERE fide_id = ?',
+          [eloFide, player.fide_id]
+        );
         console.log(`ELO FIDE actualizado para el jugador ${player.first_name} ${player.last_name}: ${eloFide}`);
       }
     }
@@ -254,11 +257,72 @@ async function fetchAllPlayers() {
   }
 }
 
+// Función para obtener el Valor de Mercado de un jugador usando el script Python
+const getPlayerValor = (fideId) => {
+  return new Promise((resolve, reject) => {
+    const scriptPath = path.join(__dirname, '../Values/valor_mercado_jugadores.py');
+    const command = `python3 "${scriptPath}" "${fideId}"`;
+    
+    exec(command, (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error ejecutando el script para fide_id ${fideId}:`, stderr);
+        return resolve(null); // Retornar null o un valor por defecto en caso de error
+      }
+      try {
+        const valor = parseFloat(stdout.trim());
+        resolve(isNaN(valor) ? null : valor);
+      } catch (parseError) {
+        console.error(`Error parseando la salida del script para fide_id ${fideId}:`, parseError);
+        resolve(null);
+      }
+    });
+  });
+};
+
+// Función para actualizar el ELO FIDE y valor de mercado de todos los jugadores
+const updateAllPlayersEloValor = async () => {
+  let connection;
+
+  try {
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para actualizar el ELO FIDE y valor de mercado');
+
+    // Obtener todos los jugadores con fide_id válido
+    const [players] = await connection.query('SELECT fide_id FROM players WHERE fide_id IS NOT NULL');
+
+    for (const player of players) {
+      const fideId = player.fide_id;
+      
+      // Obtener el ELO FIDE
+      const eloFide = await getPlayerElo(fideId);
+      
+      // Obtener el valor de mercado utilizando el script Python
+      const valor = await getPlayerValor(fideId);
+      
+      if (eloFide !== null && valor !== null) {
+        await connection.query(
+          'UPDATE players SET elo_fide = ?, valor = ? WHERE fide_id = ?',
+          [eloFide, valor, fideId]
+        );
+        console.log(`Actualizado fide_id: ${fideId} - ELO FIDE: ${eloFide}, Valor: ${valor}`);
+      } else {
+        console.log(`No se pudo actualizar fide_id: ${fideId} - ELO FIDE: ${eloFide}, Valor: ${valor}`);
+      }
+    }
+  } catch (error) {
+    console.error('Error al actualizar el ELO FIDE y valor de mercado de los jugadores:', error);
+  } finally {
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de la actualización del ELO FIDE y valor de mercado');
+  }
+};
+
 // Exportar las funciones del controlador
 module.exports = {
   getAllPlayers,
   fetchAllPlayers,
   updateAllPlayersElo,
+  updateAllPlayersEloValor, // Nueva función para actualizar ELO y valor
   searchPlayers,
   getAllClubs,
   getAllTableros,

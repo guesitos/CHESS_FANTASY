@@ -12,8 +12,18 @@ require('dotenv').config();  // Cargar variables de entorno
 
 const fideScraper = require('fide-ratings-scraper'); // Importar el scraper
 const scrapePlayers = require('./scrapePlayers');
-const { updateAllPlayersElo, getAllClubs, getAllTableros } = require('./controllers/chessPlayerController');
-const { checkAndFixCapitalization, verifyAndAddMissingPlayers, removeNonMatchingPlayers } = require('./Reviewer'); // Importar funciones de Reviewer
+const { 
+  updateAllPlayersEloValor, 
+  getAllClubs, 
+  getAllTableros 
+} = require('./controllers/chessPlayerController');
+const { 
+  checkAndFixCapitalization, 
+  verifyAndAddMissingPlayers, 
+  removeNonMatchingPlayers 
+} = require('./Reviewer'); // Importar funciones de Reviewer
+
+const cron = require('node-cron'); // Para tareas programadas
 
 const app = express();
 
@@ -73,6 +83,12 @@ app.get('/api/chess_players/details', async (req, res) => {
   }
 });
 
+// Middleware para manejo de errores (Opcional)
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Algo salió mal!');
+});
+
 // Servidor escuchando en el puerto 5000
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, async () => {
@@ -85,20 +101,20 @@ app.listen(PORT, async () => {
   });
 
   // Preguntar al usuario si desea realizar la actualización
-  rl.question('¿Desea realizar la revisión, scraping y actualización del ELO FIDE? (sí/no): ', async (answer) => {
-    if (answer.toLowerCase() === 'sí' || answer.toLowerCase() === 'y' || answer.toLowerCase() === 'yes') {
+  rl.question('¿Desea realizar la revisión, scraping y actualización del ELO FIDE y valor de mercado? (sí/no): ', async (answer) => {
+    if (['sí', 'si', 'y', 'yes'].includes(answer.toLowerCase())) {
       try {
         console.log('Iniciando revisión de capitalización y verificación de jugadores...');
         await checkAndFixCapitalization();
         await verifyAndAddMissingPlayers();
         await removeNonMatchingPlayers(); // Eliminar jugadores obsoletos que no están en Players_list.js
-        console.log('Revisión y verificación de jugadores completada. Iniciando scraping y actualización del ELO FIDE...');
+        console.log('Revisión y verificación de jugadores completada. Iniciando scraping y actualización del ELO FIDE y valor de mercado...');
         await scrapePlayers();
-        console.log('Scraping inicial de jugadores completado. Iniciando actualización del ELO FIDE...');
-        await updateAllPlayersElo();
-        console.log('Actualización inicial de ELO FIDE completada.');
+        console.log('Scraping inicial de jugadores completado. Iniciando actualización del ELO FIDE y valor de mercado...');
+        await updateAllPlayersEloValor(); // Actualiza ELO y valor utilizando el script Python
+        console.log('Actualización inicial de ELO FIDE y valor de mercado completada.');
       } catch (error) {
-        console.error('Error al realizar la revisión, scraping inicial o la actualización del ELO FIDE:', error);
+        console.error('Error al realizar la revisión, scraping inicial o la actualización del ELO FIDE y valor de mercado:', error);
       }
     } else {
       console.log('Actualización cancelada.');
@@ -107,10 +123,6 @@ app.listen(PORT, async () => {
     // Cerrar la interfaz de readline
     rl.close();
   });
-});
 
-// Middleware para manejo de errores (Opcional)
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Algo salió mal!');
+  console.log('Configurado el cron job para actualizaciones diarias a las 2 AM.');
 });
