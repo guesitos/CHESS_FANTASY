@@ -1,116 +1,105 @@
 // controllers/userController.js
+
+const { poolUsers } = require('../db'); // Importar poolUsers desde db/index.js
 const bcrypt = require('bcrypt');
-const mysql = require('mysql2');
-require('dotenv').config();  // Asegúrate de cargar dotenv para leer las variables de entorno
-
-// Configura la conexión a la base de datos MySQL
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT || 3306,
-});
-
-// Conectar a la base de datos y manejar errores
-db.connect((err) => {
-  if (err) {
-    console.error('Error conectando a la base de datos:', err);
-    return;
-  }
-  console.log('Conexión a MySQL exitosa');
-});
+const jwt = require('jsonwebtoken');
+require('dotenv').config(); // Cargar variables de entorno
 
 // Función para registrar usuarios
-const registerUser = (req, res) => {
-  const { email, password, confirmPassword } = req.body;
+const registerUser = async (req, res) => {
+  try {
+    console.log('Datos recibidos para el registro:', req.body);
+    const { email, password } = req.body;
 
-  console.log('Datos recibidos para el registro:', { email, password, confirmPassword });
+    console.log('Datos recibidos para el registro:', { email, password });
 
-  // Verificar que todos los campos están definidos
-  if (!email || !password || !confirmPassword) {
-    return res.status(400).json({ message: 'Todos los campos son requeridos' });
-  }
-
-  // Verificar si las contraseñas coinciden
-  if (password !== confirmPassword) {
-    console.error('Las contraseñas no coinciden');
-    return res.status(400).json({ message: 'Las contraseñas no coinciden' });
-  }
-
-  // Verificar si el correo ya está registrado
-  db.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
-    if (err) {
-      console.error('Error al buscar el correo en la base de datos:', err);
-      return res.status(500).json({ message: 'Error en el servidor al buscar el correo.' });
+    // Verificar que todos los campos están definidos
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Todos los campos son requeridos' });
     }
 
-    if (results.length > 0) {
+    // Verificar si el correo ya está registrado
+    const [existingUsers] = await poolUsers.query('SELECT * FROM users WHERE email = ?', [email]);
+
+    if (existingUsers.length > 0) {
       console.error('El correo ya está registrado:', email);
       return res.status(400).json({ message: 'El correo ya está registrado.' });
     }
 
     // Encriptar la contraseña antes de guardarla
-    bcrypt.hash(password, 10, (err, hashedPassword) => {
-      if (err) {
-        console.error('Error al encriptar la contraseña:', err);
-        return res.status(500).json({ message: 'Error en el servidor al encriptar la contraseña.' });
-      }
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-      // Insertar usuario en la base de datos
-      db.query('INSERT INTO users (email, password) VALUES (?, ?)', [email, hashedPassword], (err) => {
-        if (err) {
-          console.error('Error al insertar el usuario en la base de datos:', err);
-          return res.status(500).json({ message: 'Error en el servidor al insertar el usuario.' });
-        }
-        console.log('Usuario registrado con éxito:', email);
-        res.status(201).json({ message: 'Usuario registrado con éxito.' });
-      });
+    // Insertar usuario en la base de datos
+    const [result] = await poolUsers.query('INSERT INTO users (email, password) VALUES (?, ?)', [email, hashedPassword]);
+
+    const userId = result.insertId; // Obtener el ID del usuario insertado
+    console.log('Usuario registrado con éxito:', email);
+
+    // Generar JWT
+    const token = jwt.sign({ id: userId, email }, process.env.JWT_SECRET, { expiresIn: '1d' });
+
+    // Responder con user y token
+    res.status(201).json({
+      user: {
+        id: userId,
+        email,
+        // Puedes añadir otros campos del usuario si es necesario
+      },
+      token,
     });
-  });
+
+  } catch (error) {
+    console.error('Error al registrar usuario:', error);
+    res.status(500).json({ message: 'Error en el servidor.' });
+  }
 };
 
 // Función para login de usuarios
-const loginUser = (req, res) => {
-  const { email, password } = req.body;
+const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
 
-  console.log('Datos recibidos para login:', { email });
+    console.log('Datos recibidos para login:', { email });
 
-  // Verificar que los campos están definidos
-  if (!email || !password) {
-    return res.status(400).json({ message: 'Todos los campos son requeridos' });
-  }
-
-  // Verificar si el correo está registrado
-  db.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
-    if (err) {
-      console.error('Error al buscar el correo en la base de datos:', err);
-      return res.status(500).json({ message: 'Error en el servidor al buscar el correo.' });
+    // Verificar que los campos están definidos
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Todos los campos son requeridos' });
     }
 
-    if (results.length === 0) {
+    // Verificar si el correo está registrado
+    const [users] = await poolUsers.query('SELECT * FROM users WHERE email = ?', [email]);
+
+    if (users.length === 0) {
       console.error('Correo no encontrado:', email);
       return res.status(400).json({ message: 'Correo no encontrado.' });
     }
 
+    const user = users[0];
+
     // Verificar la contraseña
-    const user = results[0];
-    bcrypt.compare(password, user.password, (err, isMatch) => {
-      if (err) {
-        console.error('Error al comparar contraseñas:', err);
-        return res.status(500).json({ message: 'Error en el servidor al comparar las contraseñas.' });
-      }
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      console.error('Contraseña incorrecta para el usuario:', email);
+      return res.status(400).json({ message: 'Contraseña incorrecta.' });
+    }
 
-      if (!isMatch) {
-        console.error('Contraseña incorrecta para el usuario:', email);
-        return res.status(400).json({ message: 'Contraseña incorrecta.' });
-      }
+    // Si todo es correcto, generar JWT
+    const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1d' });
 
-      // Si todo es correcto, responder con éxito
-      console.log('Inicio de sesión exitoso:', email);
-      res.status(200).json({ message: 'Inicio de sesión exitoso.' });
+    // Responder con user y token
+    res.status(200).json({
+      user: {
+        id: user.id,
+        email: user.email,
+        // Puedes añadir otros campos del usuario si es necesario
+      },
+      token,
     });
-  });
+
+  } catch (error) {
+    console.error('Error al iniciar sesión:', error);
+    res.status(500).json({ message: 'Error en el servidor.' });
+  }
 };
 
 module.exports = { registerUser, loginUser };

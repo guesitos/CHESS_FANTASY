@@ -2,38 +2,28 @@
 
 const express = require('express');
 const cors = require('cors');
-const readline = require('readline'); // Importar readline para la interacción en la terminal
 const morgan = require('morgan'); // Opcional: Para registro de solicitudes
 const helmet = require('helmet'); // Opcional: Para mejorar la seguridad
 const userRoutes = require('./routes/userRoutes');
 const chessPlayerRoutes = require('./routes/chessPlayerRoutes'); // Importar las rutas de jugadores
-const { poolUsers, poolPlayers } = require('./db'); // Importar las conexiones desde db.js
+const { poolUsers, poolPlayers } = require('./db'); // Importar las conexiones desde db/index.js
 require('dotenv').config();  // Cargar variables de entorno
 
 const fideScraper = require('fide-ratings-scraper'); // Importar el scraper
-const scrapePlayers = require('./scrapePlayers');
-const { 
-  updateAllPlayersEloValor, 
-  getAllClubs, 
-  getAllTableros 
-} = require('./controllers/chessPlayerController');
+const { getAllClubs, getAllTableros } = require('./controllers/chessPlayerController');
 const { 
   checkAndFixCapitalization, 
   verifyAndAddMissingPlayers, 
   removeNonMatchingPlayers 
-} = require('./Reviewer'); // Importar funciones de Reviewer
-
-const cron = require('node-cron'); // Para tareas programadas
+} = require('./utils/Reviewer'); // Importar funciones de Reviewer
 
 const app = express();
 
-// Opcional: Mejorar la seguridad con helmet
+// Seguridad y Logs
 app.use(helmet());
-
-// Opcional: Registrar solicitudes HTTP con morgan
 app.use(morgan('combined'));
 
-// Configuración de CORS más específica con whitelist
+// Configuración de CORS
 const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001']; // Añade aquí otros orígenes si es necesario
 
 app.use(cors({
@@ -59,10 +49,8 @@ app.use((req, res, next) => {
   next();
 });
 
-// Rutas para la gestión de usuarios
+// Rutas
 app.use('/api/users', userRoutes);
-
-// Rutas para la gestión de jugadores
 app.use('/api/chess_players', chessPlayerRoutes); // Nueva ruta para jugadores
 
 // Endpoint para obtener información detallada del jugador usando el ID FIDE
@@ -83,46 +71,14 @@ app.get('/api/chess_players/details', async (req, res) => {
   }
 });
 
-// Middleware para manejo de errores (Opcional)
+// Manejo de errores
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Algo salió mal!');
 });
 
-// Servidor escuchando en el puerto 5000
+// Servidor escuchando
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, async () => {
+app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
-
-  // Crear la interfaz para la interacción con el usuario
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-
-  // Preguntar al usuario si desea realizar la actualización
-  rl.question('¿Desea realizar la revisión, scraping y actualización del ELO FIDE y valor de mercado? (sí/no): ', async (answer) => {
-    if (['sí', 'si', 'y', 'yes'].includes(answer.toLowerCase())) {
-      try {
-        console.log('Iniciando revisión de capitalización y verificación de jugadores...');
-        await checkAndFixCapitalization();
-        await verifyAndAddMissingPlayers();
-        await removeNonMatchingPlayers(); // Eliminar jugadores obsoletos que no están en Players_list.js
-        console.log('Revisión y verificación de jugadores completada. Iniciando scraping y actualización del ELO FIDE y valor de mercado...');
-        await scrapePlayers();
-        console.log('Scraping inicial de jugadores completado. Iniciando actualización del ELO FIDE y valor de mercado...');
-        await updateAllPlayersEloValor(); // Actualiza ELO y valor utilizando el script Python
-        console.log('Actualización inicial de ELO FIDE y valor de mercado completada.');
-      } catch (error) {
-        console.error('Error al realizar la revisión, scraping inicial o la actualización del ELO FIDE y valor de mercado:', error);
-      }
-    } else {
-      console.log('Actualización cancelada.');
-    }
-
-    // Cerrar la interfaz de readline
-    rl.close();
-  });
-
-  console.log('Configurado el cron job para actualizaciones diarias a las 2 AM.');
 });

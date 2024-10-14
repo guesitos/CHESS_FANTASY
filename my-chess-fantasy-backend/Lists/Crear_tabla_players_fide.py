@@ -1,3 +1,5 @@
+# Lists/Crear_tabla_players_fide.py
+
 import xml.etree.ElementTree as ET
 import mysql.connector
 import os
@@ -11,8 +13,14 @@ from dotenv import load_dotenv
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(levelname)s]: %(message)s')
 logger = logging.getLogger(__name__)
 
+# Determinar la ruta base del proyecto (asumiendo que este script está en la carpeta 'Lists')
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+# Especificar la ruta al archivo .env
+ENV_PATH = os.path.join(BASE_DIR, '.env')
+
 # Cargar las variables de entorno desde el archivo .env
-load_dotenv()
+load_dotenv(dotenv_path=ENV_PATH)
 
 def normalize_string(s):
     import unicodedata
@@ -23,12 +31,13 @@ def normalize_string(s):
 
 def download_and_extract_xml():
     url = 'https://ratings.fide.com/download/players_list_xml.zip'
-    zip_path = 'players_list_xml_foa.zip'
+    zip_path = os.path.join(os.path.dirname(__file__), 'players_list_xml_foa.zip')  # Guardar en 'Lists' o 'scheduler' según corresponda
     xml_filename = 'players_list_xml_foa.xml'
+    xml_path = os.path.join(os.path.dirname(__file__), xml_filename)  # Ruta completa al XML
 
     # Eliminar el archivo XML anterior si existe
-    if os.path.exists(xml_filename):
-        os.remove(xml_filename)
+    if os.path.exists(xml_path):
+        os.remove(xml_path)
         logger.info(f"Archivo anterior '{xml_filename}' eliminado.")
 
     # Descargar el archivo ZIP
@@ -42,7 +51,7 @@ def download_and_extract_xml():
 
         # Extraer el archivo XML del ZIP
         with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-            zip_ref.extract(xml_filename)
+            zip_ref.extract(xml_filename, os.path.dirname(zip_path))
         logger.info(f"Archivo '{xml_filename}' extraído del ZIP.")
 
         # Eliminar el archivo ZIP
@@ -60,7 +69,7 @@ def main():
     # Obtener la configuración de la base de datos desde variables de entorno
     host = os.getenv('DB_CHESS_HOST', 'localhost')
     user = os.getenv('DB_CHESS_USER', 'chess_user')
-    password = os.getenv('DB_PASSWORD')
+    password = os.getenv('DB_CHESS_PASSWORD')
     database = os.getenv('DB_CHESS_NAME', 'chess_players_db')
     port = int(os.getenv('DB_CHESS_PORT', 3306))
 
@@ -108,9 +117,11 @@ def main():
     players_data = []
     chunk_size = 1000
 
+    xml_path = os.path.join(os.path.dirname(__file__), 'players_list_xml_foa.xml')
+
     try:
         logger.info("Iniciando el procesamiento del archivo XML...")
-        context = ET.iterparse('players_list_xml_foa.xml', events=('end',))
+        context = ET.iterparse(xml_path, events=('end',))
         for event, elem in context:
             if elem.tag == 'player':
                 fideid_text = elem.find('fideid').text
@@ -161,7 +172,7 @@ def main():
                 elem.clear()  # Liberar memoria
         logger.info("Procesamiento del archivo XML completado.")
     except FileNotFoundError:
-        logger.error("El archivo 'players_list_xml_foa.xml' no se encontró.")
+        logger.error(f"El archivo '{xml_path}' no se encontró.")
         sys.exit(1)
     except ET.ParseError as e:
         logger.error(f"Error al parsear el archivo XML: {e}")
@@ -199,3 +210,4 @@ def insert_data(cursor, data):
 
 if __name__ == '__main__':
     main()
+    

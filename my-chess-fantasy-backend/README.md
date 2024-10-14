@@ -55,7 +55,12 @@ Backend que gestiona datos de usuarios y jugadores de ajedrez, incluyendo la pro
     DB_CHESS_PORT=3306
 ```    
 
-### 4. Ejecuta el servidor principal del backend:
+### 4. Actualiza las bases de datos de jugadores:
+```bash
+    node scheduler/scheduler.js
+```    
+
+### 5. Ejecuta el servidor principal del backend:
 ```bash
     node server.js
 ```    
@@ -71,7 +76,7 @@ GET /api/chess_players: Obtiene una lista de todos los jugadores.
 GET /api/chess_players/search: Busca un jugador por nombre y apellido. Requiere firstName y lastName como parámetros de consulta.
 GET /api/chess_players/details: Obtiene detalles de un jugador usando el ID FIDE. Requiere fideId como parámetro de consulta.
 
-# Scripts Disponibles y estructura
+# Scripts Disponibles y estructura (por actualizar)
 server.js: Archivo principal que configura y ejecuta el servidor.
 scheduler.js: Programa tareas automáticas para el scraping de jugadores y la actualización de ELO FIDE.
 controllers/:
