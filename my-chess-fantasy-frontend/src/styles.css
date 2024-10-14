@@ -12,10 +12,12 @@ nav {
   
   nav ul {
     list-style: none;
-    display: inline;
+    display: flex;
+    gap: 1rem; /* Añade espacio entre elementos en lugar de margin-right en li */
     margin-left: 2rem;
     padding: 0;
   }
+
   
   nav ul li {
     display: inline;

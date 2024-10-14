@@ -1,80 +1,131 @@
-// src/pages/Registro.js
-import React, { useState } from 'react';
+// src/pages/Registro/Registro.js
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 import './Registro.css';
 import logo from '../assets/logo.png';
 
 function Registro() {
   const navigate = useNavigate();
+  const { register: authRegister, login: authLogin } = useContext(AuthContext);
+
   const [activeForm, setActiveForm] = useState(null);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+
+  // Estados para Registro
+  const [regEmail, setRegEmail] = useState('');
+  const [regPassword, setRegPassword] = useState('');
+  const [regConfirmPassword, setRegConfirmPassword] = useState('');
+
+  // Estados para Login
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+
   const [errorMessage, setErrorMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleCreateAccountClick = () => {
+    setErrorMessage(''); // Limpiar cualquier error anterior
     setActiveForm(activeForm === 'register' ? null : 'register');
   };
 
   const handleLoginClick = () => {
+    setErrorMessage(''); // Limpiar cualquier error anterior
     setActiveForm(activeForm === 'login' ? null : 'login');
   };
 
-  // Validación del registro de cuenta
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
-    console.log("Intentando registrar el usuario con email:", email);
-    console.log("API URL (registro):", process.env.REACT_APP_API_URL);
 
-    // Validar si la URL de la API está definida
-    if (!process.env.REACT_APP_API_URL) {
-      setErrorMessage('La URL de la API no está definida. Verifique el archivo .env.');
+    const trimmedEmail = regEmail.trim();
+    const trimmedPassword = regPassword.trim();
+    const trimmedConfirmPassword = regConfirmPassword.trim();
+
+    console.log('Registro - Email:', trimmedEmail);
+    console.log('Registro - Password:', trimmedPassword);
+    console.log('Registro - Confirm Password:', trimmedConfirmPassword);
+
+    // Validaciones iniciales
+    if (!trimmedEmail || !trimmedPassword || !trimmedConfirmPassword) {
+      setErrorMessage('Todos los campos son requeridos');
+      console.log('Error: Campos requeridos no completados');
       return;
     }
 
-    // Validar si las contraseñas coinciden
-    if (password !== confirmPassword) {
+    if (trimmedPassword !== trimmedConfirmPassword) {
       setErrorMessage('Las contraseñas no coinciden');
+      console.log('Error: Las contraseñas no coinciden');
+      return;
+    }
+
+    if (!process.env.REACT_APP_API_URL) {
+      setErrorMessage('La URL de la API no está definida. Verifique el archivo .env.');
+      console.log('Error: La URL de la API no está definida');
       return;
     }
 
     try {
       setIsLoading(true);
-      console.log("Enviando solicitud a:", `${process.env.REACT_APP_API_URL}/users/register`);
       const response = await fetch(`${process.env.REACT_APP_API_URL}/users/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password, confirmPassword }),
+        body: JSON.stringify({
+          email: trimmedEmail,
+          password: trimmedPassword,
+        }), // No enviar confirmPassword
       });
 
-      console.log("Respuesta del servidor:", response);
       if (!response.ok) {
-        console.error("Código de estado del error (registro):", response.status);
         const data = await response.json();
         setErrorMessage(data.message || 'Error desconocido');
+        console.log('Error en el registro:', data.message || 'Error desconocido');
         return;
       }
 
-      const data = await response.json();
-      navigate('/home'); // Redirige a la página principal solo si es exitoso
+      const data = await response.json(); // Asumiendo que el backend devuelve el usuario y/o token
+      console.log('Registro exitoso:', data);
+
+      // Verificar la estructura de la respuesta
+      if (data.user && data.token) {
+        // Llamar a la función de registro del AuthContext
+        authRegister(data.user, data.token); // Asegúrate de que 'data.user' y 'data.token' existen
+
+        // Manejar 'isFirstTimeUser' si es necesario
+        localStorage.setItem('isFirstTimeUser', 'true');
+
+        // Limpia los campos
+        setRegEmail('');
+        setRegPassword('');
+        setRegConfirmPassword('');
+
+        navigate('/home');
+      } else {
+        setErrorMessage('Respuesta del servidor no válida.');
+        console.log('Error: Respuesta del servidor no contiene user o token.');
+      }
     } catch (error) {
-      console.error("Error en la conexión con el servidor (registro):", error);
       setErrorMessage(`Error en la conexión con el servidor: ${error.message}`);
+      console.log('Error en la conexión:', error.message);
     } finally {
       setIsLoading(false);
     }
   };
 
-  // Validación del login
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
-    console.log("Enviando solicitud a:", `${process.env.REACT_APP_API_URL}/users/login`);
-    console.log("API URL (login):", process.env.REACT_APP_API_URL);
 
-    // Validar si la URL de la API está definida
+    const trimmedLoginEmail = loginEmail.trim();
+    const trimmedLoginPassword = loginPassword.trim();
+
+    console.log('Login - Email:', trimmedLoginEmail);
+    console.log('Login - Password:', trimmedLoginPassword);
+
+    if (!trimmedLoginEmail || !trimmedLoginPassword) {
+      setErrorMessage('Todos los campos son requeridos');
+      return;
+    }
+
     if (!process.env.REACT_APP_API_URL) {
       setErrorMessage('La URL de la API no está definida. Verifique el archivo .env.');
       return;
@@ -87,22 +138,39 @@ function Registro() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email: trimmedLoginEmail, password: trimmedLoginPassword }),
       });
 
-      console.log("Respuesta del servidor:", response);
       if (!response.ok) {
-        console.error("Código de estado del error (login):", response.status);
         const data = await response.json();
         setErrorMessage(data.message || 'Error desconocido');
+        console.log('Error en el login:', data.message || 'Error desconocido');
         return;
       }
 
-      const data = await response.json();
-      navigate('/home');
+      const data = await response.json(); // Asumiendo que el backend devuelve el usuario y/o token
+      console.log('Login exitoso:', data);
+
+      // Verificar la estructura de la respuesta
+      if (data.user && data.token) {
+        // Llamar a la función de login del AuthContext
+        authLogin(data.user, data.token); // Asegúrate de que 'data.user' y 'data.token' existen
+
+        // Verificar si es la primera vez que el usuario inicia sesión
+        const isFirstTimeUser = localStorage.getItem('isFirstTimeUser');
+        if (isFirstTimeUser) {
+          localStorage.removeItem('isFirstTimeUser'); // Limpiar el flag
+          navigate('/home'); // Redirige a Home
+        } else {
+          navigate('/perfil'); // Redirige a PerfilUsuario
+        }
+      } else {
+        setErrorMessage('Respuesta del servidor no válida.');
+        console.log('Error: Respuesta del servidor no contiene user o token.');
+      }
     } catch (error) {
-      console.error("Error en la conexión con el servidor (login):", error);
       setErrorMessage(`Error en la conexión con el servidor: ${error.message}`);
+      console.log('Error en la conexión:', error.message);
     } finally {
       setIsLoading(false);
     }
@@ -114,12 +182,13 @@ function Registro() {
       <div className="content">
         <h2>GALICHESS FANTASY</h2>
 
-        {/* Botón Crear Cuenta */}
-        <button className={`toggle-btn ${activeForm === 'register' ? 'active' : ''}`} onClick={handleCreateAccountClick}>
+        <button
+          className={`toggle-btn ${activeForm === 'register' ? 'active' : ''}`}
+          onClick={handleCreateAccountClick}
+        >
           Crear Cuenta
         </button>
 
-        {/* Formulario de Crear Cuenta */}
         {activeForm === 'register' && (
           <form onSubmit={handleRegisterSubmit} className="form-container">
             <input
@@ -127,36 +196,39 @@ function Registro() {
               placeholder="Email"
               required
               className="input-field"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={regEmail}
+              onChange={(e) => setRegEmail(e.target.value)}
             />
             <input
               type="password"
               placeholder="Contraseña"
               required
               className="input-field"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={regPassword}
+              onChange={(e) => setRegPassword(e.target.value)}
             />
             <input
               type="password"
               placeholder="Confirmar contraseña"
               required
               className="input-field"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
+              value={regConfirmPassword}
+              onChange={(e) => setRegConfirmPassword(e.target.value)}
             />
             {errorMessage && <p className="error-message">{errorMessage}</p>}
-            <button type="submit" className="submit-btn" disabled={isLoading}>{isLoading ? 'Registrando...' : 'Regístrate'}</button>
+            <button type="submit" className="submit-btn" disabled={isLoading}>
+              {isLoading ? 'Registrando...' : 'Regístrate'}
+            </button>
           </form>
         )}
 
-        {/* Botón Ya tengo cuenta */}
-        <button className={`toggle-btn ${activeForm === 'login' ? 'active' : 'inactive'}`} onClick={handleLoginClick}>
+        <button
+          className={`toggle-btn ${activeForm === 'login' ? 'active' : 'inactive'}`}
+          onClick={handleLoginClick}
+        >
           Ya tengo cuenta
         </button>
 
-        {/* Formulario de Login */}
         {activeForm === 'login' && (
           <form onSubmit={handleLoginSubmit} className="form-container">
             <input
@@ -164,19 +236,21 @@ function Registro() {
               placeholder="Email"
               required
               className="input-field"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={loginEmail}
+              onChange={(e) => setLoginEmail(e.target.value)}
             />
             <input
               type="password"
               placeholder="Contraseña"
               required
               className="input-field"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={loginPassword}
+              onChange={(e) => setLoginPassword(e.target.value)}
             />
             {errorMessage && <p className="error-message">{errorMessage}</p>}
-            <button type="submit" className="submit-btn" disabled={isLoading}>{isLoading ? 'Iniciando...' : 'Iniciar Sesión'}</button>
+            <button type="submit" className="submit-btn" disabled={isLoading}>
+              {isLoading ? 'Iniciando...' : 'Iniciar Sesión'}
+            </button>
           </form>
         )}
       </div>

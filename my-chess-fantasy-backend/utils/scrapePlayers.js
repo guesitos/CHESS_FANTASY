@@ -1,10 +1,12 @@
-// scrapePlayers.js
+// utils/scrapePlayers.js
 
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 const winston = require('winston');
-const { exec } = require('child_process'); // Importamos 'exec' para ejecutar el script de Python
+const { spawn } = require('child_process'); // Importamos 'spawn' para ejecutar el script de Python
 const mysql = require('mysql2/promise');
+const path = require('path');
+const { poolPlayers } = require('../db'); // Importar poolPlayers desde db/index.js
 require('dotenv').config(); // Cargar variables de entorno
 
 // Configurar winston para logs detallados
@@ -33,15 +35,16 @@ function normalizeString(str) {
     .trim();
 }
 
-const { spawn } = require('child_process');
-
 // Función para ejecutar el script de Python
 function runPythonScript() {
   return new Promise((resolve, reject) => {
     logger.info('Ejecutando el script de Python para procesar el XML...');
     const env = { ...process.env }; // Pasamos las variables de entorno
 
-    const pythonProcess = spawn('python3', ['./Lists/Crear_tabla_players_fide.py'], { env });
+    // Construir la ruta absoluta al script de Python
+    const pythonScriptPath = path.resolve(__dirname, '../Lists/Crear_tabla_players_fide.py');
+    
+    const pythonProcess = spawn('python3', [pythonScriptPath], { env });
 
     // Captura de salida estándar
     pythonProcess.stdout.on('data', (data) => {
@@ -71,6 +74,34 @@ function runPythonScript() {
   });
 }
 
+// Función para buscar el FIDE ID en la tabla 'fide_players'
+async function searchInFideList(connection, player, fullName) {
+  // La tabla 'fide_players' ya debería estar actualizada por el script de Python
+
+  // Normalizar el nombre del jugador
+  const playerFirstNameNormalized = normalizeString(player.first_name);
+  const playerLastNameNormalized = normalizeString(player.last_name);
+
+  // Buscar en la tabla fide_players
+  const [rows] = await connection.execute(
+    'SELECT fide_id FROM fide_players WHERE first_name_normalized = ? AND last_name_normalized = ?',
+    [playerFirstNameNormalized, playerLastNameNormalized]
+  );
+
+  if (rows.length > 0) {
+    const fideId = rows[0].fide_id;
+    logger.info(`FIDE ID encontrado en la lista FIDE para ${fullName}: ${fideId}`);
+
+    // Actualizar el fide_id en la tabla players
+    await connection.execute(
+      'UPDATE players SET fide_id = ? WHERE license_number = ?',
+      [fideId, player.license_number]
+    );
+    logger.info(`FIDE ID para ${fullName} actualizado correctamente en la base de datos.`);
+  } else {
+    logger.warn(`No se encontró FIDE ID para ${fullName} en la lista FIDE.`);
+  }
+}
 
 // Función principal
 async function scrapePlayers() {
@@ -158,35 +189,6 @@ async function scrapePlayers() {
     logger.info('Proceso de búsqueda de FIDE IDs completado.');
   } catch (error) {
     logger.error('Error durante el proceso de búsqueda de FIDE IDs: ' + error.message);
-  }
-}
-
-// Función para buscar el FIDE ID en la tabla 'fide_players'
-async function searchInFideList(connection, player, fullName) {
-  // La tabla 'fide_players' ya debería estar actualizada por el script de Python
-
-  // Normalizar el nombre del jugador
-  const playerFirstNameNormalized = normalizeString(player.first_name);
-  const playerLastNameNormalized = normalizeString(player.last_name);
-
-  // Buscar en la tabla fide_players
-  const [rows] = await connection.execute(
-    'SELECT fide_id FROM fide_players WHERE first_name_normalized = ? AND last_name_normalized = ?',
-    [playerFirstNameNormalized, playerLastNameNormalized]
-  );
-
-  if (rows.length > 0) {
-    const fideId = rows[0].fide_id;
-    logger.info(`FIDE ID encontrado en la lista FIDE para ${fullName}: ${fideId}`);
-
-    // Actualizar el fide_id en la tabla players
-    await connection.execute(
-      'UPDATE players SET fide_id = ? WHERE license_number = ?',
-      [fideId, player.license_number]
-    );
-    logger.info(`FIDE ID para ${fullName} actualizado correctamente en la base de datos.`);
-  } else {
-    logger.warn(`No se encontró FIDE ID para ${fullName} en la lista FIDE.`);
   }
 }
 

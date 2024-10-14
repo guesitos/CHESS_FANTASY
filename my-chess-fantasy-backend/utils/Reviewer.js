@@ -1,8 +1,8 @@
 // Reviewer.js
 
-const { poolPlayers } = require('./db');
+const { poolPlayers } = require('../db');
 const winston = require('winston');
-const playersList = require('./Lists/Players_list');
+const playersList = require('../Lists/Players_list');
 
 // Configurar winston para logs detallados
 const logger = winston.createLogger({

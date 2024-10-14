@@ -1,0 +1,31 @@
+/* src/components/Navbar.css */
+
+/* Asegúrate de que los estilos sean consistentes */
+.ml-auto {
+    margin-left: auto !important;
+  }
+  
+  /* Estilos personalizados para Navbar */
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #ffffff !important;
+  }
+  
+  .nav-link:hover {
+    color: #dddddd !important;
+  }
+  
+  .button-outline-light {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+  
+  .button-outline-light:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
