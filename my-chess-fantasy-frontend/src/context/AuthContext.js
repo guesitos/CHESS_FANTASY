@@ -1,7 +1,7 @@
 // src/context/AuthContext.js
 import React, { createContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { jwtDecode } from 'jwt-decode'; // Importa jwtDecode como exportación con nombre
+import { jwtDecode } from 'jwt-decode'; // Importación nombrada
 
 export const AuthContext = createContext();
 
@@ -135,6 +135,13 @@ const AuthProvider = ({ children }) => {
     console.log('Usuario desconectado.');
   };
 
+  // Nueva función para actualizar el usuario
+  const updateUser = (updatedUser) => {
+    setUser(updatedUser);
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+    console.log('Usuario actualizado en AuthContext:', updatedUser);
+  };
+
   return (
     <AuthContext.Provider value={{ 
       user, 
@@ -142,6 +149,7 @@ const AuthProvider = ({ children }) => {
       register, 
       login, 
       logout, 
+      updateUser, // Añade updateUser al contexto
       loading, 
       authError 
     }}>

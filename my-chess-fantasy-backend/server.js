@@ -43,7 +43,7 @@ app.use(cors({
 // Middleware para parsear JSON
 app.use(express.json());
 
-// Log de solicitudes
+// Log de solicitudes (redundante si usas morgan, pero puede ser útil para mensajes personalizados)
 app.use((req, res, next) => {
   console.log(`Solicitud recibida: ${req.method} ${req.url}`);
   next();
@@ -71,9 +71,23 @@ app.get('/api/chess_players/details', async (req, res) => {
   }
 });
 
+// Ruta para manejar GET / y evitar el error 404
+app.get('/', (req, res) => {
+  res.status(200).send('¡Servidor backend de Chess Fantasy está funcionando!');
+});
+
+// Manejo de rutas no encontradas
+app.use((req, res, next) => {
+  res.status(404).json({ message: 'Ruta no encontrada.' });
+});
+
 // Manejo de errores
 app.use((err, req, res, next) => {
   console.error(err.stack);
+  // Si el error es de CORS, manejarlo de manera diferente
+  if (err instanceof Error && err.message.includes('CORS')) {
+    return res.status(403).json({ message: err.message });
+  }
   res.status(500).send('Algo salió mal!');
 });
 
