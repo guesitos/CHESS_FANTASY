@@ -1,7 +1,7 @@
 // src/App.js
 
 import React, { useContext } from 'react';
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom'; // Importa useLocation
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import AuthProvider, { AuthContext } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -15,6 +15,7 @@ import Estadisticas from './pages/Estadisticas';
 import Comunidad from './pages/Comunidad';
 import Soporte from './pages/Soporte';
 import Calendario from './pages/Calendario';
+import { PlayersProvider } from './context/PlayersContext';
 
 // Componente para rutas protegidas
 const PrivateRoute = ({ children }) => {
@@ -33,97 +34,99 @@ function App() {
 
   return (
     <AuthProvider>
-      {/* Renderiza la Navbar solo si shouldHideNavbar es falso */}
-      {!shouldHideNavbar && <Navbar />}
-      <Routes>
-        {/* Ruta pública: Registro */}
-        <Route path="/" element={<Registro />} />
-        
-        {/* Rutas protegidas */}
-        <Route
-          path="/home"
-          element={
-            <PrivateRoute>
-              <Home />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/clasificacion"
-          element={
-            <PrivateRoute>
-              <Clasificacion />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/mercado"
-          element={
-            <PrivateRoute>
-              <Mercado />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/jugadores"
-          element={
-            <PrivateRoute>
-              <Jugadores />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/equipo"
-          element={
-            <PrivateRoute>
-              <MiEquipo />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/perfil"
-          element={
-            <PrivateRoute>
-              <PerfilUsuario />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/estadisticas"
-          element={
-            <PrivateRoute>
-              <Estadisticas />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/comunidad"
-          element={
-            <PrivateRoute>
-              <Comunidad />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/soporte"
-          element={
-            <PrivateRoute>
-              <Soporte />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/calendario"
-          element={
-            <PrivateRoute>
-              <Calendario />
-            </PrivateRoute>
-          }
-        />
-        
-        {/* Ruta por defecto: Redirige a Registro */}
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+      <PlayersProvider> {/* Envolviendo con PlayersProvider */}
+        {/* Renderiza la Navbar solo si shouldHideNavbar es falso */}
+        {!shouldHideNavbar && <Navbar />}
+        <Routes>
+          {/* Ruta pública: Registro */}
+          <Route path="/" element={<Registro />} />
+          
+          {/* Rutas protegidas */}
+          <Route
+            path="/home"
+            element={
+              <PrivateRoute>
+                <Home />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/clasificacion"
+            element={
+              <PrivateRoute>
+                <Clasificacion />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/mercado"
+            element={
+              <PrivateRoute>
+                <Mercado />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/jugadores"
+            element={
+              <PrivateRoute>
+                <Jugadores />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/equipo"
+            element={
+              <PrivateRoute>
+                <MiEquipo />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/perfil"
+            element={
+              <PrivateRoute>
+                <PerfilUsuario />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/estadisticas"
+            element={
+              <PrivateRoute>
+                <Estadisticas />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/comunidad"
+            element={
+              <PrivateRoute>
+                <Comunidad />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/soporte"
+            element={
+              <PrivateRoute>
+                <Soporte />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/calendario"
+            element={
+              <PrivateRoute>
+                <Calendario />
+              </PrivateRoute>
+            }
+          />
+          
+          {/* Ruta por defecto: Redirige a Registro */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </PlayersProvider>
     </AuthProvider>
   );
 }
