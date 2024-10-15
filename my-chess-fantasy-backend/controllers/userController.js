@@ -9,12 +9,10 @@ require('dotenv').config(); // Cargar variables de entorno
 const registerUser = async (req, res) => {
   try {
     console.log('Datos recibidos para el registro:', req.body);
-    const { email, password } = req.body;
-
-    console.log('Datos recibidos para el registro:', { email, password });
+    const { email, password, username, teamName, firstName, lastName } = req.body;
 
     // Verificar que todos los campos están definidos
-    if (!email || !password) {
+    if (!email || !password || !username || !teamName || !firstName || !lastName) {
       return res.status(400).json({ message: 'Todos los campos son requeridos' });
     }
 
@@ -26,11 +24,22 @@ const registerUser = async (req, res) => {
       return res.status(400).json({ message: 'El correo ya está registrado.' });
     }
 
+    // Verificar si el nombre de usuario ya está registrado
+    const [existingUsernames] = await poolUsers.query('SELECT * FROM users WHERE username = ?', [username]);
+
+    if (existingUsernames.length > 0) {
+      console.error('El nombre de usuario ya está en uso:', username);
+      return res.status(400).json({ message: 'El nombre de usuario ya está en uso.' });
+    }
+
     // Encriptar la contraseña antes de guardarla
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Insertar usuario en la base de datos
-    const [result] = await poolUsers.query('INSERT INTO users (email, password) VALUES (?, ?)', [email, hashedPassword]);
+    // Insertar usuario en la base de datos con los nuevos campos
+    const [result] = await poolUsers.query(
+      'INSERT INTO users (email, password, username, team_name, first_name, last_name) VALUES (?, ?, ?, ?, ?, ?)',
+      [email, hashedPassword, username, teamName, firstName, lastName]
+    );
 
     const userId = result.insertId; // Obtener el ID del usuario insertado
     console.log('Usuario registrado con éxito:', email);
@@ -38,12 +47,15 @@ const registerUser = async (req, res) => {
     // Generar JWT
     const token = jwt.sign({ id: userId, email }, process.env.JWT_SECRET, { expiresIn: '1d' });
 
-    // Responder con user y token
+    // Responder con user y token, incluyendo los nuevos campos
     res.status(201).json({
       user: {
         id: userId,
         email,
-        // Puedes añadir otros campos del usuario si es necesario
+        username,
+        teamName,
+        firstName,
+        lastName,
       },
       token,
     });
@@ -54,7 +66,7 @@ const registerUser = async (req, res) => {
   }
 };
 
-// Función para login de usuarios
+// Función para login de usuarios (sin cambios necesarios)
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -86,12 +98,15 @@ const loginUser = async (req, res) => {
     // Si todo es correcto, generar JWT
     const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1d' });
 
-    // Responder con user y token
+    // Responder con user y token, incluyendo los nuevos campos
     res.status(200).json({
       user: {
         id: user.id,
         email: user.email,
-        // Puedes añadir otros campos del usuario si es necesario
+        username: user.username,
+        teamName: user.team_name,
+        firstName: user.first_name,
+        lastName: user.last_name,
       },
       token,
     });

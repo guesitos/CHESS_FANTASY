@@ -1,0 +1,76 @@
+/* src/pages/PerfilUsuario.css */
+
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1f1c2c;
+    padding: 2rem;
+  }
+  
+  .perfil-card {
+    background: #2b2a3d;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    padding: 2rem;
+  }
+  
+  .perfil-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .perfil-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .perfil-info {
+    line-height: 1.6;
+  }
+  
+  .perfil-info label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .perfil-info input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+  }
+  
+  .perfil-actions {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .btn-editar, .btn-cerrar-sesion, .btn-guardar, .btn-cancelar {
+    background-color: #f0a500;
+    border: none;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-editar:hover, .btn-cerrar-sesion:hover, .btn-guardar:hover, .btn-cancelar:hover {
+    background-color: #e08900;
+  }
+  
+  .btn-cancelar {
+    background-color: #d9534f;
+  }
+  
+  .btn-cancelar:hover {
+    background-color: #c9302c;
+  }

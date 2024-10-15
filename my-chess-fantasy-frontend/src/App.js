@@ -1,7 +1,7 @@
 // src/App.js
 
 import React, { useContext } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'; // Importa useLocation
 import AuthProvider, { AuthContext } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -23,8 +23,18 @@ const PrivateRoute = ({ children }) => {
 };
 
 function App() {
+  const location = useLocation(); // Obtén la ubicación actual
+
+  // Define las rutas donde NO se mostrará la Navbar
+  const hideNavbarRoutes = ['/']; // '/' es la ruta de Registro
+
+  // Determina si la Navbar debe estar oculta en la ruta actual
+  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
+
   return (
     <AuthProvider>
+      {/* Renderiza la Navbar solo si shouldHideNavbar es falso */}
+      {!shouldHideNavbar && <Navbar />}
       <Routes>
         {/* Ruta pública: Registro */}
         <Route path="/" element={<Registro />} />
@@ -34,7 +44,6 @@ function App() {
           path="/home"
           element={
             <PrivateRoute>
-              <Navbar />
               <Home />
             </PrivateRoute>
           }
@@ -43,7 +52,6 @@ function App() {
           path="/clasificacion"
           element={
             <PrivateRoute>
-              <Navbar />
               <Clasificacion />
             </PrivateRoute>
           }
@@ -52,7 +60,6 @@ function App() {
           path="/mercado"
           element={
             <PrivateRoute>
-              <Navbar />
               <Mercado />
             </PrivateRoute>
           }
@@ -61,7 +68,6 @@ function App() {
           path="/jugadores"
           element={
             <PrivateRoute>
-              <Navbar />
               <Jugadores />
             </PrivateRoute>
           }
@@ -70,7 +76,6 @@ function App() {
           path="/equipo"
           element={
             <PrivateRoute>
-              <Navbar />
               <MiEquipo />
             </PrivateRoute>
           }
@@ -79,7 +84,6 @@ function App() {
           path="/perfil"
           element={
             <PrivateRoute>
-              <Navbar />
               <PerfilUsuario />
             </PrivateRoute>
           }
@@ -88,7 +92,6 @@ function App() {
           path="/estadisticas"
           element={
             <PrivateRoute>
-              <Navbar />
               <Estadisticas />
             </PrivateRoute>
           }
@@ -97,7 +100,6 @@ function App() {
           path="/comunidad"
           element={
             <PrivateRoute>
-              <Navbar />
               <Comunidad />
             </PrivateRoute>
           }
@@ -106,7 +108,6 @@ function App() {
           path="/soporte"
           element={
             <PrivateRoute>
-              <Navbar />
               <Soporte />
             </PrivateRoute>
           }
@@ -115,7 +116,6 @@ function App() {
           path="/calendario"
           element={
             <PrivateRoute>
-              <Navbar />
               <Calendario />
             </PrivateRoute>
           }
