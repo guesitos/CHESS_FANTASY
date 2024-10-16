@@ -1,144 +1,78 @@
-/* src/pages/MiEquipo.css */
+/* src/pages/MiEquipo/MiEquipo.css */
 
-.miequipo-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .budget-info {
-    margin-bottom: 20px;
-  }
-  
-  .positions-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .position-button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  .position-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .position-button.active {
-    background-color: #28a745;
-  }
-  
-  .players-panel {
-    margin-bottom: 30px;
-  }
-  
-  .players-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .player-card {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-  }
-  
-  .player-image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-  .player-info {
-    margin-top: 10px;
-  }
-  
-  .player-info h4 {
-    margin-bottom: 5px;
-  }
-  
-  .player-info p {
-    margin: 5px 0;
-  }
-  
-  .player-info button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #28a745;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  .player-info button:hover {
-    background-color: #218838;
-  }
-  
-  .current-team {
-    margin-bottom: 30px;
-  }
-  
-  .team-positions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .team-position {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 15px;
-    width: 300px;
-  }
-  
-  .team-player {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .player-image-small {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  
-  .team-player button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #dc3545;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  .team-player button:hover {
-    background-color: #c82333;
-  }
-  
-  .save-team-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #ffc107;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  .save-team-button:hover {
-    background-color: #e0a800;
-  }  
+.mi-equipo-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-button,
+.reset-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.division-section {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.category label {
+  width: 150px;
+}
+
+.category select {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.remove-button {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.selected-team {
+  margin-top: 30px;
+}
+
+.selected-team ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.selected-team li {
+  padding: 5px 0;
+}
   

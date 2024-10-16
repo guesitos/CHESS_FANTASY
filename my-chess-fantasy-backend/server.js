@@ -6,6 +6,7 @@ const morgan = require('morgan'); // Opcional: Para registro de solicitudes
 const helmet = require('helmet'); // Opcional: Para mejorar la seguridad
 const userRoutes = require('./routes/userRoutes');
 const chessPlayerRoutes = require('./routes/chessPlayerRoutes'); // Importar las rutas de jugadores
+const teamRoutes = require('./routes/teamRoutes'); // Importar las rutas de equipos
 const { poolUsers, poolPlayers } = require('./db'); // Importar las conexiones desde db/index.js
 require('dotenv').config();  // Cargar variables de entorno
 
@@ -51,7 +52,8 @@ app.use((req, res, next) => {
 
 // Rutas
 app.use('/api/users', userRoutes);
-app.use('/api/chess_players', chessPlayerRoutes); // Nueva ruta para jugadores
+app.use('/api/chess_players', chessPlayerRoutes); // Ruta para jugadores
+app.use('/api/teams', teamRoutes); // Nueva ruta para equipos
 
 // Endpoint para obtener información detallada del jugador usando el ID FIDE
 app.get('/api/chess_players/details', async (req, res) => {
