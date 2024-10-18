@@ -272,6 +272,34 @@ const getPlayerValor = (fideId) => {
   });
 };
 
+// Función para actualizar el valor de los jugadores Notrated
+const setNotRatedPlayersValorToZero = async () => {
+  let connection;
+  try {
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para actualizar valor de jugadores Notrated');
+
+    // Verifica primero si existen jugadores NotRated
+    const [notRatedPlayers] = await connection.query(
+      "SELECT COUNT(*) as count FROM players WHERE elo_fide = 'Notrated'"
+    );
+
+    if (notRatedPlayers[0].count > 0) {
+      const [result] = await connection.query(
+        "UPDATE players SET valor = 0 WHERE elo_fide = 'Notrated'"
+      );
+      console.log(`Se han actualizado ${result.affectedRows} jugadores NotRated a valor 0.`);
+    } else {
+      console.log('No hay jugadores con elo_fide "Notrated" para actualizar.');
+    }
+  } catch (error) {
+    console.error('Error al actualizar valor de jugadores NotRated:', error);
+  } finally {
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de actualizar valor de jugadores Notrated');
+  }
+};
+
 // Función para actualizar el ELO FIDE y valor de mercado de todos los jugadores
 const updateAllPlayersEloValor = async () => {
   let connection;
@@ -292,6 +320,12 @@ const updateAllPlayersEloValor = async () => {
       // Obtener el ELO FIDE
       const eloFide = await getPlayerElo(fideId);
       
+      // Actualizar los jugadores con ELO 'NotRated' a valor 0
+      if (eloFide === 'Notrated') {
+        await setNotRatedPlayersValorToZero();
+        console.log(`Jugadores con elo_fide "Notrated" actualizados a valor 0.`);
+      }
+
       // Obtener el valor de mercado utilizando el script Python
       const valor = await getPlayerValor(fideId);
       
@@ -337,26 +371,6 @@ async function fetchAllPlayers() {
     console.log('Conexión a la base de datos liberada después de obtener jugadores');
   }
 }
-
-// **Nueva función** para actualizar el valor a 0 para jugadores con EloFIDE 'Not Rated'
-const setNotRatedPlayersValorToZero = async () => {
-  let connection;
-  try {
-    connection = await poolPlayers.getConnection();
-    console.log('Conexión a la base de datos obtenida para actualizar valor de jugadores NotRated');
-
-    const [result] = await connection.query(
-      "UPDATE players SET valor = 0 WHERE elo_fide = 'Not Rated' OR elo_fide IS NULL OR elo_fide = ''"
-    );
-
-    console.log(`Se han actualizado ${result.affectedRows} jugadores NotRated a valor 0.`);
-  } catch (error) {
-    console.error('Error al actualizar valor de jugadores NotRated:', error);
-  } finally {
-    if (connection) connection.release();
-    console.log('Conexión a la base de datos liberada después de actualizar valor de jugadores NotRated');
-  }
-};
 
 // Exportar las funciones del controlador
 module.exports = {

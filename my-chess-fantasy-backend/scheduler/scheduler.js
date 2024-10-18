@@ -1,9 +1,11 @@
+// scheduler/scheduler.js
+
 const cron = require('node-cron');
 const scrapePlayers = require('../utils/scrapePlayers'); // Asegúrate de que la ruta es correcta
 const { 
   updateAllPlayersEloValor, 
   fetchProblematicPlayers,
-  setNotRatedPlayersValorToZero // Importamos la nueva función
+  setNotRatedPlayersValorToZero // Importar la función para actualizar jugadores 'Notrated'
 } = require('../controllers/chessPlayerController');
 const { 
   checkAndFixCapitalization, 
@@ -67,7 +69,7 @@ async function runInitialTasks() {
     await updateAllPlayersEloValor();
     console.log('Actualización inicial de ELO FIDE y valor de mercado completada.');
 
-    // Establecer valor 0 a los jugadores NotRated
+    // Establecer el valor de 0 para los jugadores con elo_fide 'Notrated'
     await setNotRatedPlayersValorToZero();
     console.log('Valor de jugadores NotRated establecido a 0.');
 
@@ -88,7 +90,7 @@ function scheduleTasks() {
       await updateAllPlayersEloValor();
       console.log('Actualización diaria completada.');
 
-      // Establecer valor 0 a los jugadores NotRated
+      // Establecer el valor de 0 para los jugadores con elo_fide 'Notrated'
       await setNotRatedPlayersValorToZero();
       console.log('Valor de jugadores NotRated establecido a 0.');
 
@@ -108,7 +110,7 @@ function scheduleTasks() {
       await updateAllPlayersEloValor();
       console.log('Scraping y actualización mensual completada.');
 
-      // Establecer valor 0 a los jugadores NotRated
+      // Establecer el valor de 0 para los jugadores con elo_fide 'Notrated'
       await setNotRatedPlayersValorToZero();
       console.log('Valor de jugadores NotRated establecido a 0.');
 
