@@ -26,7 +26,7 @@ function Jugadores() {
     showAdvancedSearch,
     toggleAdvancedSearch,
     currentPage,
-    setCurrentPage,
+    //setCurrentPage,
     totalPages,
     clubs,
     tableros,
@@ -116,6 +116,7 @@ function Jugadores() {
               >
                 <option value="">Todas</option>
                 <option value="División de Honor">División de Honor</option>
+                <option value="Preferente">Preferente</option>
                 <option value="Primera División">Primera División</option>
                 <option value="Segunda División">Segunda División</option>
               </Form.Control>
@@ -149,6 +150,7 @@ function Jugadores() {
                   <img src={clubLogo} alt="Club" className="club-logo" />
                   <span className="division-tag">
                     {player.division === 'División de Honor' ? 'DH' :
+                      player.division === 'Primera División' ? 'Pr' :
                       player.division === 'Primera División' ? '1a' :
                       player.division === 'Segunda División' ? '2a' :
                       player.division}

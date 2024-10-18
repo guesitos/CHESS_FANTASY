@@ -338,6 +338,26 @@ async function fetchAllPlayers() {
   }
 }
 
+// **Nueva función** para actualizar el valor a 0 para jugadores con EloFIDE 'Not Rated'
+const setNotRatedPlayersValorToZero = async () => {
+  let connection;
+  try {
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para actualizar valor de jugadores NotRated');
+
+    const [result] = await connection.query(
+      "UPDATE players SET valor = 0 WHERE elo_fide = 'Not Rated' OR elo_fide IS NULL OR elo_fide = ''"
+    );
+
+    console.log(`Se han actualizado ${result.affectedRows} jugadores NotRated a valor 0.`);
+  } catch (error) {
+    console.error('Error al actualizar valor de jugadores NotRated:', error);
+  } finally {
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de actualizar valor de jugadores NotRated');
+  }
+};
+
 // Exportar las funciones del controlador
 module.exports = {
   getAllPlayers,
@@ -346,5 +366,6 @@ module.exports = {
   searchPlayers,
   getAllClubs,
   getAllTableros,
-  fetchProblematicPlayers // Nueva función para obtener jugadores problemáticos (Null, vacios y duplicados)
+  fetchProblematicPlayers, // Nueva función para obtener jugadores problemáticos (Null, vacios y duplicados)
+  setNotRatedPlayersValorToZero
 };
