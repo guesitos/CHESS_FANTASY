@@ -924,7 +924,7 @@ const playersList = [
     { tablero: 10, license_number: 11917, first_name: 'ANA', last_name: 'TEIXEIRA DA SILVA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
     { tablero: 11, license_number: 880, first_name: 'ALBA', last_name: 'PIAY GARCIA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
     { tablero: 12, license_number: 12740, first_name: 'JOSE LUCAS', last_name: 'FERREIRA DA SILVA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
-    { tablero: 13, license_number: 5559, first_name: 'PABLO', last_name: 'FERNANDEZ LOPEZ', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 5559, first_name: 'PABLO II', last_name: 'FERNANDEZ LOPEZ', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
     { tablero: 14, license_number: 25868, first_name: 'TOMAS AFONSO', last_name: 'PIRES DOS SANTOS', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
 
     // BENCHOSHEY LASKER

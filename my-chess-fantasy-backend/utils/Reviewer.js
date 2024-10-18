@@ -44,12 +44,16 @@ async function checkAndFixCapitalization() {
 
 // Función para verificar y añadir jugadores faltantes o actualizar los que tienen datos diferentes
 async function verifyAndAddMissingPlayers() {
+  const connection = await poolPlayers.getConnection();
   try {
     logger.info('Verificando y añadiendo jugadores faltantes...');
 
+    // Iniciar transacción
+    await connection.beginTransaction();
+
     for (const player of playersList) {
-      // Verificar si el jugador ya existe en la base de datos
-      const [results] = await poolPlayers.query(
+      // Verificar si el jugador ya existe en la base de datos por license_number
+      const [results] = await connection.query(
         `SELECT first_name, last_name, club, division, photo_url, valor, total_points
          FROM players 
          WHERE license_number = ?`,
@@ -71,7 +75,7 @@ async function verifyAndAddMissingPlayers() {
 
         if (needsUpdate) {
           // Actualizar el jugador en caso de que existan diferencias
-          await poolPlayers.query(
+          await connection.query(
             `UPDATE players SET first_name = ?, last_name = ?, club = ?, division = ?, photo_url = ?, valor = ?, total_points = ?
              WHERE license_number = ?`,
             [
@@ -89,7 +93,7 @@ async function verifyAndAddMissingPlayers() {
         }
       } else {
         // Si el jugador no existe, insertarlo
-        await poolPlayers.query(
+        await connection.query(
           `INSERT INTO players (tablero, license_number, first_name, last_name, club, division, created_at, photo_url, valor, total_points)
            VALUES (?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?)`,
           [
@@ -107,31 +111,58 @@ async function verifyAndAddMissingPlayers() {
         logger.info(`Jugador añadido: ${player.first_name.toUpperCase()} ${player.last_name.toUpperCase()}`);
       }
     }
+
+    // Confirmar transacción
+    await connection.commit();
+    logger.info('Verificación y adición de jugadores completada exitosamente.');
   } catch (error) {
+    // Revertir transacción en caso de error
+    await connection.rollback();
     logger.error('Error al verificar y añadir jugadores faltantes: ' + error.message);
+  } finally {
+    // Liberar conexión
+    connection.release();
   }
 }
 
 // Función para eliminar jugadores que no están en Players_list.js
 async function removeNonMatchingPlayers() {
   try {
-    logger.info('Eliminando jugadores no coincidentes con Players_list.js...');
+    logger.info('Revisando jugadores a eliminar...');
 
-    // Crear un conjunto de nombres completos (nombres y apellidos) de Players_list.js
-    const allowedPlayers = new Set(
-      playersList.map(player => `${player.first_name.toUpperCase()} ${player.last_name.toUpperCase()}`)
+    // Crear un conjunto de números de licencia permitidos como cadenas
+    const allowedLicenseNumbers = new Set(
+      playersList.map(player => String(player.license_number))
     );
 
     // Obtener todos los jugadores de la base de datos
     const [players] = await poolPlayers.query('SELECT license_number, first_name, last_name FROM players');
 
-    // Eliminar jugadores que no están en Players_list.js
-    for (const player of players) {
-      const fullName = `${player.first_name.toUpperCase()} ${player.last_name.toUpperCase()}`;
-      if (!allowedPlayers.has(fullName)) {
-        await poolPlayers.query('DELETE FROM players WHERE license_number = ?', [player.license_number]);
-        logger.info(`Jugador eliminado: ${fullName}`);
-      }
+    // Filtrar jugadores que no están en allowedLicenseNumbers
+    const playersToDelete = players.filter(player => !allowedLicenseNumbers.has(String(player.license_number)));
+
+    if (playersToDelete.length === 0) {
+      logger.info('No hay jugadores para eliminar.');
+      return;
+    }
+
+    // Mostrar jugadores que serán eliminados
+    console.log('Se eliminarán los siguientes jugadores:');
+    playersToDelete.forEach(player => {
+      console.log(`- License Number: ${player.license_number}, Nombre: ${player.first_name} ${player.last_name}`);
+    });
+
+    // Solicitar confirmación al usuario
+    const confirm = await promptUser('¿Estás seguro de que deseas eliminar estos jugadores? (yes/no): ');
+    if (confirm.toLowerCase() !== 'yes') {
+      logger.info('Eliminación cancelada por el usuario.');
+      return;
+    }
+
+    // Eliminar jugadores confirmados
+    for (const player of playersToDelete) {
+      await poolPlayers.query('DELETE FROM players WHERE license_number = ?', [String(player.license_number)]);
+      logger.info(`Jugador eliminado: ${player.first_name.toUpperCase()} ${player.last_name.toUpperCase()}`);
     }
 
     logger.info('Eliminación de jugadores no coincidentes completada.');
@@ -139,6 +170,7 @@ async function removeNonMatchingPlayers() {
     logger.error('Error al eliminar jugadores no coincidentes: ' + error.message);
   }
 }
+
 
 // Exportar funciones
 module.exports = {

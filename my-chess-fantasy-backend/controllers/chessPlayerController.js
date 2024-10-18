@@ -137,6 +137,10 @@ const getAllPlayers = async (req, res) => {
     connection = await poolPlayers.getConnection();
     console.log('Conexión a la base de datos obtenida para obtener todos los jugadores');
     const [results] = await connection.query('SELECT * FROM players');
+    results.forEach(player => {
+      player.first_name = player.first_name.toUpperCase();
+      player.last_name = player.last_name.toUpperCase();
+    });
     res.json(results);
   } catch (error) {
     console.error('Error al obtener jugadores:', error);
@@ -181,80 +185,69 @@ const getAllTableros = async (req, res) => {
   }
 };
 
+// Función para obtener jugadores con fide_id NULL, vacío o duplicados
+const fetchProblematicPlayers = async () => {
+  let connection;
+  try {
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para obtener jugadores problemáticos');
+
+    // Jugadores con fide_id NULL
+    const [nullPlayers] = await connection.query(`
+      SELECT fide_id, first_name, last_name, license_number, tablero, club, division, created_at
+      FROM players
+      WHERE fide_id IS NULL
+    `);
+
+    // Jugadores con fide_id vacío
+    const [emptyPlayers] = await connection.query(`
+      SELECT fide_id, first_name, last_name, license_number, tablero, club, division, created_at
+      FROM players
+      WHERE fide_id = ''
+    `);
+
+    // Jugadores con fide_id duplicados
+    const [duplicatePlayers] = await connection.query(`
+      SELECT p.fide_id, p.first_name, p.last_name, p.license_number, p.tablero, p.club, p.division, p.created_at
+      FROM players p
+      INNER JOIN (
+        SELECT fide_id
+        FROM players
+        WHERE fide_id IS NOT NULL AND fide_id != ''
+        GROUP BY fide_id
+        HAVING COUNT(*) > 1
+      ) dup ON p.fide_id = dup.fide_id
+      ORDER BY p.fide_id ASC, p.license_number ASC
+    `);
+
+    return { nullPlayers, emptyPlayers, duplicatePlayers };
+  } catch (error) {
+    console.error('Error al obtener jugadores problemáticos:', error);
+    throw error;
+  } finally {
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de obtener jugadores problemáticos');
+  }
+};
+
 // Función para obtener el ELO FIDE de un jugador dado su FIDE ID
 function getPlayerElo(fideId) {
   return new Promise((resolve, reject) => {
     exec(`fide-ratings-scraper get elo ${fideId}`, (error, stdout, stderr) => {
       if (error) {
         console.error(`Error ejecutando el scraper para FIDE ID ${fideId}:`, stderr);
-        resolve('-');
+        resolve(null);
       } else {
         try {
-          const data = JSON.parse(stdout);
-          resolve(data.standard_elo || '-');
+          const data = JSON.parse(stdout.trim());
+          resolve(data.standard_elo || null);
         } catch (parseError) {
           console.error(`Error parseando la respuesta del scraper para FIDE ID ${fideId}:`, parseError);
-          resolve('-');
+          resolve(null);
         }
       }
     });
   });
-}
-
-// Función para actualizar el ELO FIDE de todos los jugadores
-async function updateAllPlayersElo() {
-  let connection;
-
-  try {
-    // Obtener una conexión del pool
-    connection = await poolPlayers.getConnection();
-    console.log('Conexión a la base de datos obtenida para actualizar el ELO FIDE');
-
-    const [results] = await connection.query('SELECT * FROM players');
-
-    // Actualizar el ELO FIDE de cada jugador
-    for (const player of results) {
-      if (player.fide_id) {
-        const eloFide = await getPlayerElo(player.fide_id);
-        await connection.query(
-          'UPDATE players SET elo_fide = ?, first_name = UPPER(first_name), last_name = UPPER(last_name) WHERE fide_id = ?',
-          [eloFide, player.fide_id]
-        );
-        console.log(`ELO FIDE actualizado para el jugador ${player.first_name} ${player.last_name}: ${eloFide}`);
-      }
-    }
-  } catch (error) {
-    console.error('Error al actualizar el ELO FIDE de los jugadores:', error);
-  } finally {
-    // Liberar la conexión después de realizar la actualización
-    if (connection) connection.release();
-    console.log('Conexión a la base de datos liberada después de la actualización del ELO FIDE');
-  }
-}
-
-// Función para obtener todos los jugadores sin depender de req y res
-async function fetchAllPlayers() {
-  let connection;
-
-  try {
-    // Obtener una conexión del pool
-    connection = await poolPlayers.getConnection();
-    console.log('Conexión a la base de datos obtenida para obtener todos los jugadores');
-
-    const [results] = await connection.query('SELECT * FROM players');
-    results.forEach(player => {
-      player.first_name = player.first_name.toUpperCase();
-      player.last_name = player.last_name.toUpperCase();
-    });
-    return results;
-  } catch (error) {
-    console.error('Error al obtener jugadores:', error);
-    throw error;
-  } finally {
-    // Liberar la conexión después de la consulta
-    if (connection) connection.release();
-    console.log('Conexión a la base de datos liberada después de obtener jugadores');
-  }
 }
 
 // Función para obtener el Valor de Mercado de un jugador usando el script Python
@@ -287,8 +280,11 @@ const updateAllPlayersEloValor = async () => {
     connection = await poolPlayers.getConnection();
     console.log('Conexión a la base de datos obtenida para actualizar el ELO FIDE y valor de mercado');
 
-    // Obtener todos los jugadores con fide_id válido
-    const [players] = await connection.query('SELECT fide_id FROM players WHERE fide_id IS NOT NULL');
+    // Seleccionar solo jugadores con fide_id numérico y no NULL ni vacío
+    const [players] = await connection.query(`
+      SELECT fide_id FROM players 
+      WHERE fide_id IS NOT NULL AND fide_id != '' AND fide_id REGEXP '^[0-9]+$'
+    `);
 
     for (const player of players) {
       const fideId = player.fide_id;
@@ -301,7 +297,7 @@ const updateAllPlayersEloValor = async () => {
       
       if (eloFide !== null && valor !== null) {
         await connection.query(
-          'UPDATE players SET elo_fide = ?, valor = ? WHERE fide_id = ?',
+          'UPDATE players SET elo_fide = ?, valor = ?, first_name = UPPER(first_name), last_name = UPPER(last_name) WHERE fide_id = ?',
           [eloFide, valor, fideId]
         );
         console.log(`Actualizado fide_id: ${fideId} - ELO FIDE: ${eloFide}, Valor: ${valor}`);
@@ -317,13 +313,38 @@ const updateAllPlayersEloValor = async () => {
   }
 };
 
+// Función para obtener todos los jugadores sin depender de req y res
+async function fetchAllPlayers() {
+  let connection;
+
+  try {
+    // Obtener una conexión del pool
+    connection = await poolPlayers.getConnection();
+    console.log('Conexión a la base de datos obtenida para obtener todos los jugadores');
+
+    const [results] = await connection.query('SELECT * FROM players');
+    results.forEach(player => {
+      player.first_name = player.first_name.toUpperCase();
+      player.last_name = player.last_name.toUpperCase();
+    });
+    return results;
+  } catch (error) {
+    console.error('Error al obtener jugadores:', error);
+    throw error;
+  } finally {
+    // Liberar la conexión después de la consulta
+    if (connection) connection.release();
+    console.log('Conexión a la base de datos liberada después de obtener jugadores');
+  }
+}
+
 // Exportar las funciones del controlador
 module.exports = {
   getAllPlayers,
   fetchAllPlayers,
-  updateAllPlayersElo,
   updateAllPlayersEloValor, // Nueva función para actualizar ELO y valor
   searchPlayers,
   getAllClubs,
   getAllTableros,
+  fetchProblematicPlayers // Nueva función para obtener jugadores problemáticos (Null, vacios y duplicados)
 };
