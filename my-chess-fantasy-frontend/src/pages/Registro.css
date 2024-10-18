@@ -20,6 +20,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 20px; /* Añadido para asegurar que haya espacio en pantallas pequeñas */
+  box-sizing: border-box;
 }
 
 .logo {
@@ -80,6 +82,12 @@ body {
   border-radius: 5px;
   color: #fff;
   font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #e02424; /* Resaltar el borde al enfocar */
+  outline: none;
 }
 
 .input-field::placeholder {
@@ -100,4 +108,22 @@ body {
 
 .submit-btn:hover {
   background-color: #d01010;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 400px) {
+  .toggle-btn,
+  .form-container {
+    width: 100%;
+  }
+
+  .toggle-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
 }

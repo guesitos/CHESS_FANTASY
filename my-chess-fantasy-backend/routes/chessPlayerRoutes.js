@@ -6,7 +6,7 @@ const {
   searchPlayers, 
   getAllClubs, 
   getAllTableros,
-  updateAllPlayersEloValor 
+  updateAllPlayersEloValor
 } = require('../controllers/chessPlayerController');
 const router = express.Router();
 
@@ -26,4 +26,3 @@ router.get('/tableros', getAllTableros);
 router.post('/update_all_elo_valor', updateAllPlayersEloValor);
 
 module.exports = router;
-

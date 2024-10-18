@@ -6,6 +6,7 @@ const morgan = require('morgan'); // Opcional: Para registro de solicitudes
 const helmet = require('helmet'); // Opcional: Para mejorar la seguridad
 const userRoutes = require('./routes/userRoutes');
 const chessPlayerRoutes = require('./routes/chessPlayerRoutes'); // Importar las rutas de jugadores
+const teamRoutes = require('./routes/teamRoutes'); // Importar las rutas de equipos
 const { poolUsers, poolPlayers } = require('./db'); // Importar las conexiones desde db/index.js
 require('dotenv').config();  // Cargar variables de entorno
 
@@ -43,7 +44,7 @@ app.use(cors({
 // Middleware para parsear JSON
 app.use(express.json());
 
-// Log de solicitudes
+// Log de solicitudes (redundante si usas morgan, pero puede ser útil para mensajes personalizados)
 app.use((req, res, next) => {
   console.log(`Solicitud recibida: ${req.method} ${req.url}`);
   next();
@@ -51,7 +52,8 @@ app.use((req, res, next) => {
 
 // Rutas
 app.use('/api/users', userRoutes);
-app.use('/api/chess_players', chessPlayerRoutes); // Nueva ruta para jugadores
+app.use('/api/chess_players', chessPlayerRoutes); // Ruta para jugadores
+app.use('/api/teams', teamRoutes); // Nueva ruta para equipos
 
 // Endpoint para obtener información detallada del jugador usando el ID FIDE
 app.get('/api/chess_players/details', async (req, res) => {
@@ -71,9 +73,23 @@ app.get('/api/chess_players/details', async (req, res) => {
   }
 });
 
+// Ruta para manejar GET / y evitar el error 404
+app.get('/', (req, res) => {
+  res.status(200).send('¡Servidor backend de Chess Fantasy está funcionando!');
+});
+
+// Manejo de rutas no encontradas
+app.use((req, res, next) => {
+  res.status(404).json({ message: 'Ruta no encontrada.' });
+});
+
 // Manejo de errores
 app.use((err, req, res, next) => {
   console.error(err.stack);
+  // Si el error es de CORS, manejarlo de manera diferente
+  if (err instanceof Error && err.message.includes('CORS')) {
+    return res.status(403).json({ message: err.message });
+  }
   res.status(500).send('Algo salió mal!');
 });
 

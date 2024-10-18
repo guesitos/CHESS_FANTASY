@@ -101,7 +101,6 @@ def main():
     create_table_query = '''
     CREATE TABLE IF NOT EXISTS fide_players (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        license_number VARCHAR(50) NULL,
         first_name VARCHAR(255) NOT NULL,
         last_name VARCHAR(255) NOT NULL,
         first_name_normalized VARCHAR(255) NOT NULL,
@@ -155,10 +154,8 @@ def main():
                     first_name_normalized = normalize_string(first_name)
                     last_name_normalized = normalize_string(last_name)
 
-                    license_number = None  # No tenemos este dato
-
                     players_data.append((
-                        license_number, first_name, last_name,
+                        first_name, last_name,
                         first_name_normalized, last_name_normalized, fide_id
                     ))
 
@@ -193,7 +190,7 @@ def main():
 def insert_data(cursor, data):
     insert_query = '''
     INSERT INTO fide_players
-    (license_number, first_name, last_name, first_name_normalized, last_name_normalized, fide_id)
+    (first_name, last_name, first_name_normalized, last_name_normalized, fide_id)
     VALUES (%s, %s, %s, %s, %s, %s)
     ON DUPLICATE KEY UPDATE
         first_name = VALUES(first_name),

@@ -1,0 +1,158 @@
+/* src/components/PerfilUsuario.css */
+
+/* Variables de Color */
+:root {
+  --color-fondo-principal: #1f1c2c;
+  --color-fondo-card: #2b2a3d;
+  --color-texto: #ffffff;
+  --color-boton-primario: #f0a500;
+  --color-boton-primario-hover: #e08900;
+  --color-boton-cancelar: #d9534f;
+  --color-boton-cancelar-hover: #c9302c;
+  --color-boton-secundario: #4a90e2;
+  --color-boton-secundario-hover: #357abd;
+  --color-borde-input: #ccc;
+  --color-fondo-input: #3a394f;
+  --color-placeholder: #b0b0b0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo-principal);
+  color: var(--color-texto);
+}
+
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.perfil-card {
+  background: var(--color-fondo-card);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  color: var(--color-texto);
+  width: 100%;
+  max-width: 600px;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.perfil-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.perfil-header h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--color-boton-primario);
+}
+
+.perfil-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.perfil-info {
+  line-height: 1.8;
+}
+
+.perfil-info p {
+  margin: 0.5rem 0;
+}
+
+.perfil-info label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.perfil-info input {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-borde-input);
+  background-color: var(--color-fondo-input);
+  color: var(--color-texto);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.perfil-info input:focus {
+  outline: none;
+  border-color: var(--color-boton-primario);
+  background-color: #4a4961;
+}
+
+.perfil-info input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.perfil-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-editar, 
+.btn-cerrar-sesion, 
+.btn-guardar, 
+.btn-cancelar {
+  flex: 1 1 calc(50% - 0.5rem);
+  background-color: var(--color-boton-primario);
+  border: none;
+  color: var(--color-texto);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-editar:hover, 
+.btn-guardar:hover, 
+.btn-cerrar-sesion:hover, 
+.btn-cancelar:hover {
+  background-color: var(--color-boton-primario-hover);
+}
+
+.btn-cancelar {
+  background-color: var(--color-boton-cancelar);
+}
+
+.btn-cancelar:hover {
+  background-color: var(--color-boton-cancelar-hover);
+}
+
+@media (max-width: 480px) {
+  .perfil-card {
+      padding: 1.5rem;
+  }
+
+  .perfil-header h2 {
+      font-size: 1.5rem;
+  }
+
+  .btn-editar, 
+  .btn-cerrar-sesion, 
+  .btn-guardar, 
+  .btn-cancelar {
+      flex: 1 1 100%;
+  }
+}

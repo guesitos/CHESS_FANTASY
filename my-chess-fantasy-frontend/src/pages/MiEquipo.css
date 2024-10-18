@@ -1,0 +1,78 @@
+/* src/pages/MiEquipo/MiEquipo.css */
+
+.mi-equipo-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-button,
+.reset-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.division-section {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.category label {
+  width: 150px;
+}
+
+.category select {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.remove-button {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.selected-team {
+  margin-top: 30px;
+}
+
+.selected-team ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.selected-team li {
+  padding: 5px 0;
+}
+  

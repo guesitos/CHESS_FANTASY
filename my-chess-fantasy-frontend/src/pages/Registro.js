@@ -7,7 +7,7 @@ import logo from '../assets/logo.png';
 
 function Registro() {
   const navigate = useNavigate();
-  const { register: authRegister, login: authLogin } = useContext(AuthContext);
+  const { register, login } = useContext(AuthContext); // Eliminados loading y authError
 
   const [activeForm, setActiveForm] = useState(null);
 
@@ -15,6 +15,12 @@ function Registro() {
   const [regEmail, setRegEmail] = useState('');
   const [regPassword, setRegPassword] = useState('');
   const [regConfirmPassword, setRegConfirmPassword] = useState('');
+  
+  // Nuevos estados para los campos adicionales
+  const [regUsername, setRegUsername] = useState('');
+  const [regTeamName, setRegTeamName] = useState('');
+  const [regFirstName, setRegFirstName] = useState('');
+  const [regLastName, setRegLastName] = useState('');
 
   // Estados para Login
   const [loginEmail, setLoginEmail] = useState('');
@@ -39,13 +45,29 @@ function Registro() {
     const trimmedEmail = regEmail.trim();
     const trimmedPassword = regPassword.trim();
     const trimmedConfirmPassword = regConfirmPassword.trim();
+    const trimmedUsername = regUsername.trim();
+    const trimmedTeamName = regTeamName.trim();
+    const trimmedFirstName = regFirstName.trim();
+    const trimmedLastName = regLastName.trim();
 
     console.log('Registro - Email:', trimmedEmail);
     console.log('Registro - Password:', trimmedPassword);
     console.log('Registro - Confirm Password:', trimmedConfirmPassword);
+    console.log('Registro - Username:', trimmedUsername);
+    console.log('Registro - Team Name:', trimmedTeamName);
+    console.log('Registro - First Name:', trimmedFirstName);
+    console.log('Registro - Last Name:', trimmedLastName);
 
     // Validaciones iniciales
-    if (!trimmedEmail || !trimmedPassword || !trimmedConfirmPassword) {
+    if (
+      !trimmedEmail ||
+      !trimmedPassword ||
+      !trimmedConfirmPassword ||
+      !trimmedUsername ||
+      !trimmedTeamName ||
+      !trimmedFirstName ||
+      !trimmedLastName
+    ) {
       setErrorMessage('Todos los campos son requeridos');
       console.log('Error: Campos requeridos no completados');
       return;
@@ -73,7 +95,11 @@ function Registro() {
         body: JSON.stringify({
           email: trimmedEmail,
           password: trimmedPassword,
-        }), // No enviar confirmPassword
+          username: trimmedUsername,      // Enviar Username
+          teamName: trimmedTeamName,      // Enviar Nombre de Equipo
+          firstName: trimmedFirstName,    // Enviar Nombre
+          lastName: trimmedLastName,      // Enviar Apellidos
+        }),
       });
 
       if (!response.ok) {
@@ -89,7 +115,7 @@ function Registro() {
       // Verificar la estructura de la respuesta
       if (data.user && data.token) {
         // Llamar a la función de registro del AuthContext
-        authRegister(data.user, data.token); // Asegúrate de que 'data.user' y 'data.token' existen
+        register(data.user, data.token); // Asegúrate de que 'data.user' y 'data.token' existen
 
         // Manejar 'isFirstTimeUser' si es necesario
         localStorage.setItem('isFirstTimeUser', 'true');
@@ -98,6 +124,10 @@ function Registro() {
         setRegEmail('');
         setRegPassword('');
         setRegConfirmPassword('');
+        setRegUsername('');
+        setRegTeamName('');
+        setRegFirstName('');
+        setRegLastName('');
 
         navigate('/home');
       } else {
@@ -154,7 +184,7 @@ function Registro() {
       // Verificar la estructura de la respuesta
       if (data.user && data.token) {
         // Llamar a la función de login del AuthContext
-        authLogin(data.user, data.token); // Asegúrate de que 'data.user' y 'data.token' existen
+        login(data.user, data.token); // Asegúrate de que 'data.user' y 'data.token' existen
 
         // Verificar si es la primera vez que el usuario inicia sesión
         const isFirstTimeUser = localStorage.getItem('isFirstTimeUser');
@@ -214,6 +244,39 @@ function Registro() {
               className="input-field"
               value={regConfirmPassword}
               onChange={(e) => setRegConfirmPassword(e.target.value)}
+            />
+            {/* Nuevos campos añadidos */}
+            <input
+              type="text"
+              placeholder="Nombre de Usuario"
+              required
+              className="input-field"
+              value={regUsername}
+              onChange={(e) => setRegUsername(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Nombre de Equipo"
+              required
+              className="input-field"
+              value={regTeamName}
+              onChange={(e) => setRegTeamName(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Nombre"
+              required
+              className="input-field"
+              value={regFirstName}
+              onChange={(e) => setRegFirstName(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Apellidos"
+              required
+              className="input-field"
+              value={regLastName}
+              onChange={(e) => setRegLastName(e.target.value)}
             />
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             <button type="submit" className="submit-btn" disabled={isLoading}>

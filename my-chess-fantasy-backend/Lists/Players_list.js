@@ -17,23 +17,23 @@ const playersList = [
     { tablero: 9, license_number: 14046, first_name: 'LUCAS', last_name: 'FERRO FERNANDEZ', club: 'BENCHOSHEY PEREIRO DE AGUIAR', division: 'División de Honor', valor: 0, total_points: 0 },
     
     // CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC
-    { tablero: 1, license_number: 1210, first_name: 'ALEJANDRO SERGIO', last_name: 'HOFFMAN', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 1, license_number: 1210, first_name: 'ALEJANDRO', last_name: 'HOFFMAN', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 5047, first_name: 'ALEKSA', last_name: 'STRIKOVIC', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 3, license_number: 26562, first_name: 'MIHAIL', last_name: 'MARIN', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 11919, first_name: 'VLADIMIR IVANOV', last_name: 'PETKOV', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11919, first_name: 'VLADIMIR', last_name: 'PETKOV', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 5, license_number: 14161, first_name: 'VELISLAV', last_name: 'KUKOV', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 12741, first_name: 'PEDRO GIL', last_name: 'FERREIRA DA SILVA', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 13105, first_name: 'PAULO MIGUEL', last_name: 'LEITAO GOMES DE PINHO', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 12741, first_name: 'PEDRO GIL FERREIRA DA', last_name: 'SILVA', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 13105, first_name: 'PAULO', last_name: 'PINHO', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 8, license_number: 6410, first_name: 'MARTIN', last_name: 'BOADO RODRIGUEZ', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 9, license_number: 1220, first_name: 'TOMAS', last_name: 'ALONSO MARTINEZ', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 10, license_number: 11915, first_name: 'SIMAO MACIEL', last_name: 'ABRANCHES PINTOR', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 11, license_number: 25913, first_name: 'MANUEL ANTONIO', last_name: 'RODRIGUEZ BLANCO', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 11915, first_name: 'SIMAO', last_name: 'PINTOR', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 25913, first_name: 'MANUEL A.', last_name: 'RODRIGUEZ BLANCO', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 12, license_number: 24745, first_name: 'ORLANDO CAMILO', last_name: 'DUARTE RIBEIRO', club: 'CIRCULO CHANTADINO XADREZ DRAGAN PAUNOVIC', division: 'División de Honor', valor: 0, total_points: 0 },
     
     // CIRCULO FERROLANO A
     { tablero: 1, license_number: 648, first_name: 'PABLO', last_name: 'FERNANDEZ BORREGO', club: 'CÍRCULO FERROLANO A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 647, first_name: 'ANTONIO', last_name: 'PAZOS PORTA', club: 'CÍRCULO FERROLANO A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 26489, first_name: 'MARCO ANTONIO', last_name: 'MORALES MARMOL', club: 'CÍRCULO FERROLANO A', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 26489, first_name: 'MARCOS ANTONIO', last_name: 'MORALES MARMOL', club: 'CÍRCULO FERROLANO A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 4, license_number: 1213, first_name: 'DIEGO', last_name: 'GUERRA BASTIDA', club: 'CÍRCULO FERROLANO A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 5, license_number: 1963, first_name: 'XOEL', last_name: 'PEREZ MAURICIO', club: 'CÍRCULO FERROLANO A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 6, license_number: 1965, first_name: 'DAVID', last_name: 'JOVE REY', club: 'CÍRCULO FERROLANO A', division: 'División de Honor', valor: 0, total_points: 0 },
@@ -48,7 +48,7 @@ const playersList = [
     { tablero: 1, license_number: 25145, first_name: 'JONAS BUHL', last_name: 'BJERRE', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 14849, first_name: 'Mads', last_name: 'Andersen', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 3, license_number: 5783, first_name: 'JORGE VITERBO', last_name: 'FERREIRA', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 11319, first_name: 'ANDRE MIGUEL', last_name: 'DO VALE VENTURA DE SOUSA', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11319, first_name: 'ANDRE VENTURA', last_name: 'SOUSA', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 5, license_number: 7799, first_name: 'ZENON', last_name: 'FRANCO OCAMPOS', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 6, license_number: 9219, first_name: 'XULIO', last_name: 'DEL PRADO RODRIGUEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 7, license_number: 1531, first_name: 'DAVID', last_name: 'GOMEZ DIEGUEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
@@ -58,38 +58,16 @@ const playersList = [
     { tablero: 11, license_number: 2225, first_name: 'ADRIAN', last_name: 'GOMEZ DIEGUEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 12, license_number: 5282, first_name: 'MARTIN', last_name: 'GOMEZ CARREÑO', club: 'CLUB DEPORTIVO XADREZ OURENSE A', division: 'División de Honor', valor: 0, total_points: 0 },
  
-    // CLUB XADREZ MOS A
-    { tablero: 1, license_number: 9723, first_name: 'MANUEL', last_name: 'PENA GOMEZ', club: 'CLUB XADREZ MOS A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 1198, first_name: 'MIGUEL', last_name: 'SENLLE CARIDE', club: 'CLUB XADREZ MOS A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 10216, first_name: 'ANTONIO', last_name: 'ALVAREZ PAMPILLON', club: 'CLUB XADREZ MOS A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 8331, first_name: 'MAURO', last_name: 'SANROMAN COSTAS', club: 'CLUB XADREZ MOS A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 9841, first_name: 'XABIER', last_name: 'PEREZ SOUSA', club: 'CLUB XADREZ MOS A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 10851, first_name: 'JAVIER', last_name: 'DEL VALLE CRESPO', club: 'CLUB XADREZ MOS A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 10656, first_name: 'CESAR', last_name: 'PEREZ NOVAS', club: 'CLUB XADREZ MOS A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 14007, first_name: 'EDUARDO', last_name: 'DEL VALLE DE LA JARA', club: 'CLUB XADREZ MOS A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 9, license_number: 21101, first_name: 'CARLOS', last_name: 'CUÑA DELGADO', club: 'CLUB XADREZ MOS A', division: 'División de Honor', valor: 0, total_points: 0 },
- 
     // CLUB XADREZ RIANXO
     { tablero: 1, license_number: 7794, first_name: 'DAVID', last_name: 'LARIÑO NIETO', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 5706, first_name: 'FERNANDO', last_name: 'SANCHEZ ALLER', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 3, license_number: 414, first_name: 'MARCIAL', last_name: 'GARCIA CARBO', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 4, license_number: 432, first_name: 'EDUARDO', last_name: 'GARCIA BRION', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 5, license_number: 421, first_name: 'MANUEL ANGEL', last_name: 'ABUIN BOULLON', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 13128, first_name: 'JAVIER', last_name: 'RODRIGUES PORTELA', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 13128, first_name: 'JAVIER', last_name: 'RODRIGUEZ PORTELA', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 8, license_number: 4406, first_name: 'SAMUEL', last_name: 'MARTINEZ VARELA', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 9, license_number: 21180, first_name: 'MATEO', last_name: 'MARTINEZ HERMO', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 10, license_number: 9642, first_name: 'HUGO', last_name: 'MARTINEZ VARELA', club: 'CLUB XADREZ RIANXO', division: 'División de Honor', valor: 0, total_points: 0 },
- 
-    // CLUBEXA A
-    { tablero: 1, license_number: 21104, first_name: 'ALEXANDER', last_name: 'ROJAS SERRA', club: 'CLUBEXA A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 26417, first_name: 'ALEJANDRO', last_name: 'FERNÁNDEZ CAMELLO', club: 'CLUBEXA A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 119, first_name: 'TOMAS', last_name: 'BODELON RODRIGUEZ', club: 'CLUBEXA A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 118, first_name: 'ALFREDO', last_name: 'DE LA FUENTE MAYAN', club: 'CLUBEXA A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 14271, first_name: 'Guilherme', last_name: 'Deola Borges', club: 'CLUBEXA A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 13947, first_name: 'RUI', last_name: 'PINTO GUIMARAES', club: 'CLUBEXA A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 493, first_name: 'BERNARD', last_name: 'SAKULSKI', club: 'CLUBEXA A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 3898, first_name: 'ENRIQUE', last_name: 'VILLODAS VAZQUEZ', club: 'CLUBEXA A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 9, license_number: 141, first_name: 'DIEGO', last_name: 'FERNANDEZ IGLESIAS', club: 'CLUBEXA A', division: 'División de Honor', valor: 0, total_points: 0 },
 
     // CXF - VIAJES INTERRIAS SANXENXO
     { tablero: 1, license_number: 26221, first_name: 'ERNESTO', last_name: 'FERNANDEZ ROMERO', club: 'CXF - VIAJES INTERRIAS SANXENXO', division: 'División de Honor', valor: 0, total_points: 0 },
@@ -110,40 +88,17 @@ const playersList = [
     { tablero: 2, license_number: 415, first_name: 'DIEGO ADRIAN', last_name: 'ESPIÑEIRA GONZALEZ', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 3, license_number: 6154, first_name: 'ALFONSO', last_name: 'LOPEZ GONZALEZ', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 4, license_number: 26552, first_name: 'JUAN MANUEL', last_name: 'ACOSTA SOSA', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 11626, first_name: 'PAULO ALEXANDRE', last_name: 'GOMES MONTEIRO', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11626, first_name: 'PAULO ALEXANDRE G', last_name: 'MONTEIRO', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 6, license_number: 7641, first_name: 'ANGEL', last_name: 'FERREÑO SANMARTIN', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 7, license_number: 12493, first_name: 'BREIXO', last_name: 'LONGUEIRA ALONSO', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 8, license_number: 9446, first_name: 'CLAUDIO', last_name: 'REBOREDO MARTINEZ', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 9, license_number: 10156, first_name: 'ALEJANDRO', last_name: 'CEREIJO SUAREZ', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 10, license_number: 8215, first_name: 'DIEGO', last_name: 'LOPEZ GONZALEZ', club: 'PADRÓN - EXC', division: 'División de Honor', valor: 0, total_points: 0 },
 
-    // XADREZ BUEU A
-    { tablero: 1, license_number: 850, first_name: 'LUIS ALBERTO', last_name: 'COSTADO DIOS', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 851, first_name: 'JOSE RAMON', last_name: 'SANTACLARA RODRIGUEZ', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 861, first_name: 'TOMAS', last_name: 'LEMOS VIZCAYA', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 1253, first_name: 'JOSE LUIS', last_name: 'CEBRIAN RAMOS', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 852, first_name: 'JESUS ANGEL', last_name: 'DE LA TORRE ALFONSO', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 868, first_name: 'JOSE', last_name: 'BARREIRO PIÑEIRO', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 855, first_name: 'DANIEL', last_name: 'ABELLEIRA GONZALEZ', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 860, first_name: 'JOSE', last_name: 'GESTIDO VILLANUEVA', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 9, license_number: 1849, first_name: 'MARIO', last_name: 'EXPOSITO PACIN', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 10, license_number: 854, first_name: 'SALVADOR', last_name: 'CASTRO OTERO', club: 'XADREZ BUEU A', division: 'División de Honor', valor: 0, total_points: 0 },
-
-    // USC
-    { tablero: 1, license_number: 11188, first_name: 'DIEGO', last_name: 'CACHEIRO BLANCO', club: 'USC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 307, first_name: 'DIEGO', last_name: 'SUAREZ POUSA', club: 'USC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 422, first_name: 'MANOEL', last_name: 'RODRIGUEZ CALVO', club: 'USC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 310, first_name: 'JUAN ROBERTO', last_name: 'PATIÑO ROMARIS', club: 'USC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 292, first_name: 'CESAR', last_name: 'ABELLA VAZQUEZ', club: 'USC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 1428, first_name: 'PABLO', last_name: 'TUBIO AGRASAR', club: 'USC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 8293, first_name: 'ALFONSO', last_name: 'CABALEIRO BARROSO', club: 'USC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 21195, first_name: 'MANUEL ANTONIO', last_name: 'GARCIA TENREIRO', club: 'USC', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 9, license_number: 496, first_name: 'MARTIN', last_name: 'CACHEIRO MARTINEZ', club: 'USC', division: 'División de Honor', valor: 0, total_points: 0 },
-
     // XADREZ: ESTRATEXIA POLA PAZ
     { tablero: 1, license_number: 2334, first_name: 'ALBERTO', last_name: 'PORTELA PELETEIRO', club: 'XADREZ: ESTRATEXIA POLA PAZ', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 8205, first_name: 'RUBEN', last_name: 'FERNANDEZ LOPEZ', club: 'XADREZ: ESTRATEXIA POLA PAZ', division: 'División de Honor', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 1266, first_name: 'DANIEL', last_name: 'RIVERA KUZAWKA', club: 'XADREZ: ESTRATEXIA POLA PAZ', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1266, first_name: 'DANIEL', last_name: 'RIVERA', club: 'XADREZ: ESTRATEXIA POLA PAZ', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 4, license_number: 1933, first_name: 'PABLO', last_name: 'GARCIA CASTRO', club: 'XADREZ: ESTRATEXIA POLA PAZ', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 5, license_number: 8891, first_name: 'ANTONIO', last_name: 'FROIS', club: 'XADREZ: ESTRATEXIA POLA PAZ', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 6, license_number: 6052, first_name: 'DAVID', last_name: 'GARCIA SOBRINO', club: 'XADREZ: ESTRATEXIA POLA PAZ', division: 'División de Honor', valor: 0, total_points: 0 },
@@ -151,6 +106,241 @@ const playersList = [
     { tablero: 8, license_number: 7644, first_name: 'JUAN MANUEL', last_name: 'MARTINEZ MONTES', club: 'XADREZ: ESTRATEXIA POLA PAZ', division: 'División de Honor', valor: 0, total_points: 0 },
     { tablero: 9, license_number: 5648, first_name: 'MIGUEL', last_name: 'RODRIGUEZ DOMINGUEZ', club: 'XADREZ: ESTRATEXIA POLA PAZ', division: 'División de Honor', valor: 0, total_points: 0 },
 
+    // E.L.X.
+    { tablero: 1, license_number: 21501, first_name: 'SIEM', last_name: 'VAN DAEL', club: 'E.L.X.', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 6840, first_name: 'PABLO', last_name: 'LOPEZ VARELA', club: 'E.L.X.', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 26767, first_name: 'EMILIA', last_name: 'DYLAG', club: 'E.L.X.', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 3288, first_name: 'ALFONSO', last_name: 'ARANGO FERNANDEZ', club: 'E.L.X.', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 6, first_name: 'CARLOS', last_name: 'CASARES CABANAS', club: 'E.L.X.', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 9894, first_name: 'MARIA JESUS', last_name: 'VARELA VILLAMARIN', club: 'E.L.X.', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 7300, first_name: 'YADAI', last_name: 'CARBALLIDO BOUZAS', club: 'E.L.X.', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 9109, first_name: 'MARTA', last_name: 'CASTRO GIRONA', club: 'E.L.X.', division: 'División de Honor', valor: 0, total_points: 0 },
+
+    // ALEXANDRE BÓVEDA A
+    { tablero: 1, license_number: 24550, first_name: 'SERGIO', last_name: 'LOPEZ REGUEIRO', club: 'ALEXANDRE BÓVEDA A', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 25617, first_name: 'KARLA JULY', last_name: 'FERNÁNDEZ RIVERO', club: 'ALEXANDRE BÓVEDA A', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 191, first_name: 'MIGUEL', last_name: 'CARBALLO NOYA', club: 'ALEXANDRE BÓVEDA A', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 200, first_name: 'ALEJANDRO', last_name: 'SANCHEZ BARDANCA', club: 'ALEXANDRE BÓVEDA A', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 192, first_name: 'VICTOR', last_name: 'GONZALEZ CARRO', club: 'ALEXANDRE BÓVEDA A', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 161, first_name: 'JOSE', last_name: 'LARROSA VILA', club: 'ALEXANDRE BÓVEDA A', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 2915, first_name: 'SALVADOR', last_name: 'DIZ INFANTE', club: 'ALEXANDRE BÓVEDA A', division: 'División de Honor', valor: 0, total_points: 0 },    
+
+    // SOCIEDADE LICEO MARQUIÑO
+    { tablero: 1, license_number: 10466, first_name: 'IAGO', last_name: 'FERNANDEZ RAMOS', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 9470, first_name: 'DAVID', last_name: 'CERNADAS CAMEAN', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 435, first_name: 'JESUS', last_name: 'RODRIGUEZ PEREZ', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 358, first_name: 'ANXO', last_name: 'CARREIRA CASAIS', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 441, first_name: 'GERARDO', last_name: 'GIL PEREZ', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 25914, first_name: 'CURSTAN JORDAN', last_name: 'ARMSTRONG', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'División de Honor', valor: 0, total_points: 0 },
+    
+    // LICEO GRUPO A. POSTAL
+    { tablero: 1, license_number: 11752, first_name: 'ARIAN', last_name: 'GONZALEZ PEREZ', club: 'LICEO GRUPO A. POSTAL', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 782, first_name: 'DAVID', last_name: 'BALTAR IGLESIAS', club: 'LICEO GRUPO A. POSTAL', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 5453, first_name: 'ANGEL', last_name: 'DOMINGUEZ FERNANDEZ', club: 'LICEO GRUPO A. POSTAL', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1875, first_name: 'MARCOS', last_name: 'LORENZO DURAN', club: 'LICEO GRUPO A. POSTAL', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1879, first_name: 'JUAN C.', last_name: 'NEGREIRA RODRIGUEZ', club: 'LICEO GRUPO A. POSTAL', division: 'División de Honor', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 6566, first_name: 'CESAR', last_name: 'PEREZ DAPOZA', club: 'LICEO GRUPO A. POSTAL', division: 'División de Honor', valor: 0, total_points: 0 },    
+
+    // PREFERENTE
+
+    // CLUB XADREZ MOS A
+    { tablero: 1, license_number: 9723, first_name: 'MANUEL', last_name: 'PENA GOMEZ', club: 'CLUB XADREZ MOS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1198, first_name: 'MIGUEL', last_name: 'SENLLE CARIDE', club: 'CLUB XADREZ MOS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 10216, first_name: 'ANTONIO', last_name: 'ALVAREZ PAMPILLON', club: 'CLUB XADREZ MOS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 8331, first_name: 'MAURO', last_name: 'SANROMAN COSTAS', club: 'CLUB XADREZ MOS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 9841, first_name: 'XABIER', last_name: 'PEREZ SOUSA', club: 'CLUB XADREZ MOS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 10851, first_name: 'JAVIER', last_name: 'DEL VALLE CRESPO', club: 'CLUB XADREZ MOS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 10656, first_name: 'CESAR', last_name: 'PEREZ NOVAS', club: 'CLUB XADREZ MOS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 14007, first_name: 'EDUARDO', last_name: 'DEL VALLE DE LA JARA', club: 'CLUB XADREZ MOS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 21101, first_name: 'CARLOS', last_name: 'CUÑA DELGADO', club: 'CLUB XADREZ MOS A', division: 'Preferente', valor: 0, total_points: 0 },
+    
+    // USC
+    { tablero: 1, license_number: 11188, first_name: 'DIEGO', last_name: 'CACHEIRO BLANCO', club: 'USC', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 307, first_name: 'DIEGO', last_name: 'SUAREZ POUSA', club: 'USC', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 422, first_name: 'MANOEL', last_name: 'RODRIGUEZ CALVO', club: 'USC', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 310, first_name: 'JUAN ROBERTO', last_name: 'PATIÑO ROMARIS', club: 'USC', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 292, first_name: 'CESAR', last_name: 'ABELLA VAZQUEZ', club: 'USC', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 1428, first_name: 'PABLO', last_name: 'TUBIO AGRASAR', club: 'USC', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 8293, first_name: 'ALFONSO M.', last_name: 'CABALEIRO BARROSO', club: 'USC', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 21195, first_name: 'MANUEL ANTONIO', last_name: 'GARCIA TENREIRO', club: 'USC', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 496, first_name: 'MARTIN', last_name: 'CACHEIRO MARTINEZ', club: 'USC', division: 'Preferente', valor: 0, total_points: 0 },
+    
+    // XADREZ BUEU A
+    { tablero: 1, license_number: 850, first_name: 'LUIS ALBERTO', last_name: 'COSTADO DIOS', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 851, first_name: 'JOSE RAMON', last_name: 'SANTACLARA RODRIGUEZ', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 861, first_name: 'TOMAS', last_name: 'LEMOS VIZCAYA', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1253, first_name: 'JOSE LUIS', last_name: 'CEBRIAN RAMOS', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 852, first_name: 'JESUS ANGEL', last_name: 'DE LA TORRE ALFONSO', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 868, first_name: 'JOSE', last_name: 'BARREIRO PIÑEIRO', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 855, first_name: 'DANIEL', last_name: 'ABELLEIRA GONZALEZ', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 860, first_name: 'JOSE', last_name: 'GESTIDO VILLANUEVA', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 1849, first_name: 'MARIO', last_name: 'EXPOSITO PACIN', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 854, first_name: 'SALVADOR', last_name: 'CASTRO OTERO', club: 'XADREZ BUEU A', division: 'Preferente', valor: 0, total_points: 0 },
+    
+    // CLUBEXA A
+    { tablero: 1, license_number: 21104, first_name: 'ALEXANDER', last_name: 'ROJAS SERRA', club: 'CLUBEXA A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 26417, first_name: 'ALEJANDRO', last_name: 'FERNÁNDEZ CAMELLO', club: 'CLUBEXA A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 119, first_name: 'TOMAS', last_name: 'BODELON RODRIGUEZ', club: 'CLUBEXA A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 118, first_name: 'ALFREDO', last_name: 'DE LA FUENTE MAYAN', club: 'CLUBEXA A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 14271, first_name: 'GUILHERME DEOLA', last_name: 'BORGES', club: 'CLUBEXA A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 13947, first_name: 'RUI', last_name: 'GUIMARAES', club: 'CLUBEXA A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 493, first_name: 'BERNARD', last_name: 'SAKULSKI', club: 'CLUBEXA A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 3898, first_name: 'ENRIQUE', last_name: 'VILLODAS VAZQUEZ', club: 'CLUBEXA A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 141, first_name: 'DIEGO', last_name: 'FERNANDEZ IGLESIAS', club: 'CLUBEXA A', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // CÍRCULO FERROLANO B
+    { tablero: 1, license_number: 7069, first_name: 'LORENZO', last_name: 'GONZALEZ TABOADA', club: 'CÍRCULO FERROLANO B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 6245, first_name: 'ROQUE', last_name: 'BOUZA SANTISO', club: 'CÍRCULO FERROLANO B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 10655, first_name: 'DAVID', last_name: 'VARELA PETEIRA', club: 'CÍRCULO FERROLANO B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1964, first_name: 'RODRIGO', last_name: 'CUBERO FERREIRO', club: 'CÍRCULO FERROLANO B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 2886, first_name: 'CARMEN', last_name: 'LOPEZ GRAÑA', club: 'CÍRCULO FERROLANO B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 7443, first_name: 'ANDRES', last_name: 'VAZQUEZ PORTA', club: 'CÍRCULO FERROLANO B', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // NARONTEC C.X.N.
+    { tablero: 1, license_number: 616, first_name: 'PABLO', last_name: 'FERNANDEZ LOPEZ', club: 'NARONTEC C.X.N.', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 602, first_name: 'JOSE RAMON', last_name: 'PANTIN SOTO', club: 'NARONTEC C.X.N.', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 12161, first_name: 'SERGIO', last_name: 'DINIZ LOPEZ', club: 'NARONTEC C.X.N.', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 25944, first_name: 'JAVIER', last_name: 'CASTRILLON OTERO', club: 'NARONTEC C.X.N.', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 607, first_name: 'JUAN MANUEL', last_name: 'CANEIRO COUTO', club: 'NARONTEC C.X.N.', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 603, first_name: 'JUAN CARLOS', last_name: 'BERDULLAS GUERRA', club: 'NARONTEC C.X.N.', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // RECATELO CAMPUS TERRA
+    { tablero: 1, license_number: 13217, first_name: 'ADOLFO', last_name: 'DIAZ NUÑEZ', club: 'RECATELO CAMPUS TERRA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 54, first_name: 'MOISES', last_name: 'SYLLA GARCIA', club: 'RECATELO CAMPUS TERRA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 50, first_name: 'ANGEL', last_name: 'PENALONGA SWEERS', club: 'RECATELO CAMPUS TERRA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1512, first_name: 'RAFAEL', last_name: 'ALONSO VAZQUEZ', club: 'RECATELO CAMPUS TERRA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 59, first_name: 'OSVALDO', last_name: 'DIEGUEZ LOPEZ', club: 'RECATELO CAMPUS TERRA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 56, first_name: 'PABLO', last_name: 'SANCHEZ QUINTEIRO', club: 'RECATELO CAMPUS TERRA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 49, first_name: 'MIGUEL ANGEL', last_name: 'FERNANDEZ LOPEZ', club: 'RECATELO CAMPUS TERRA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 27006, first_name: 'RUBEN', last_name: 'CEÑAL GUTIERREZ', club: 'RECATELO CAMPUS TERRA', division: 'Preferente', valor: 0, total_points: 0 },
+    
+    // CLUB DE AJEDREZ MACONDO A
+    { tablero: 1, license_number: 6499, first_name: 'JOSE RAMON', last_name: 'GOMEZ TORRE', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 24551, first_name: 'CARLOS JOSE', last_name: 'MARTINEZ ROJAS', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 230, first_name: 'JUAN CARLOS', last_name: 'RODRIGUEZ FERNANDEZ', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 233, first_name: 'VICTOR JOSE', last_name: 'GODAY OTERO', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 232, first_name: 'ROGELIO', last_name: 'FERNANDEZ MACEIRAS', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 25624, first_name: 'AMIN ANDRES', last_name: 'MEBAREK DAZA', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 26727, first_name: 'MIGUEL ANTONIO', last_name: 'DIEGUEZ RATON', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 27076, first_name: 'CHRISTIAN', last_name: 'PEREZ VERA', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Preferente', valor: 0, total_points: 0 },    
+    
+    // CLUB XADREZ ARTEIXO A
+    { tablero: 1, license_number: 276, first_name: 'OSCAR BRUNO', last_name: 'DE PRADO RODRIGUEZ', club: 'CLUB XADREZ ARTEIXO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1479, first_name: 'FRANCISCO MIGUEL', last_name: 'AMADO RODRIGUEZ', club: 'CLUB XADREZ ARTEIXO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 8912, first_name: 'MARIO', last_name: 'MAÑANA PEDREIRA', club: 'CLUB XADREZ ARTEIXO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 6451, first_name: 'ADRIAN', last_name: 'AMADO RODRIGUEZ', club: 'CLUB XADREZ ARTEIXO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 9571, first_name: 'XOSE MANUEL', last_name: 'ZAPATA PEREZ', club: 'CLUB XADREZ ARTEIXO A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 12690, first_name: 'Daniel', last_name: 'Mendez Rey', club: 'CLUB XADREZ ARTEIXO A', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // E.L.X. LUGO XADREZ
+    { tablero: 1, license_number: 19, first_name: 'DIEGO', last_name: 'FLOREZ RODRIGUEZ', club: 'E.L.X. LUGO XADREZ', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 53, first_name: 'ALFREDO', last_name: 'LOPEZ LOPEZ', club: 'E.L.X. LUGO XADREZ', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 12, first_name: 'EDUARDO', last_name: 'BRAÑA LOPEZ', club: 'E.L.X. LUGO XADREZ', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 655, first_name: 'DIEGO', last_name: 'VAZQUEZ ALVAREZ', club: 'E.L.X. LUGO XADREZ', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 3373, first_name: 'ALEJANDRO I', last_name: 'ARIAS PINEIRO', club: 'E.L.X. LUGO XADREZ', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 20, first_name: 'BORJA', last_name: 'SANCHEZ LOPEZ', club: 'E.L.X. LUGO XADREZ', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 15, first_name: 'RUBEN', last_name: 'VAZQUEZ DEL VALLE', club: 'E.L.X. LUGO XADREZ', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 1912, first_name: 'CARLOS', last_name: 'FERNANDEZ POMBO', club: 'E.L.X. LUGO XADREZ', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 2875, first_name: 'ALVARO', last_name: 'HIERRO FERREIRO', club: 'E.L.X. LUGO XADREZ', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // ALGALIA
+    { tablero: 1, license_number: 309, first_name: 'JUAN PABLO', last_name: 'GARCIA MELGAR', club: 'ALGALIA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 313, first_name: 'EMILIO', last_name: 'PAREDES GALAN', club: 'ALGALIA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 316, first_name: 'IRENE', last_name: 'AMADO ROLAN', club: 'ALGALIA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 312, first_name: 'TOMAS', last_name: 'CORONA GARCIA', club: 'ALGALIA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1509, first_name: 'GREGORI', last_name: 'NEDOBORA KARASYK', club: 'ALGALIA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 291, first_name: 'PABLO', last_name: 'CORDIDO SIXTO', club: 'ALGALIA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 290, first_name: 'JOSE CARLOS', last_name: 'PENA TORRES', club: 'ALGALIA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 317, first_name: 'JOSE', last_name: 'SANCHEZ CAMINO', club: 'ALGALIA', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 303, first_name: 'AGUSTIN ANGEL', last_name: 'BLANCO BARREIRO', club: 'ALGALIA', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // GILLÁN - EL PROGRESO
+    { tablero: 1, license_number: 518, first_name: 'FRANCISCO LUIS', last_name: 'ABELLA CRUZ', club: 'GILLÁN - EL PROGRESO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 517, first_name: 'JOSE ANTONIO', last_name: 'CRUZ CAMBON', club: 'GILLÁN - EL PROGRESO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 525, first_name: 'IAGO', last_name: 'GARCIA OUTEIRO', club: 'GILLÁN - EL PROGRESO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 523, first_name: 'XOSE BREOGAN', last_name: 'GARCIA OUTEIRO', club: 'GILLÁN - EL PROGRESO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 533, first_name: 'DIEGO', last_name: 'CHOUCIÑO BELLO', club: 'GILLÁN - EL PROGRESO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 4563, first_name: 'JAVIER MANUEL', last_name: 'FARINA PEREZ', club: 'GILLÁN - EL PROGRESO', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // CLUB KARPOV
+    { tablero: 1, license_number: 951, first_name: 'MANUEL ANTONIO', last_name: 'PEREZ FUNGUEIRO', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 3638, first_name: 'MIGUEL', last_name: 'CABRERO DE CABO', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 976, first_name: 'VICTOR', last_name: 'ALONSO MACIAS', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 967, first_name: 'DAVID', last_name: 'FARTO OROZCO', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 9481, first_name: 'SERGIO', last_name: 'ESTEPA GUERRERO', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 1007, first_name: 'ANGEL RAMON', last_name: 'OTERO RAMIREZ', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 961, first_name: 'SANTIAGO', last_name: 'ARGIBAY FONTAN', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 965, first_name: 'RAFAEL', last_name: 'BOUZAS BELLO', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 960, first_name: 'CARLOS BRADAN', last_name: 'DOCAMPO GARRIDO', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 4487, first_name: 'GONZALO', last_name: 'SAAVEDRA SANTIAGO', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 970, first_name: 'JACOBO DE LA CRUZ', last_name: 'FRAGA CASTRO', club: 'CLUB KARPOV', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // CXF - ESPAZO XOVE
+    { tablero: 1, license_number: 2889, first_name: 'LUIS', last_name: 'SEGURA SANTOS', club: 'CXF - ESPAZO XOVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 947, first_name: 'ANDRES', last_name: 'VARELA FERNANDEZ', club: 'CXF - ESPAZO XOVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 7910, first_name: 'LUCA', last_name: 'REY CHIMERA', club: 'CXF - ESPAZO XOVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 6996, first_name: 'PAULA', last_name: 'SUAREZ GOMEZ', club: 'CXF - ESPAZO XOVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 5009, first_name: 'ANDREA', last_name: 'DORADO MEIJIDE', club: 'CXF - ESPAZO XOVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 8717, first_name: 'DAVID', last_name: 'SUAREZ ROZAS', club: 'CXF - ESPAZO XOVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 3615, first_name: 'DIEGO', last_name: 'PEREIRO RODRIGUEZ', club: 'CXF - ESPAZO XOVE', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // EXP RAMÓN ESCUDEIRO TILVE
+    { tablero: 1, license_number: 732, first_name: 'ALEJANDRO', last_name: 'FOJO PIÑON', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 4510, first_name: 'PABLO', last_name: 'VIDAL FERNANDEZ', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 8260, first_name: 'MIGUEL', last_name: 'PALACIOS GONZALEZ', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 6182, first_name: 'BERNARDO', last_name: 'REBOLLO MONTES', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1579, first_name: 'RODRIGO', last_name: 'GONZALEZ REGUEIRO', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 3196, first_name: 'ALVARO', last_name: 'MAQUIEIRA VIDAL', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // XADREZ ALBATROS A
+    { tablero: 1, license_number: 1889, first_name: 'GERMAN', last_name: 'VILAPLANA BAZ', club: 'XADREZ ALBATROS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1056, first_name: 'AVELINO', last_name: 'DOMINGUEZ GONZALEZ', club: 'XADREZ ALBATROS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 2362, first_name: 'SERGIO', last_name: 'LOMBA GONZALEZ', club: 'XADREZ ALBATROS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 2929, first_name: 'DANIEL', last_name: 'LOMBA GONZALEZ', club: 'XADREZ ALBATROS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1057, first_name: 'JUAN CARLOS', last_name: 'VICENTE URBANO', club: 'XADREZ ALBATROS A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 2932, first_name: 'ANTONIO', last_name: 'CASTRO ALONSO', club: 'XADREZ ALBATROS A', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // CLUB DEPORTIVO XADREZ OURENSE B
+    { tablero: 1, license_number: 810, first_name: 'IAGO', last_name: 'PROL NOGUEIRA', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 3902, first_name: 'CARLOS JOAO FERNANDES', last_name: 'NOVAIS', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 806, first_name: 'JOSE LUIS', last_name: 'FERNANDEZ SAAVEDRA', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 811, first_name: 'JESUS MIGUEL', last_name: 'CONDE LLINARES', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 892, first_name: 'FRANCISCO J.', last_name: 'OGANDO GONZALEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 812, first_name: 'ALEJANDRO', last_name: 'DE LEON JUSTO', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 2852, first_name: 'SAMUEL', last_name: 'CRUZ GUERRA', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 14504, first_name: 'JESUS MANUEL', last_name: 'BETANCOURT HERNANDEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 26743, first_name: 'BRUNO RICARDO', last_name: 'LOPES', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 808, first_name: 'ELIAS JOSE', last_name: 'GONZALEZ GIL', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 26936, first_name: 'RAQUEL DOS SANTOS', last_name: 'DUQUE', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 13010, first_name: 'IVO RODRIGUES', last_name: 'DIAS', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // LICEO CASINO DE TUI - XADREZ TUI
+    { tablero: 1, license_number: 7110, first_name: 'CIBRAN', last_name: 'ALVAREZ CASTAÑO', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 14582, first_name: 'JAN SEBASTIAN', last_name: 'ARIAS MUÑOZ', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 5208, first_name: 'DAVID', last_name: 'DOCAMPO GARCIA', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1298, first_name: 'LUIS', last_name: 'FERNANDEZ DE ARMAS', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 457, first_name: 'EMILIO', last_name: 'PAZO NUÑEZ', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 12442, first_name: 'DANIEL', last_name: 'FERNANDEZ PAZOS', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // LUCENA XG - VIGO
+    { tablero: 1, license_number: 2744, first_name: 'ROBERTO', last_name: 'PARAMOS DOMINGUEZ', club: 'LUCENA XG - VIGO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1779, first_name: 'FRANCISCO', last_name: 'CARRERA PEREZ', club: 'LUCENA XG - VIGO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1268, first_name: 'AVELINO', last_name: 'LEIROS VILA', club: 'LUCENA XG - VIGO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 26614, first_name: 'MIGUEL', last_name: 'MORONA MINGUEZ', club: 'LUCENA XG - VIGO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11854, first_name: 'SANTIAGO', last_name: 'MOUGAN GONZALEZ', club: 'LUCENA XG - VIGO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 24494, first_name: 'RUBEN', last_name: 'GARRIDO RODRÍGUEZ', club: 'LUCENA XG - VIGO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 13791, first_name: 'DIEGO', last_name: 'IBAÑEZ CRUCES', club: 'LUCENA XG - VIGO', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 24480, first_name: 'GUILLERMO', last_name: 'DOPICO CARREJA', club: 'LUCENA XG - VIGO', division: 'Preferente', valor: 0, total_points: 0 },
+
+    // UNIVERSITARIO DE OURENSE A
+    { tablero: 1, license_number: 8502, first_name: 'MANUEL', last_name: 'VIDAL DEL RIO', club: 'UNIVERSITARIO DE OURENSE A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 8620, first_name: 'ANTONIO', last_name: 'VILLAR NIEVES', club: 'UNIVERSITARIO DE OURENSE A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 813, first_name: 'DIEGO', last_name: 'VIDAL DEL RIO', club: 'UNIVERSITARIO DE OURENSE A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 8462, first_name: 'MARCOS', last_name: 'REZA SALGADO', club: 'UNIVERSITARIO DE OURENSE A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 8463, first_name: 'MIGUEL', last_name: 'REZA SALGADO', club: 'UNIVERSITARIO DE OURENSE A', division: 'Preferente', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 14845, first_name: 'David', last_name: 'Rivas Vila', club: 'UNIVERSITARIO DE OURENSE A', division: 'Preferente', valor: 0, total_points: 0 },
+
+    
     // PRIMERA DIVISIÓN
 
     // AFECCIONADOS CLUBEXA
@@ -162,22 +352,6 @@ const playersList = [
     { tablero: 6, license_number: 5540, first_name: 'ALEJANDRO', last_name: 'VILLODAS VAZQUEZ', club: 'AFECCIONADOS CLUBEXA', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 7, license_number: 125, first_name: 'JOSE MARIA', last_name: 'GONZALEZ PRIDA', club: 'AFECCIONADOS CLUBEXA', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 8, license_number: 1387, first_name: 'JOSE MARIA', last_name: 'DORADO REBOREDO', club: 'AFECCIONADOS CLUBEXA', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // CÍRCULO FERROLANO B
-    { tablero: 1, license_number: 7069, first_name: 'LORENZO', last_name: 'GONZALEZ TABOADA', club: 'CÍRCULO FERROLANO B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 6245, first_name: 'ROQUE', last_name: 'BOUZA SANTISO', club: 'CÍRCULO FERROLANO B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 10655, first_name: 'DAVID', last_name: 'VARELA PETEIRA', club: 'CÍRCULO FERROLANO B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 1964, first_name: 'RODRIGO', last_name: 'CUBERO FERREIRO', club: 'CÍRCULO FERROLANO B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 2886, first_name: 'CARMEN', last_name: 'LOPEZ GRAÑA', club: 'CÍRCULO FERROLANO B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 7443, first_name: 'ANDRES', last_name: 'VAZQUEZ PORTA', club: 'CÍRCULO FERROLANO B', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // CÍRCULO FERROLANO C
-    { tablero: 1, license_number: 3964, first_name: 'MANUEL', last_name: 'GONZALEZ LOPEZ', club: 'CÍRCULO FERROLANO C', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 25243, first_name: 'LUCIA', last_name: 'LOPEZ FRAGA', club: 'CÍRCULO FERROLANO C', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 615, first_name: 'DAVID', last_name: 'RAMON LOSADA', club: 'CÍRCULO FERROLANO C', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 8878, first_name: 'RAQUEL XIAN', last_name: 'CARREGADO GARCIA', club: 'CÍRCULO FERROLANO C', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 7314, first_name: 'ALEJANDRO', last_name: 'SANCHEZ ROMAR', club: 'CÍRCULO FERROLANO C', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 14840, first_name: 'JOSE ANTONIO', last_name: 'GARCIA MATO', club: 'CÍRCULO FERROLANO C', division: 'Primera División', valor: 0, total_points: 0 },
 
     // CLUB XADREZ SMYSLOV SADA
     { tablero: 1, license_number: 198, first_name: 'JORGE', last_name: 'GRAÑA LOIS', club: 'CLUB XADREZ SMYSLOV SADA', division: 'Primera División', valor: 0, total_points: 0 },
@@ -207,16 +381,6 @@ const playersList = [
     { tablero: 5, license_number: 504, first_name: 'JOSE MANUEL', last_name: 'LOUREIRO GOMEZ', club: 'CXB LUGAMI A', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 6, license_number: 8476, first_name: 'ANTONIO', last_name: 'FERNANDEZ FERNANDEZ', club: 'CXB LUGAMI A', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 7, license_number: 171, first_name: 'OSCAR', last_name: 'GARCIA RAMOS', club: 'CXB LUGAMI A', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // E.L.X.
-    { tablero: 1, license_number: 21501, first_name: 'SIEM', last_name: 'VAN DAEL', club: 'E.L.X.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 6840, first_name: 'PABLO', last_name: 'LOPEZ VARELA', club: 'E.L.X.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 26767, first_name: 'EMILIA', last_name: 'DYLAG', club: 'E.L.X.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 3288, first_name: 'ALFONSO', last_name: 'ARANGO FERNANDEZ', club: 'E.L.X.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 6, first_name: 'CARLOS', last_name: 'CASARES CABANAS', club: 'E.L.X.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 9894, first_name: 'MARIA JESUS', last_name: 'VARELA VILLAMARIN', club: 'E.L.X.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 7300, first_name: 'YADAI', last_name: 'CARBALLIDO BOUZAS', club: 'E.L.X.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 9109, first_name: 'MARTA', last_name: 'CASTRO GIRONA', club: 'E.L.X.', division: 'Primera División', valor: 0, total_points: 0 },
 
     // E.L.X. un Tal Dubov
     { tablero: 1, license_number: 4457, first_name: 'ANDRES', last_name: 'GRAÑA CASTAÑAL', club: 'E.L.X. un Tal Dubov', division: 'Primera División', valor: 0, total_points: 0 },
@@ -255,33 +419,6 @@ const playersList = [
     { tablero: 8, license_number: 733, first_name: 'MIGUEL ANGEL', last_name: 'FERRO JOVE', club: 'GRUPO BAZÁN A', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 9, license_number: 2840, first_name: 'ALEXANDRE', last_name: 'RODRIGUEZ SIGLER', club: 'GRUPO BAZÁN A', division: 'Primera División', valor: 0, total_points: 0 },
 
-    // NARONTEC C.X.N.
-    { tablero: 1, license_number: 616, first_name: 'PABLO', last_name: 'FERNANDEZ LOPEZ', club: 'NARONTEC C.X.N.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 602, first_name: 'JOSE RAMON', last_name: 'PANTIN SOTO', club: 'NARONTEC C.X.N.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 12161, first_name: 'SERGIO', last_name: 'DINIZ LOPEZ', club: 'NARONTEC C.X.N.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 25944, first_name: 'JAVIER', last_name: 'CASTRILLON OTERO', club: 'NARONTEC C.X.N.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 607, first_name: 'JUAN MANUEL', last_name: 'CANEIRO COUTO', club: 'NARONTEC C.X.N.', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 603, first_name: 'JUAN CARLOS', last_name: 'BERDULLAS GUERRA', club: 'NARONTEC C.X.N.', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // RECATELO CAMPUS TERRA
-    { tablero: 1, license_number: 13217, first_name: 'ADOLFO', last_name: 'DIAZ NUÑEZ', club: 'RECATELO CAMPUS TERRA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 54, first_name: 'MOISES', last_name: 'SYLLA GARCIA', club: 'RECATELO CAMPUS TERRA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 50, first_name: 'ANGEL', last_name: 'PENALONGA SWEERS', club: 'RECATELO CAMPUS TERRA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 1512, first_name: 'RAFAEL', last_name: 'ALONSO VAZQUEZ', club: 'RECATELO CAMPUS TERRA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 59, first_name: 'OSVALDO', last_name: 'DIEGUEZ LOPEZ', club: 'RECATELO CAMPUS TERRA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 56, first_name: 'PABLO', last_name: 'SANCHEZ QUINTEIRO', club: 'RECATELO CAMPUS TERRA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 49, first_name: 'MIGUEL ANGEL', last_name: 'FERNANDEZ LOPEZ', club: 'RECATELO CAMPUS TERRA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 27006, first_name: 'RUBEN', last_name: 'CEÑAL GUTIERREZ', club: 'RECATELO CAMPUS TERRA', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // ALEXANDRE BÓVEDA A
-    { tablero: 1, license_number: 24550, first_name: 'SERGIO', last_name: 'LOPEZ REGUEIRO', club: 'ALEXANDRE BÓVEDA A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 25617, first_name: 'KARLA JULY', last_name: 'FERNÁNDEZ RIVERO', club: 'ALEXANDRE BÓVEDA A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 191, first_name: 'MIGUEL', last_name: 'CARBALLO NOYA', club: 'ALEXANDRE BÓVEDA A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 200, first_name: 'ALEJANDRO', last_name: 'SANCHEZ BARDANCA', club: 'ALEXANDRE BÓVEDA A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 192, first_name: 'VICTOR', last_name: 'GONZALEZ CARRO', club: 'ALEXANDRE BÓVEDA A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 161, first_name: 'JOSE', last_name: 'LARROSA VILA', club: 'ALEXANDRE BÓVEDA A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 2915, first_name: 'SALVADOR', last_name: 'DIZ INFANTE', club: 'ALEXANDRE BÓVEDA A', division: 'Primera División', valor: 0, total_points: 0 },
-
     // ALGALIA DE ABAIXO
     { tablero: 1, license_number: 289, first_name: 'ANGEL', last_name: 'CARRIL GONZALEZ', club: 'ALGALIA DE ABAIXO', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 298, first_name: 'FRANCISCO', last_name: 'BAÑOBRE GONZALEZ', club: 'ALGALIA DE ABAIXO', division: 'Primera División', valor: 0, total_points: 0 },
@@ -290,14 +427,6 @@ const playersList = [
     { tablero: 5, license_number: 2968, first_name: 'KAMO', last_name: 'PETROSYAN', club: 'ALGALIA DE ABAIXO', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 6, license_number: 408, first_name: 'CARLOS', last_name: 'ARIAS IGLESIAS', club: 'ALGALIA DE ABAIXO', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 8, license_number: 8050, first_name: 'CARLOS', last_name: 'GONZALEZ GONZALEZ', club: 'ALGALIA DE ABAIXO', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // ALGALIA DO MEDIO
-    { tablero: 1, license_number: 370, first_name: 'FERNANDO', last_name: 'REGUEIRA VEIGA', club: 'ALGALIA DO MEDIO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 7720, first_name: 'GABRIEL', last_name: 'BARREIRO RIVERA', club: 'ALGALIA DO MEDIO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 301, first_name: 'XOSE MANUEL', last_name: 'IGLESIAS IGLESIAS', club: 'ALGALIA DO MEDIO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 5347, first_name: 'MANUEL', last_name: 'GARCIA AMADO', club: 'ALGALIA DO MEDIO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 10757, first_name: 'ALEJANDRO', last_name: 'COUSELO NEIRA', club: 'ALGALIA DO MEDIO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 7725, first_name: 'LEO', last_name: 'CENDAN MALINGRET', club: 'ALGALIA DO MEDIO', division: 'Primera División', valor: 0, total_points: 0 },
 
     // CABO TOURIÑÁN CONCELLO DE MUXÍA
     { tablero: 1, license_number: 8389, first_name: 'DAVID', last_name: 'BUITRON RAMIL', club: 'CABO TOURIÑÁN CONCELLO DE MUXÍA', division: 'Primera División', valor: 0, total_points: 0 },
@@ -308,16 +437,6 @@ const playersList = [
     { tablero: 6, license_number: 11169, first_name: 'ANA', last_name: 'BARJA DE QUIROGA LOSADA', club: 'CABO TOURIÑÁN CONCELLO DE MUXÍA', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 7, license_number: 6514, first_name: 'SANTIAGO', last_name: 'PEREZ HAZ', club: 'CABO TOURIÑÁN CONCELLO DE MUXÍA', division: 'Primera División', valor: 0, total_points: 0 },
 
-    // CLUB DE AJEDREZ MACONDO A
-    { tablero: 1, license_number: 6499, first_name: 'JOSE RAMON', last_name: 'GOMEZ TORRE', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 24551, first_name: 'CARLOS JOSE', last_name: 'MARTINEZ ROJAS', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 230, first_name: 'JUAN CARLOS', last_name: 'RODRIGUEZ FERNANDEZ', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 233, first_name: 'VICTOR JOSE', last_name: 'GODAY OTERO', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 232, first_name: 'ROGELIO', last_name: 'FERNANDEZ MACEIRAS', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 25624, first_name: 'AMIN ANDRES', last_name: 'MEBAREK DAZA', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 26727, first_name: 'MIGUEL ANTONIO', last_name: 'DIEGUEZ RATON', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 27076, first_name: 'CHRISTIAN', last_name: 'PEREZ VERA', club: 'CLUB DE AJEDREZ MACONDO A', division: 'Primera División', valor: 0, total_points: 0 },
-
     // CLUB USC B
     { tablero: 1, license_number: 11003, first_name: 'ANTON', last_name: 'QUINTAS OTERO', club: 'CLUB USC B', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 11325, first_name: 'MANUEL ANXO', last_name: 'CABAÑAS LOPEZ', club: 'CLUB USC B', division: 'Primera División', valor: 0, total_points: 0 },
@@ -326,33 +445,6 @@ const playersList = [
     { tablero: 5, license_number: 12365, first_name: 'FRANCISCO EDUARDO', last_name: 'CABAÑAS DIAZ', club: 'CLUB USC B', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 6, license_number: 12242, first_name: 'JOSÉ LUIS', last_name: 'QUINTAS CARREIRA', club: 'CLUB USC B', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 7, license_number: 27106, first_name: 'MARTIN', last_name: 'BLANCO CASTRO', club: 'CLUB USC B', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // CLUB XADREZ ARTEIXO A
-    { tablero: 1, license_number: 276, first_name: 'OSCAR BRUNO', last_name: 'DE PRADO RODRIGUEZ', club: 'CLUB XADREZ ARTEIXO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 1479, first_name: 'FRANCISCO MIGUEL', last_name: 'AMADO RODRIGUEZ', club: 'CLUB XADREZ ARTEIXO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 8912, first_name: 'MARIO', last_name: 'MAÑANA PEDREIRA', club: 'CLUB XADREZ ARTEIXO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 6451, first_name: 'ADRIAN', last_name: 'AMADO RODRIGUEZ', club: 'CLUB XADREZ ARTEIXO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 9571, first_name: 'XOSE MANUEL', last_name: 'ZAPATA PEREZ', club: 'CLUB XADREZ ARTEIXO A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 12690, first_name: 'Daniel', last_name: 'Mendez Rey', club: 'CLUB XADREZ ARTEIXO A', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // E.L.X. LUGO XADREZ
-    { tablero: 1, license_number: 19, first_name: 'DIEGO', last_name: 'FLOREZ RODRIGUEZ', club: 'E.L.X. LUGO XADREZ', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 53, first_name: 'ALFREDO', last_name: 'LOPEZ LOPEZ', club: 'E.L.X. LUGO XADREZ', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 12, first_name: 'EDUARDO', last_name: 'BRAÑA LOPEZ', club: 'E.L.X. LUGO XADREZ', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 655, first_name: 'DIEGO', last_name: 'VAZQUEZ ALVAREZ', club: 'E.L.X. LUGO XADREZ', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 3373, first_name: 'ALEJANDRO', last_name: 'ARIAS PIÑEIRO', club: 'E.L.X. LUGO XADREZ', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 20, first_name: 'BORJA', last_name: 'SANCHEZ LOPEZ', club: 'E.L.X. LUGO XADREZ', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 15, first_name: 'RUBEN', last_name: 'VAZQUEZ DEL VALLE', club: 'E.L.X. LUGO XADREZ', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 1912, first_name: 'CARLOS', last_name: 'FERNANDEZ POMBO', club: 'E.L.X. LUGO XADREZ', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 9, license_number: 2875, first_name: 'ALVARO', last_name: 'HIERRO FERREIRO', club: 'E.L.X. LUGO XADREZ', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // GILLÁN - EL PROGRESO
-    { tablero: 1, license_number: 518, first_name: 'FRANCISCO LUIS', last_name: 'ABELLA CRUZ', club: 'GILLÁN - EL PROGRESO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 517, first_name: 'JOSE ANTONIO', last_name: 'CRUZ CAMBON', club: 'GILLÁN - EL PROGRESO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 525, first_name: 'IAGO', last_name: 'GARCIA OUTEIRO', club: 'GILLÁN - EL PROGRESO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 523, first_name: 'XOSE BREOGAN', last_name: 'GARCIA OUTEIRO', club: 'GILLÁN - EL PROGRESO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 533, first_name: 'DIEGO', last_name: 'CHOUCIÑO BELLO', club: 'GILLÁN - EL PROGRESO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 4563, first_name: 'JAVIER MANUEL', last_name: 'FARINA PEREZ', club: 'GILLÁN - EL PROGRESO', division: 'Primera División', valor: 0, total_points: 0 },
 
     // MILLADOIRO
     { tablero: 1, license_number: 3996, first_name: 'JOSE', last_name: 'DOVAL GONZALEZ', club: 'MILLADOIRO', division: 'Primera División', valor: 0, total_points: 0 },
@@ -380,19 +472,8 @@ const playersList = [
     { tablero: 6, license_number: 552, first_name: 'RODRIGO', last_name: 'TEIJEIRA LASTRES', club: 'XIRIA CALVO CARBALLO A', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 7, license_number: 10003, first_name: 'RAMIRO', last_name: 'LEMA GARCIA', club: 'XIRIA CALVO CARBALLO A', division: 'Primera División', valor: 0, total_points: 0 },
 
-    // ALGALIA
-    { tablero: 1, license_number: 309, first_name: 'JUAN PABLO', last_name: 'GARCIA MELGAR', club: 'ALGALIA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 313, first_name: 'EMILIO', last_name: 'PAREDES GALAN', club: 'ALGALIA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 316, first_name: 'IRENE', last_name: 'AMADO ROLAN', club: 'ALGALIA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 312, first_name: 'TOMAS', last_name: 'CORONA GARCIA', club: 'ALGALIA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 1509, first_name: 'GREGORI', last_name: 'NEDOBORA KARASYK', club: 'ALGALIA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 291, first_name: 'PABLO', last_name: 'CORDIDO SIXTO', club: 'ALGALIA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 290, first_name: 'JOSE CARLOS', last_name: 'PENA TORRES', club: 'ALGALIA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 317, first_name: 'JOSE', last_name: 'SANCHEZ CAMINO', club: 'ALGALIA', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 9, license_number: 303, first_name: 'AGUSTIN ANGEL', last_name: 'BLANCO BARREIRO', club: 'ALGALIA', division: 'Primera División', valor: 0, total_points: 0 },
-
     // BREOGÁN
-    { tablero: 1, license_number: 827, first_name: 'JOSE', last_name: 'PEREZ NEGRO', club: 'BREOGÁN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 1, license_number: 827, first_name: 'JOSE M.', last_name: 'PEREZ NEGRO', club: 'BREOGÁN', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 824, first_name: 'DAVID', last_name: 'TORRES DOMINGUEZ', club: 'BREOGÁN', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 3, license_number: 833, first_name: 'JUAN JOSE', last_name: 'MONTES MAYO', club: 'BREOGÁN', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 4, license_number: 832, first_name: 'HELADIO', last_name: 'OUTEIRO PADIN', club: 'BREOGÁN', division: 'Primera División', valor: 0, total_points: 0 },
@@ -405,19 +486,6 @@ const playersList = [
     { tablero: 11, license_number: 24788, first_name: 'MARCOS', last_name: 'SABOR CAMIÑA', club: 'BREOGÁN', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 12, license_number: 2702, first_name: 'CARMEN', last_name: 'PRIETO ALVAREZ', club: 'BREOGÁN', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 13, license_number: 6034, first_name: 'JESUS FRANCISCO', last_name: 'LEIRO ABELLEIRA', club: 'BREOGÁN', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // CLUB KÁRPOV
-    { tablero: 1, license_number: 951, first_name: 'MANUEL ANTONIO', last_name: 'PEREZ FUNGUEIRO', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 3638, first_name: 'MIGUEL', last_name: 'CABRERO DE CABO', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 976, first_name: 'VICTOR', last_name: 'ALONSO MACIAS', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 967, first_name: 'DAVID', last_name: 'FARTO OROZCO', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 9481, first_name: 'SERGIO', last_name: 'ESTEPA GUERRERO', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 1007, first_name: 'ANGEL RAMON', last_name: 'OTERO RAMIREZ', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 961, first_name: 'SANTIAGO', last_name: 'ARGIBAY FONTAN', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 965, first_name: 'RAFAEL', last_name: 'BOUZAS BELLO', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 9, license_number: 960, first_name: 'CARLOS BRADAN', last_name: 'DOCAMPO GARRIDO', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 10, license_number: 4487, first_name: 'GONZALO', last_name: 'SAAVEDRA SANTIAGO', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 11, license_number: 970, first_name: 'JACOBO DE LA CRUZ', last_name: 'FRAGA CASTRO', club: 'CLUB KÁRPOV', division: 'Primera División', valor: 0, total_points: 0 },
 
     // CLUB XADREZ RIANXO B
     { tablero: 1, license_number: 436, first_name: 'SERGIO', last_name: 'AREVALILLO ROMERO', club: 'CLUB XADREZ RIANXO B', division: 'Primera División', valor: 0, total_points: 0 },
@@ -435,15 +503,6 @@ const playersList = [
     { tablero: 4, license_number: 6862, first_name: 'JAVIER', last_name: 'FERNANDEZ COSTAS', club: 'CULTURAL DEPORTIVA PORTAS XADREZ A', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 5, license_number: 3840, first_name: 'JUAN RAMON', last_name: 'OCAMPO RIVAS', club: 'CULTURAL DEPORTIVA PORTAS XADREZ A', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 6, license_number: 3841, first_name: 'SANDRO CESAR', last_name: 'PADILLA PICUASI', club: 'CULTURAL DEPORTIVA PORTAS XADREZ A', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // CXF - ESPAZO XOVE
-    { tablero: 1, license_number: 2889, first_name: 'LUIS', last_name: 'SEGURA SANTOS', club: 'CXF - ESPAZO XOVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 947, first_name: 'ANDRES', last_name: 'VARELA FERNANDEZ', club: 'CXF - ESPAZO XOVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 7910, first_name: 'LUCA', last_name: 'REY CHIMERA', club: 'CXF - ESPAZO XOVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 6996, first_name: 'PAULA', last_name: 'SUAREZ GOMEZ', club: 'CXF - ESPAZO XOVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 5009, first_name: 'ANDREA', last_name: 'DORADO MEIJIDE', club: 'CXF - ESPAZO XOVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 8717, first_name: 'DAVID', last_name: 'SUAREZ ROZAS', club: 'CXF - ESPAZO XOVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 3615, first_name: 'DIEGO', last_name: 'PEREIRO RODRIGUEZ', club: 'CXF - ESPAZO XOVE', division: 'Primera División', valor: 0, total_points: 0 },
 
     // CXF - MC DONALDS
     { tablero: 1, license_number: 10876, first_name: 'CESAR', last_name: 'OUBIÑA PAZOS', club: 'CXF - MC DONALDS', division: 'Primera División', valor: 0, total_points: 0 },
@@ -465,38 +524,6 @@ const playersList = [
     { tablero: 9, license_number: 1310, first_name: 'JOSE ANTONIO', last_name: 'GOMEZ VILLAVERDE', club: 'DORNA VENGARCO', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 10, license_number: 6314, first_name: 'SOFIA BELEN', last_name: 'DOVAL VILLCA', club: 'DORNA VENGARCO', division: 'Primera División', valor: 0, total_points: 0 },
 
-    // EXP RAMÓN ESCUDEIRO TILVE
-    { tablero: 1, license_number: 732, first_name: 'ALEJANDRO', last_name: 'FOJO PIÑON', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 4510, first_name: 'PABLO', last_name: 'VIDAL FERNANDEZ', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 8260, first_name: 'MIGUEL', last_name: 'PALACIOS GONZALEZ', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 6182, first_name: 'BERNARDO', last_name: 'REBOLLO MONTES', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 1579, first_name: 'RODRIGO', last_name: 'GONZALEZ REGUEIRO', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 3196, first_name: 'ALVARO', last_name: 'MAQUIEIRA VIDAL', club: 'EXP RAMÓN ESCUDEIRO TILVE', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // LAROCA-NIGRAN A
-    { tablero: 1, license_number: 1183, first_name: 'CONSTANTINO', last_name: 'GONZALEZ LEVICES', club: 'LAROCA-NIGRAN A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 1164, first_name: 'SERGIO', last_name: 'LOPEZ PEREZ', club: 'LAROCA-NIGRAN A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 12405, first_name: 'RICARDO', last_name: 'FERNÁNDEZ LÓPEZ', club: 'LAROCA-NIGRAN A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 7126, first_name: 'JOSE MANUEL', last_name: 'BEN ALVAREZ', club: 'LAROCA-NIGRAN A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 5035, first_name: 'AVELINO ALE', last_name: 'IGLESIAS FERNANDEZ', club: 'LAROCA-NIGRAN A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 1166, first_name: 'TOMAS', last_name: 'BERNARDEZ DURAN', club: 'LAROCA-NIGRAN A', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // SOCIEDADE LICEO MARQUIÑO
-    { tablero: 1, license_number: 10466, first_name: 'IAGO', last_name: 'FERNANDEZ RAMOS', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 9470, first_name: 'DAVID', last_name: 'CERNADAS CAMEAN', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 435, first_name: 'JESUS', last_name: 'RODRIGUEZ PEREZ', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 358, first_name: 'ANXO', last_name: 'CARREIRA CASAIS', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 441, first_name: 'GERARDO', last_name: 'GIL PEREZ', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 25914, first_name: 'CURSTAN JORDAN', last_name: 'ARMSTRONG', club: 'SOCIEDADE LICEO MARQUIÑO', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // XADREZ ALBATROS A
-    { tablero: 1, license_number: 1889, first_name: 'GERMAN', last_name: 'VILAPLANA BAZ', club: 'XADREZ ALBATROS A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 1056, first_name: 'AVELINO', last_name: 'DOMINGUEZ GONZALEZ', club: 'XADREZ ALBATROS A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 2362, first_name: 'SERGIO', last_name: 'LOMBA GONZALEZ', club: 'XADREZ ALBATROS A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 2929, first_name: 'DANIEL', last_name: 'LOMBA GONZALEZ', club: 'XADREZ ALBATROS A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 1057, first_name: 'JUAN CARLOS', last_name: 'VICENTE URBANO', club: 'XADREZ ALBATROS A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 2932, first_name: 'ANTONIO', last_name: 'CASTRO ALONSO', club: 'XADREZ ALBATROS A', division: 'Primera División', valor: 0, total_points: 0 },
-
     // BENCHOSHEY FISCHER
     { tablero: 1, license_number: 8488, first_name: 'CESAREO', last_name: 'ALVAREZ RODRIGUEZ', club: 'BENCHOSHEY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 9626, first_name: 'BENJAMIN', last_name: 'DIEGUEZ NOVOA', club: 'BENCHOSHEY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
@@ -506,21 +533,6 @@ const playersList = [
     { tablero: 6, license_number: 8788, first_name: 'JUAN ANTONIO', last_name: 'SACO RIVERA', club: 'BENCHOSHEY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 7, license_number: 12960, first_name: 'LUIS', last_name: 'GUERRERO MENDEZ', club: 'BENCHOSHEY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
 
-    // CIRCULO CHANTADINO XADREZ B
-    { tablero: 1, license_number: 5952, first_name: 'Antonio PEDRO CARAMEZ', last_name: 'PEREIRA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 5560, first_name: 'ALEJANDRO I', last_name: 'FERNANDEZ LOPEZ', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 26817, first_name: 'MARIIA', last_name: 'IUGINA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 13237, first_name: 'DIOGO', last_name: 'FARIA DE OLIVEIRA MARTINS', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 5535, first_name: 'JOSE MIGUEL', last_name: 'VAZQUEZ FORTES', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 24744, first_name: 'PEDRO MIGUEL', last_name: 'GOMES MENDES', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 25869, first_name: 'FRANCISCO', last_name: 'NUNES VIEIRA DE ALMEIDA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 10449, first_name: 'EUGENIO', last_name: 'MARTINEZ RODRIGUEZ', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 9, license_number: 11916, first_name: 'MARIANA SOFIA', last_name: 'TEIXEIRA DA SILVA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 10, license_number: 11917, first_name: 'ANA', last_name: 'TEIXEIRA DA SILVA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 11, license_number: 880, first_name: 'ALBA', last_name: 'PIAY GARCIA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 12, license_number: 12740, first_name: 'JOSE LUCAS', last_name: 'FERREIRA DA SILVA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 13, license_number: 5559, first_name: 'PABLO', last_name: 'FERNANDEZ LOPEZ', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 14, license_number: 25868, first_name: 'TOMAS AFONSO', last_name: 'PIRES DOS SANTOS', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Primera División', valor: 0, total_points: 0 },
 
     // CLUB DEPORTIVO XADREZ OURENSE C
     { tablero: 1, license_number: 8895, first_name: 'JOSÉ MIGUEL TEIXEIRA', last_name: 'MARGARIDO', club: 'CLUB DEPORTIVO XADREZ OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
@@ -566,54 +578,6 @@ const playersList = [
     { tablero: 12, license_number: 920, first_name: 'JOSE ALBERTO', last_name: 'RODRIGUEZ GARCIA', club: 'CXF - CONCELLO DEVILAGARCIA', division: 'Primera División', valor: 0, total_points: 0 },
 
 
-    // CLUB DEPORTIVO XADREZ OURENSE B
-    { tablero: 1, license_number: 810, first_name: 'IAGO', last_name: 'PROL NOGUEIRA', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 3902, first_name: 'CARLOS JOAO FERNANDES', last_name: 'NOVAIS', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 806, first_name: 'JOSE LUIS', last_name: 'FERNANDEZ SAAVEDRA', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 811, first_name: 'JESUS MIGUEL', last_name: 'CONDE LLINARES', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 892, first_name: 'FRANCISCO', last_name: 'OGANDO GONZALEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 812, first_name: 'ALEJANDRO', last_name: 'DE LEON JUSTO', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 2852, first_name: 'SAMUEL', last_name: 'CRUZ GUERRA', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 14504, first_name: 'JESUS MANUEL', last_name: 'BETANCOURT HERNANDEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 9, license_number: 26743, first_name: 'BRUNO RICARDO', last_name: 'LOPES', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 10, license_number: 808, first_name: 'ELIAS JOSE', last_name: 'GONZALEZ GIL', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 11, license_number: 26936, first_name: 'RAQUEL DOS SANTOS', last_name: 'DUQUE', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 12, license_number: 13010, first_name: 'IVO', last_name: 'RODRIGUES DIAS', club: 'CLUB DEPORTIVO XADREZ OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // LICEO CASINO DE TUI - XADREZ TUI
-    { tablero: 1, license_number: 7110, first_name: 'CIBRAN', last_name: 'ALVAREZ CASTAÑO', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 14582, first_name: 'JAN SEBASTIAN', last_name: 'ARIAS MUÑOZ', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 5208, first_name: 'DAVID', last_name: 'DOCAMPO GARCIA', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 1298, first_name: 'LUIS', last_name: 'FERNANDEZ DE ARMAS', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 457, first_name: 'EMILIO', last_name: 'PAZO NUÑEZ', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 12442, first_name: 'DANIEL', last_name: 'FERNANDEZ PAZOS', club: 'LICEO CASINO DE TUI - XADREZ TUI', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // LICEO GRUPO A. POSTAL
-    { tablero: 1, license_number: 11752, first_name: 'ARIAN', last_name: 'GONZALEZ PEREZ', club: 'LICEO GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 782, first_name: 'DAVID', last_name: 'BALTAR IGLESIAS', club: 'LICEO GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 5453, first_name: 'ANGEL', last_name: 'DOMINGUEZ FERNANDEZ', club: 'LICEO GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 1875, first_name: 'MARCOS', last_name: 'LORENZO DURAN', club: 'LICEO GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 1879, first_name: 'JUAN CARLOS', last_name: 'NEGREIRA RODRIGUEZ', club: 'LICEO GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 6566, first_name: 'CESAR', last_name: 'PEREZ DAPOZA', club: 'LICEO GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // LUCENA XG - VIGO
-    { tablero: 1, license_number: 2744, first_name: 'ROBERTO', last_name: 'PARAMOS DOMINGUEZ', club: 'LUCENA XG - VIGO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 1779, first_name: 'FRANCISCO', last_name: 'CARRERA PEREZ', club: 'LUCENA XG - VIGO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 1268, first_name: 'AVELINO', last_name: 'LEIROS VILA', club: 'LUCENA XG - VIGO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 26614, first_name: 'MIGUEL', last_name: 'MORONA MINGUEZ', club: 'LUCENA XG - VIGO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 11854, first_name: 'SANTIAGO', last_name: 'MOUGAN GONZALEZ', club: 'LUCENA XG - VIGO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 24494, first_name: 'RUBEN', last_name: 'GARRIDO RODRÍGUEZ', club: 'LUCENA XG - VIGO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 13791, first_name: 'DIEGO', last_name: 'IBAÑEZ CRUCES', club: 'LUCENA XG - VIGO', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 8, license_number: 24480, first_name: 'GUILLERMO', last_name: 'DOPICO CARREJA', club: 'LUCENA XG - VIGO', division: 'Primera División', valor: 0, total_points: 0 },
-
-    // UNIVERSITARIO DE OURENSE A
-    { tablero: 1, license_number: 8502, first_name: 'MANUEL', last_name: 'VIDAL DEL RIO', club: 'UNIVERSITARIO DE OURENSE A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 2, license_number: 8620, first_name: 'ANTONIO', last_name: 'VILLAR NIEVES', club: 'UNIVERSITARIO DE OURENSE A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 3, license_number: 813, first_name: 'DIEGO', last_name: 'VIDAL DEL RIO', club: 'UNIVERSITARIO DE OURENSE A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 4, license_number: 8462, first_name: 'MARCOS', last_name: 'REZA SALGADO', club: 'UNIVERSITARIO DE OURENSE A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 5, license_number: 8463, first_name: 'MIGUEL', last_name: 'REZA SALGADO', club: 'UNIVERSITARIO DE OURENSE A', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 6, license_number: 14845, first_name: 'David', last_name: 'Rivas Vila', club: 'UNIVERSITARIO DE OURENSE A', division: 'Primera División', valor: 0, total_points: 0 },
-
     // UNIVERSITARIO DE OURENSE B
     { tablero: 1, license_number: 770, first_name: 'MANUEL', last_name: 'ALVAREZ FERNANDEZ', club: 'UNIVERSITARIO DE OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 2, license_number: 769, first_name: 'JOSE ANTONIO', last_name: 'ALVAREZ FERNANDEZ', club: 'UNIVERSITARIO DE OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
@@ -621,9 +585,1141 @@ const playersList = [
     { tablero: 4, license_number: 11374, first_name: 'RODRIGO', last_name: 'ARIAS PEREZ', club: 'UNIVERSITARIO DE OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 5, license_number: 5195, first_name: 'JOSE LUIS', last_name: 'FERNANDEZ GONZALEZ', club: 'UNIVERSITARIO DE OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
     { tablero: 6, license_number: 7258, first_name: 'ADRIAN', last_name: 'GONZALEZ MAESTRO', club: 'UNIVERSITARIO DE OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
-    { tablero: 7, license_number: 10469, first_name: 'JOSE JAIME', last_name: 'GONZALEZ-VISO PULIDO', club: 'UNIVERSITARIO DE OURENSE B', division: 'Primera División', valor: 0, total_points: 0 }
+    { tablero: 7, license_number: 10469, first_name: 'JOSE JAIME', last_name: 'GONZALEZ-VISO PULIDO', club: 'UNIVERSITARIO DE OURENSE B', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // A.C. A ESTRADA
+    { tablero: 1, license_number: 1317, first_name: 'BASILIO', last_name: 'GUIJARRO ARCA', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1324, first_name: 'EFREN', last_name: 'CARBIA COUCHEIRO', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1321, first_name: 'XOSE HENRIQUE', last_name: 'BAZAL BOUZAS', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 4954, first_name: 'ALEX', last_name: 'VAZQUEZ VARELA', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 8953, first_name: 'SAMUEL', last_name: 'SANCHEZ VAZQUEZ', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 12051, first_name: 'JOSÉ ALBERTO', last_name: 'ESCOBAR RODRÍGUEZ', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 921, first_name: 'JORGE', last_name: 'DIOGO GUINARTE', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 26580, first_name: 'JUAN CARLOS', last_name: 'LORENZO FRANCISCO', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 25462, first_name: 'RAUL', last_name: 'BOUZON LOPEZ', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 13279, first_name: 'XOSE', last_name: 'LOUREIRO BARCALA', club: 'A.C. A ESTRADA', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // ALEKHINE-CORREDURIA TEMPU
+    { tablero: 1, license_number: 9639, first_name: 'DAVID', last_name: 'VAZQUEZ LOPEZ', club: 'ALEKHINE-CORREDURIA TEMPU', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1067, first_name: 'MARCIAL', last_name: 'PRIETO PENAS', club: 'ALEKHINE-CORREDURIA TEMPU', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1780, first_name: 'LUIS ALBERTO', last_name: 'ESTEVEZ RODRIGUEZ', club: 'ALEKHINE-CORREDURIA TEMPU', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1065, first_name: 'ANTONIO', last_name: 'GOMEZ RODRIGUEZ', club: 'ALEKHINE-CORREDURIA TEMPU', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 5948, first_name: 'RAFAEL', last_name: 'SANCHEZ MIGUELEZ', club: 'ALEKHINE-CORREDURIA TEMPU', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 1071, first_name: 'JULIO', last_name: 'FERNANDEZ ALONSO', club: 'ALEKHINE-CORREDURIA TEMPU', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 1153, first_name: 'MIGUEL', last_name: 'HEREDIA FERNANDEZ', club: 'ALEKHINE-CORREDURIA TEMPU', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 24873, first_name: 'CARLOS', last_name: 'HEREDIA BASTERO', club: 'ALEKHINE-CORREDURIA TEMPU', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 1764, first_name: 'BIEITO', last_name: 'SOUSA BARREIRO', club: 'ALEKHINE-CORREDURIA TEMPU', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // AVV O GAITEIRO - SIGRAS
+    { tablero: 1, license_number: 149, first_name: 'FRANCISCO', last_name: 'PEDREIRA GIRALDA', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 21965, first_name: 'NORLY', last_name: 'VENEGAS SANCHEZ', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 14218, first_name: 'DIEGO', last_name: 'FERNANDEZ TOMASELLI', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 5511, first_name: 'DIEGO', last_name: 'BUGLIOT MATEO', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 2165, first_name: 'JULIO', last_name: 'FARIÑAS POSE', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 2070, first_name: 'ALEJANDRO', last_name: 'ALONSO EIROA', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 249, first_name: 'DIEGO', last_name: 'CANTORNA BERDULLAS', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 5259, first_name: 'MIGUEL', last_name: 'RECUNA ARANDA', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 26219, first_name: 'BRAIS', last_name: 'LOPEZ CHAO', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 267, first_name: 'DONATO LUIS', last_name: 'MOSCOSO MELLA', club: 'AVV O GAITEIRO - SIGRAS', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // CELANOVA A
+    { tablero: 1, license_number: 754, first_name: 'PABLO', last_name: 'CASAS REZA', club: 'CELANOVA A', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 745, first_name: 'JUAN CARLOS', last_name: 'BARBOSA FERNANDEZ', club: 'CELANOVA A', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 3017, first_name: 'JAIRO', last_name: 'VILLAR FERNANDEZ', club: 'CELANOVA A', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 747, first_name: 'GUMERSINDO', last_name: 'RODRIGUEZ BERNARDO', club: 'CELANOVA A', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 26473, first_name: 'ALEJANDRO', last_name: 'DORADO RODRIGUEZ', club: 'CELANOVA A', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 10545, first_name: 'MANUEL', last_name: 'PAZ VIZCAYA', club: 'CELANOVA A', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25664, first_name: 'SAMUEL', last_name: 'IGLESIAS VAZQUEZ', club: 'CELANOVA A', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 25665, first_name: 'ROMEO', last_name: 'GUERRERO FERNANDEZ', club: 'CELANOVA A', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // CLUB USC C
+    { tablero: 1, license_number: 22019, first_name: 'RUBEN', last_name: 'LOPEZ ARIAS', club: 'CLUB USC C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 25645, first_name: 'CAROLINA', last_name: 'PICAZO SANCHO', club: 'CLUB USC C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 13892, first_name: 'DIEGO', last_name: 'NORDELO OTALORA', club: 'CLUB USC C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 24611, first_name: 'ALEJANDRO', last_name: 'GRACIA DI RIENZO', club: 'CLUB USC C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 4048, first_name: 'RAMON', last_name: 'FERNANDEZ LAGE', club: 'CLUB USC C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 22021, first_name: 'JUAN SEBASTIÁN', last_name: 'ALAYZA SERRA', club: 'CLUB USC C', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // CLUB XADREZ MOS F
+    { tablero: 1, license_number: 25288, first_name: 'JACOBO', last_name: 'UCHA RODRIGUEZ', club: 'CLUB XADREZ MOS F', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 10657, first_name: 'JESUS', last_name: 'ALVAREZ FERNANDEZ', club: 'CLUB XADREZ MOS F', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 9875, first_name: 'MANUEL', last_name: 'DOMINGUEZ SENLLE', club: 'CLUB XADREZ MOS F', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 6856, first_name: 'MANUEL', last_name: 'GARCIA RAMIL', club: 'CLUB XADREZ MOS F', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11907, first_name: 'JAVIER', last_name: 'OTERO SEIJO', club: 'CLUB XADREZ MOS F', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 9947, first_name: 'MARCOS', last_name: 'GARCIA TENREIRO', club: 'CLUB XADREZ MOS F', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 11906, first_name: 'MARIANO', last_name: 'GARCIA DIAZ', club: 'CLUB XADREZ MOS F', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // CLUB XADREZ OROSO
+    { tablero: 1, license_number: 9613, first_name: 'MARIA DEL CARMEN', last_name: 'VARELA ALVAREZ', club: 'CLUB XADREZ OROSO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 26445, first_name: 'MARIA CRISTINA', last_name: 'POISA JOGLAR', club: 'CLUB XADREZ OROSO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 5314, first_name: 'MARTIN', last_name: 'PENA VARELA', club: 'CLUB XADREZ OROSO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 299, first_name: 'BENJAMIN', last_name: 'PEREZ SOUTO', club: 'CLUB XADREZ OROSO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 2128, first_name: 'XESUS', last_name: 'FEAS SANCHEZ', club: 'CLUB XADREZ OROSO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 547, first_name: 'ALVARO', last_name: 'VIQUEIRA VEREA', club: 'CLUB XADREZ OROSO', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // CXF - BAÑOS PRINT
+    { tablero: 1, license_number: 6695, first_name: 'MARCOS', last_name: 'BOO VALLEJO', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 4257, first_name: 'ADRIAN', last_name: 'BETANZOS JAMARDO', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1607, first_name: 'ADRIAN', last_name: 'MONTANS LOPEZ', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 2981, first_name: 'ALEJANDRO', last_name: 'VICTORERO DOMINGUEZ', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 4855, first_name: 'AITOR', last_name: 'LEIRO POZA', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 4270, first_name: 'MIGUEL ANGEL', last_name: 'BAYON ROLO', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 1633, first_name: 'JACOBO', last_name: 'LAMAS LUAÑA', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 4269, first_name: 'OSCAR', last_name: 'VICTORERO DOMINGUEZ', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 3297, first_name: 'JAVIER', last_name: 'OTERO PEREZ', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 3613, first_name: 'MARIO', last_name: 'SANTOS GARCIA', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 1595, first_name: 'ADRIAN', last_name: 'BLANCO SEIJAS', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 9826, first_name: 'JUAN', last_name: 'BAHAMONDE TRUJILLO', club: 'CXF - BAÑOS PRINT', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // E.L.X. BOBBY FISCHER
+    { tablero: 1, license_number: 12048, first_name: 'PABLO', last_name: 'LOPEZ DIAZ', club: 'E.L.X. BOBBY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 9304, first_name: 'UXIO', last_name: 'VILARIÑO LORENZO', club: 'E.L.X. BOBBY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 13329, first_name: 'SAMUEL', last_name: 'FONTEBOA LOPEZ', club: 'E.L.X. BOBBY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 8353, first_name: 'ANTON', last_name: 'VILARIÑO LORENZO', club: 'E.L.X. BOBBY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 8362, first_name: 'MARCOS', last_name: 'ALFONSO GRANDAS', club: 'E.L.X. BOBBY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 3289, first_name: 'ISABEL', last_name: 'ARANGO FERNANDEZ', club: 'E.L.X. BOBBY FISCHER', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // EXC SUB18
+    { tablero: 1, license_number: 8473, first_name: 'PABLO', last_name: 'MAGARIÑOS GOMEZ', club: 'EXC SUB18', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 11484, first_name: 'MIGUEL ARTURO', last_name: 'VAZQUEZ ALEXANDROUSKI', club: 'EXC SUB18', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 21324, first_name: 'SERGIO', last_name: 'CALVO MIGUEZ', club: 'EXC SUB18', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 9703, first_name: 'IAN', last_name: 'SANCHEZ BASCOY', club: 'EXC SUB18', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 21792, first_name: 'ROBERTO', last_name: 'CALVO VIEITO', club: 'EXC SUB18', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 12430, first_name: 'JESUS', last_name: 'VAZQUEZ FORNO', club: 'EXC SUB18', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // EXF TORREÓN
+    { tablero: 1, license_number: 20998, first_name: 'SALVADOR', last_name: 'MONTERO ENRIQUEZ', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 5828, first_name: 'ISAAC RAFAEL', last_name: 'REGUEIRO GARCIA', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 2208, first_name: 'MIGUEL', last_name: 'BROZOS VAZQUEZ', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 4931, first_name: 'DAVID', last_name: 'BLANCO REY', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 10696, first_name: 'JUAN', last_name: 'FRAGA PEREZ', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 7089, first_name: 'JESUS MANUEL', last_name: 'ALCAIDE CORRAL', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 1360, first_name: 'JOSE', last_name: 'ARDA BLANCO', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 26610, first_name: 'ANTONIO', last_name: 'ALLEGUE LEIRA', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 4932, first_name: 'LUIS ANTONIO', last_name: 'BLANCO REY', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 9464, first_name: 'DANIEL', last_name: 'DOMINGUEZ VIZOSO', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 26470, first_name: 'ROBERTO', last_name: 'SAMPAYO FERNANDEZ', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 25316, first_name: 'FRANCISCO ADAN', last_name: 'ARIAS SANMARTIN', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 26563, first_name: 'CRISTOBAL', last_name: 'SANCHEZ CAMPOS', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 25317, first_name: 'XIAO', last_name: 'CALVO SANJURJO', club: 'EXF TORREÓN', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // EXP CONCELLO DE PONTEVEDRA
+    { tablero: 1, license_number: 1865, first_name: 'DAVID', last_name: 'FERNANDEZ LAGO', club: 'EXP CONCELLO DE PONTEVEDRA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 877, first_name: 'JOSE LUIS', last_name: 'GARCIA BUGALLO', club: 'EXP CONCELLO DE PONTEVEDRA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 9584, first_name: 'ANDRÉ', last_name: 'HERRERA SAAVEDRA', club: 'EXP CONCELLO DE PONTEVEDRA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11952, first_name: 'DANIEL', last_name: 'GIRALDEZ RODRIGUEZ', club: 'EXP CONCELLO DE PONTEVEDRA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11122, first_name: 'XABIER', last_name: 'BORRAJO PIÑEIRO', club: 'EXP CONCELLO DE PONTEVEDRA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 13511, first_name: 'CAMILO', last_name: 'OJEA BOUZO', club: 'EXP CONCELLO DE PONTEVEDRA', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 22213, first_name: 'MARCOS VALIA', last_name: 'GARCIA GONZALEZ', club: 'EXP CONCELLO DE PONTEVEDRA', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // LAROCA-NIGRAN B
+    { tablero: 1, license_number: 3829, first_name: 'SAMUEL', last_name: 'RODRIGUEZ ALLERES', club: 'LAROCA-NIGRAN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 4124, first_name: 'ALBERTO', last_name: 'HERMIDA PIÑEIRO', club: 'LAROCA-NIGRAN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 5034, first_name: 'DANIEL', last_name: 'VAZ VARELA', club: 'LAROCA-NIGRAN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1163, first_name: 'PATRICIO', last_name: 'SALGADO ALONSO', club: 'LAROCA-NIGRAN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 13028, first_name: 'CARLOS', last_name: 'GROBA PRESA', club: 'LAROCA-NIGRAN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 403, first_name: 'JOSE MANUEL', last_name: 'ORDOÑEZ OZORES', club: 'LAROCA-NIGRAN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 4125, first_name: 'DANIEL', last_name: 'ALVAREZ BAZ', club: 'LAROCA-NIGRAN B', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // LICEO B GRUPO A. POSTAL
+    { tablero: 1, license_number: 2905, first_name: 'ARMANDO', last_name: 'DE SOUSA DA SILVA', club: 'LICEO B GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1878, first_name: 'RAFAEL', last_name: 'OUTOMURO NIEVES', club: 'LICEO B GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1880, first_name: 'JOAQUIN ANTONIO', last_name: 'BELLO FILGUEIRA', club: 'LICEO B GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 24818, first_name: 'JUAN', last_name: 'MONTERO MELENDEZ', club: 'LICEO B GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 12355, first_name: 'MATEO', last_name: 'DIBUJA CONDE', club: 'LICEO B GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 14113, first_name: 'ANDRE', last_name: 'BELLO MERA', club: 'LICEO B GRUPO A. POSTAL', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // LUCENA JAQUETONES
+    { tablero: 1, license_number: 25605, first_name: 'ANGEL', last_name: 'RIAL DOMINGUEZ', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 25672, first_name: 'DANNY', last_name: 'SUHR', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 26834, first_name: 'GUSTAVO RUBEN', last_name: 'HUAMANI GUEVARA', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 26841, first_name: 'GUILLERMO', last_name: 'CURRAS LORENZO', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 7673, first_name: 'NICOLAS', last_name: 'DOMINGUEZ PEREZ', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21978, first_name: 'DAVID', last_name: 'ALVAREZ GONZALEZ', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 24972, first_name: 'MATEO', last_name: 'REY BARCIELA', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 14237, first_name: 'ALAIN RAÚL', last_name: 'RODRÍGUEZ MUÑOZ', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 21351, first_name: 'IAGO', last_name: 'LEMA GARCIA', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 24559, first_name: 'VICTOR', last_name: 'ZAPATERO CASTRILLO', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 21280, first_name: 'AKIRA', last_name: 'MOREIRA KASHIMA', club: 'LUCENA JAQUETONES', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // MACONDEROS
+    { tablero: 1, license_number: 14556, first_name: 'CLAUDIO JAVIER', last_name: 'QUEIJO CASTELLANO', club: 'MACONDEROS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 26726, first_name: 'JOSE MANUEL', last_name: 'BELLO LOPEZ', club: 'MACONDEROS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 14028, first_name: 'LUIS MANUEL', last_name: 'FERNANDEZ GARCIA', club: 'MACONDEROS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 14042, first_name: 'JORGE LUIS', last_name: 'JUAREZ CRUZ', club: 'MACONDEROS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 26749, first_name: 'ANGEL', last_name: 'VAN BEEK', club: 'MACONDEROS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 9735, first_name: 'JESUS ANGEL', last_name: 'GONZALEZ COTO', club: 'MACONDEROS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 3564, first_name: 'ALFONSO', last_name: 'CAMARERO ALBANDOZ', club: 'MACONDEROS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 6474, first_name: 'MARTIN', last_name: 'HERVADA RIVERA', club: 'MACONDEROS', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // NARONTEC C.X.N. B
+    { tablero: 1, license_number: 609, first_name: 'ROBERTO', last_name: 'TUIMIL PARAPAR', club: 'NARONTEC C.X.N. B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 4197, first_name: 'LUIS JAVIER', last_name: 'DE PAZ VAZQUEZ', club: 'NARONTEC C.X.N. B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 3759, first_name: 'GUSTAVO DANIEL', last_name: 'RAJO TOYOS', club: 'NARONTEC C.X.N. B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 86, first_name: 'PABLO', last_name: 'GANDOY MARTINEZ', club: 'NARONTEC C.X.N. B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 14842, first_name: 'SERGIO', last_name: 'DE PAZ MOURIÑO', club: 'NARONTEC C.X.N. B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 621, first_name: 'SANTIAGO', last_name: 'PAZ PEREZ', club: 'NARONTEC C.X.N. B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 5367, first_name: 'LUIS MIGUEL', last_name: 'DE JESUS BREA', club: 'NARONTEC C.X.N. B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 612, first_name: 'RICARDO', last_name: 'TUIMIL MARTINEZ', club: 'NARONTEC C.X.N. B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 21876, first_name: 'RAUL', last_name: 'VILAR NEIRA', club: 'NARONTEC C.X.N. B', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // PADRÓN B
+    { tablero: 1, license_number: 418, first_name: 'PABLO DANIEL', last_name: 'ESPIÑEIRA GONZALEZ', club: 'PADRÓN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 604, first_name: 'PABLO', last_name: 'GOMEZ SEGADE', club: 'PADRÓN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 419, first_name: 'JOSE EUGENIO', last_name: 'CES GENS', club: 'PADRÓN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 423, first_name: 'ANTONIO', last_name: 'SUSAVILA MUÑIZ', club: 'PADRÓN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 426, first_name: 'VICTOR HUGO', last_name: 'DEVESA RARIS', club: 'PADRÓN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 14391, first_name: 'DAVID', last_name: 'NUÑEZ GERPE', club: 'PADRÓN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 3448, first_name: 'ERNESTO', last_name: 'REY ARAGUNDI', club: 'PADRÓN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 416, first_name: 'RAMON', last_name: 'NUÑEZ GARCIA', club: 'PADRÓN B', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 5005, first_name: 'LORENA', last_name: 'DEVESA RARIS', club: 'PADRÓN B', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // RECATELO CAMPUS TERRA LUGO
+    { tablero: 1, license_number: 52, first_name: 'JACOBO', last_name: 'LOPEZ AMOEDO', club: 'RECATELO CAMPUS TERRA LUGO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 55, first_name: 'ANTONIO', last_name: 'NIETO VELADO', club: 'RECATELO CAMPUS TERRA LUGO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 3545, first_name: 'JORGE ALBERTO', last_name: 'ALVES RODRIGUEZ', club: 'RECATELO CAMPUS TERRA LUGO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 13108, first_name: 'JULIO', last_name: 'CHAVEZ GIL', club: 'RECATELO CAMPUS TERRA LUGO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 2069, first_name: 'JAVIER', last_name: 'FILGUEIRA CARREIRA', club: 'RECATELO CAMPUS TERRA LUGO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21899, first_name: 'MIGUEL', last_name: 'VIZOSO PEREZ', club: 'RECATELO CAMPUS TERRA LUGO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 11976, first_name: 'ELADIO', last_name: 'PARGA URES', club: 'RECATELO CAMPUS TERRA LUGO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 13942, first_name: 'GIANNI MICHAEL', last_name: 'PENA', club: 'RECATELO CAMPUS TERRA LUGO', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 21076, first_name: 'PAULINO', last_name: 'MARTINEZ PORTELA', club: 'RECATELO CAMPUS TERRA LUGO', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // TDFC
+    { tablero: 1, license_number: 277, first_name: 'JAVIER ILDEFONSO', last_name: 'MAZAIRA ALBA', club: 'TDFC', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 22057, first_name: 'FERNANDO', last_name: 'LOUSADA FERNANDEZ', club: 'TDFC', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 279, first_name: 'JOSÉ ANTONIO', last_name: 'CASTRILLÓN MANSO', club: 'TDFC', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11866, first_name: 'LUIS', last_name: 'BUENDIA FERNANDEZ', club: 'TDFC', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 8863, first_name: 'DAVID', last_name: 'MOURIÑO CRESPO', club: 'TDFC', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21844, first_name: 'ALBA', last_name: 'GARCIA LONGUEIRA', club: 'TDFC', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // UNIVERSITARIO DE OURENSE C
+    { tablero: 1, license_number: 4311, first_name: 'MIGUEL', last_name: 'PUGA SANCHEZ', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 4318, first_name: 'BRAIS', last_name: 'GERPE VILAS', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 767, first_name: 'ALEJANDRO', last_name: 'ARIAS PIÑEIRO', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 738, first_name: 'ANTONIO', last_name: 'FERNANDEZ ANDRADE', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 796, first_name: 'ALVARO', last_name: 'SUAREZ FIDALGO', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 737, first_name: 'LINO', last_name: 'HERMIDA ARAUJO', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 5830, first_name: 'DAVID', last_name: 'FEIJOO PEREZ', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 5196, first_name: 'JORGE', last_name: 'DOMINGUEZ OTERO', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 772, first_name: 'ANGEL MANUEL', last_name: 'VAZQUEZ DORRIO', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 11883, first_name: 'NUEL', last_name: 'VAZQUEZ FUENTES', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 26059, first_name: 'JOSE', last_name: 'ABELLAN GALDON', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 21001, first_name: 'SERGIO', last_name: 'DE SOTO PRIETO', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 775, first_name: 'JOSE JAVIER', last_name: 'LAMAS GONZALEZ', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 21504, first_name: 'ALBERTO', last_name: 'MARTINEZ FERNANDEZ', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 10673, first_name: 'GABRIEL', last_name: 'ALCALDE SOSA', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 4370, first_name: 'PABLO', last_name: 'FERREIRO SOLLA', club: 'UNIVERSITARIO DE OURENSE C', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // USC XUVENIL
+    { tablero: 1, license_number: 11765, first_name: 'JACOBO', last_name: 'VIEITES PEREZ', club: 'USC XUVENIL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 12041, first_name: 'SALVADOR', last_name: 'MELLA FRANCO', club: 'USC XUVENIL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 10135, first_name: 'XESUS', last_name: 'LOPEZ LOPEZ', club: 'USC XUVENIL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 13065, first_name: 'DAVID', last_name: 'MOSQUERA LOIS', club: 'USC XUVENIL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 26695, first_name: 'SERGIO', last_name: 'RODRIGUEZ PRIEGO', club: 'USC XUVENIL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 26760, first_name: 'PEDRO', last_name: 'GACIO CORUJO', club: 'USC XUVENIL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25200, first_name: 'ADRIAN', last_name: 'ROSENDE CANEDO', club: 'USC XUVENIL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 27002, first_name: 'FERNANDO', last_name: 'BORDALLO LEON', club: 'USC XUVENIL', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 27063, first_name: 'MIGUEL', last_name: 'LOURIDO FERNANDEZ', club: 'USC XUVENIL', division: 'Primera División', valor: 0, total_points: 0 },
+
+    // VILLA DE BOUZAS
+    { tablero: 1, license_number: 1721, first_name: 'MANUEL', last_name: 'ENRIQUEZ PARDO', club: 'VILLA DE BOUZAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1297, first_name: 'MANUEL ANGEL', last_name: 'NUÑEZ CAMPOS', club: 'VILLA DE BOUZAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 22036, first_name: 'MOISES', last_name: 'REY JELUSICH', club: 'VILLA DE BOUZAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1124, first_name: 'ALEJANDRO II', last_name: 'MARTINEZ MARTINEZ', club: 'VILLA DE BOUZAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 6491, first_name: 'MIGUEL', last_name: 'SILVA GONZALEZ', club: 'VILLA DE BOUZAS', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 4340, first_name: 'ALEJANDRO', last_name: 'BLANCO VILLAR', club: 'VILLA DE BOUZAS', division: 'Primera División', valor: 0, total_points: 0 },
+
+
+    // Xadrez Das Mariñas - Grupo Oca
+    { tablero: 1, license_number: 218, first_name: 'MARCOS JAVIER', last_name: 'MARTINEZ RAMOS', club: 'Xadrez Das Mariñas - Grupo Oca', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 117, first_name: 'ALFONSO', last_name: 'IGLESIAS NUÑO', club: 'Xadrez Das Mariñas - Grupo Oca', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 252, first_name: 'FRANCISCO JAVIER', last_name: 'GARCIA VEIRAS', club: 'Xadrez Das Mariñas - Grupo Oca', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1347, first_name: 'ROBERTO', last_name: 'SOUTO LANDEIRA', club: 'Xadrez Das Mariñas - Grupo Oca', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 211, first_name: 'JESUS', last_name: 'RODRIGUEZ CASTIÑEIRAS', club: 'Xadrez Das Mariñas - Grupo Oca', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21228, first_name: 'LUIS FRANCISCO', last_name: 'NUÑEZ RIOS', club: 'Xadrez Das Mariñas - Grupo Oca', division: 'Primera División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 151, first_name: 'JESUS', last_name: 'PALLAS MUIÑO', club: 'Xadrez Das Mariñas - Grupo Oca', division: 'Primera División', valor: 0, total_points: 0 },
+        
 
     // SEGUNDA DIVISIÓN
+
+    // ACADEMIA ENOT
+    { tablero: 1, license_number: 882, first_name: 'ANDRES', last_name: 'CARRASCO SOLLA', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1044, first_name: 'RUY', last_name: 'LOPEZ SANTIAGO', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1922, first_name: 'MIGUEL ANGEL', last_name: 'GOMEZ GUDE', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 9507, first_name: 'LOIS', last_name: 'ALFAYA GONZÁLEZ', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1031, first_name: 'JORGE', last_name: 'VARELA GUNTIÑAS', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 1047, first_name: 'FRANCISCO JAVIER', last_name: 'MORILLO RODRIGUEZ', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 6955, first_name: 'MARTIN', last_name: 'MARTICORENA PIÑO', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 6956, first_name: 'GONZALO', last_name: 'MARTICORENA MAURICIO', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 6881, first_name: 'SERGIO', last_name: 'GONZALEZ RODRIGUEZ', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 1003, first_name: 'CARLOS', last_name: 'OTERO DIZ', club: 'ACADEMIA ENOT', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ACADÉMICA AS BURGAS
+    { tablero: 1, license_number: 26303, first_name: 'KEILYN', last_name: 'BECERRA LICOR', club: 'ACADÉMICA AS BURGAS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 26304, first_name: 'EDEL ALEJANDRO', last_name: 'GARCIA SANCHEZ', club: 'ACADÉMICA AS BURGAS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 25091, first_name: 'LAZARO', last_name: 'GALGUERA REYES', club: 'ACADÉMICA AS BURGAS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 736, first_name: 'MANUEL ANGEL', last_name: 'GARCIA FERNANDEZ', club: 'ACADÉMICA AS BURGAS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 25629, first_name: 'JOSE RODRIGO COSTA', last_name: 'LECA', club: 'ACADÉMICA AS BURGAS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 26975, first_name: 'VICTORIANO', last_name: 'ALVAREZ FERNANDEZ', club: 'ACADÉMICA AS BURGAS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 27094, first_name: 'MILAGRO DE LA CARIDAD', last_name: 'SANTOS HERNANDEZ', club: 'ACADÉMICA AS BURGAS', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ACADÉMICA AS BURGAS B
+    { tablero: 1, license_number: 6054, first_name: 'JOSE', last_name: 'RIVELA RIVELA', club: 'ACADÉMICA AS BURGAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 26286, first_name: 'EDUARDO', last_name: 'MARTINEZ ALVAREZ', club: 'ACADÉMICA AS BURGAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 25170, first_name: 'GABRIEL', last_name: 'PEREZ GONZALEZ', club: 'ACADÉMICA AS BURGAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 26312, first_name: 'BREIXO', last_name: 'GARCIA ROSA', club: 'ACADÉMICA AS BURGAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 26487, first_name: 'MARC', last_name: 'SOARES BARREIRO', club: 'ACADÉMICA AS BURGAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 25205, first_name: 'LIXANDER', last_name: 'JARDON GOMEZ', club: 'ACADÉMICA AS BURGAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // AIR-HOSTESS A
+    { tablero: 1, license_number: 21582, first_name: 'MIGUEL', last_name: 'CINTADO YAÑEZ', club: 'AIR-HOSTESS A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 14206, first_name: 'Hector', last_name: 'Lorente Martinez', club: 'AIR-HOSTESS A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 25320, first_name: 'ANTONIO', last_name: 'LOPEZ FERNANDEZ', club: 'AIR-HOSTESS A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 8480, first_name: 'JUAN CARLOS', last_name: 'PAZOS RIOS', club: 'AIR-HOSTESS A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 25615, first_name: 'LUIS MIGUEL', last_name: 'BURGOS GONZALEZ', club: 'AIR-HOSTESS A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21002, first_name: 'PABLO JOSE', last_name: 'GUITIAN MEDIERO', club: 'AIR-HOSTESS A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 14084, first_name: 'Carlos Beade', last_name: 'Couceiro Diaz', club: 'AIR-HOSTESS A', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ALGALIA DO MEDIO
+    { tablero: 1, license_number: 370, first_name: 'FERNANDO', last_name: 'REGUEIRA VEIGA', club: 'ALGALIA DO MEDIO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 7720, first_name: 'GABRIEL', last_name: 'BARREIRO RIVERA', club: 'ALGALIA DO MEDIO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 301, first_name: 'XOSE MANUEL', last_name: 'IGLESIAS IGLESIAS', club: 'ALGALIA DO MEDIO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 5347, first_name: 'MANUEL', last_name: 'GARCIA AMADO', club: 'ALGALIA DO MEDIO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 10757, first_name: 'ALEJANDRO', last_name: 'COUSELO NEIRA', club: 'ALGALIA DO MEDIO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 7725, first_name: 'LEO', last_name: 'CENDAN MALINGRET', club: 'ALGALIA DO MEDIO', division: 'Segunda División', valor: 0, total_points: 0 },
+    
+    // ATENEO DE OURENSE - XADREZ
+    { tablero: 1, license_number: 783, first_name: 'RAFAEL', last_name: 'SANCHEZ DE LEON MENENDEZ', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 788, first_name: 'CARLOS DAVID', last_name: 'CARRERO CASAS', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 7804, first_name: 'RAMON LEANDRO', last_name: 'ARIAS MOREIRAS', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1902, first_name: 'JUAN ANTONIO', last_name: 'ALVAREZ GONZALEZ', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 785, first_name: 'MANUEL OTILIO', last_name: 'MIGUEZ HERMIDA', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 4198, first_name: 'GUSTAVO LUIS', last_name: 'HERNANDEZ PUENTES', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 1899, first_name: 'JOSE LUIS', last_name: 'VAZQUEZ MAZAIRA', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 5315, first_name: 'JESUS MANUEL', last_name: 'LOPEZ SALGADO', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 1904, first_name: 'LUIS', last_name: 'DE LEON NIEVES', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 1901, first_name: 'JOAQUIN', last_name: 'LOSADA GALLEGO', club: 'ATENEO DE OURENSE - XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // BENCHOSHEY KASPAROV
+    { tablero: 1, license_number: 8243, first_name: 'ALEJANDRO', last_name: 'MEIRA IGLESIAS', club: 'BENCHOSHEY KASPAROV', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 21772, first_name: 'HUGO', last_name: 'RIVERO RODRIGUEZ', club: 'BENCHOSHEY KASPAROV', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 7943, first_name: 'ARTURO', last_name: 'GONZALEZ LOPEZ', club: 'BENCHOSHEY KASPAROV', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 13897, first_name: 'IVAN', last_name: 'MARTINEZ GARCIA', club: 'BENCHOSHEY KASPAROV', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 10674, first_name: 'JOSE MANUEL', last_name: 'FERREIRO VAZQUEZ', club: 'BENCHOSHEY KASPAROV', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 6922, first_name: 'ALFONSO', last_name: 'JUANES BARANDELA', club: 'BENCHOSHEY KASPAROV', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 13161, first_name: 'MATEO', last_name: 'MARTINEZ ALVAREZ', club: 'BENCHOSHEY KASPAROV', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 13170, first_name: 'DIEGO', last_name: 'MARTINEZ ALVAREZ', club: 'BENCHOSHEY KASPAROV', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CIRCULO CHANTADINO XADREZ B
+    { tablero: 1, license_number: 5952, first_name: 'Antonio PEDRO CARAMEZ', last_name: 'PEREIRA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 5560, first_name: 'ALEJANDRO I', last_name: 'FERNANDEZ LOPEZ', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 26817, first_name: 'MARIIA', last_name: 'IUGINA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 13237, first_name: 'DIOGO FARIA OLIVEIRA ', last_name: 'MARTINS', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 5535, first_name: 'JOSE MIGUEL', last_name: 'VAZQUEZ FORTES', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 24744, first_name: 'PEDRO MIGUEL GOMES', last_name: 'MENDES', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25869, first_name: 'FRANCISCO NUNES VIEIRA', last_name: 'ALMEIDA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 10449, first_name: 'EUGENIO', last_name: 'MARTINEZ RODRIGUEZ', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 11916, first_name: 'MARIANA', last_name: 'SILVA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 11917, first_name: 'ANA INES TEIXEIRA DA', last_name: 'SILVA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 880, first_name: 'ALBA', last_name: 'PIAY GARCIA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 12740, first_name: 'JOSE LUCAS FERREIRA', last_name: 'SILVA', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 5559, first_name: 'PABLO II', last_name: 'FERNANDEZ LOPEZ', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 25868, first_name: 'TOMAS AFONSO', last_name: 'PIRES DOS SANTOS', club: 'CIRCULO CHANTADINO XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // BENCHOSHEY LASKER
+    { tablero: 1, license_number: 11711, first_name: 'FERNANDO', last_name: 'GONZALEZ FONTANALS', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 13964, first_name: 'BRIAN', last_name: 'GOMEZ DOMINGUEZ', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 7944, first_name: 'CARLOS', last_name: 'GODOY RODRIGUEZ', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 6659, first_name: 'ANDRES', last_name: 'IBARRA MARTIN', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 25915, first_name: 'MARCOS ANDRES', last_name: 'FERNANDEZ RODRIGUEZ', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 11707, first_name: 'LAURA', last_name: 'DIEGUEZ NOVOA', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 11678, first_name: 'IKER', last_name: 'FERRO FERNANDEZ', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 13158, first_name: 'ESTEBAN', last_name: 'MARQUEZ QUINTAS', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 10007, first_name: 'JOSE LUIS', last_name: 'DIEGUEZ RUIBAL', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 7955, first_name: 'PAULA', last_name: 'GONZALEZ RUBIO', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 6911, first_name: 'CARLOTA', last_name: 'GARCIA GONZALEZ', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 8254, first_name: 'JUAN', last_name: 'SACO PEREZ', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 12872, first_name: 'JON AARON', last_name: 'IBARRA RODRIGUEZ', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 10680, first_name: 'CRISTIAN', last_name: 'PAGE PLACERES', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 10678, first_name: 'AUDREY', last_name: 'NOGUERA ALONSO', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 6908, first_name: 'MATEO', last_name: 'GONZALEZ LOPEZ', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 17, license_number: 6906, first_name: 'IAGO', last_name: 'GODOY QUINTELA', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 18, license_number: 7134, first_name: 'BRAIS', last_name: 'GONZALEZ NAVEIRA', club: 'BENCHOSHEY LASKER', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CIDU INCUDE
+    { tablero: 1, license_number: 26249, first_name: 'JAIME', last_name: 'ARANGÜENA LAFFON', club: 'CIDU INCUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 26247, first_name: 'ERICK JAIR', last_name: 'ESTRADA ROMERO', club: 'CIDU INCUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 13236, first_name: 'PABLO', last_name: 'ESPARRAGO ROSON', club: 'CIDU INCUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 26299, first_name: 'GONZALO', last_name: 'LOPEZ VAZQUEZ', club: 'CIDU INCUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11974, first_name: 'PABLO', last_name: 'FURELOS DIEGUEZ', club: 'CIDU INCUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21935, first_name: 'JOSE ANDRES', last_name: 'PARDO EXPOSITO', club: 'CIDU INCUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25966, first_name: 'DIEGO', last_name: 'GONZALEZ CONTRERAS', club: 'CIDU INCUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 26305, first_name: 'FRANCO GABRIEL', last_name: 'FRANCO PEREZ', club: 'CIDU INCUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CIDU UNIVERSIDADE DA CORUÑA
+    { tablero: 1, license_number: 1416, first_name: 'DANIEL', last_name: 'CODESIDO SANCHEZ', club: 'CIDU UNIVERSIDADE DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 24823, first_name: 'IAGO', last_name: 'SOTO PAINO', club: 'CIDU UNIVERSIDADE DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 13305, first_name: 'Roberto', last_name: 'Serrano Bujan', club: 'CIDU UNIVERSIDADE DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 13239, first_name: 'LUCA', last_name: 'GRYGAR CASAS', club: 'CIDU UNIVERSIDADE DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 9321, first_name: 'LUIS', last_name: 'RODRIGUEZ DIAZ', club: 'CIDU UNIVERSIDADE DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 215, first_name: 'JOSE MANUEL', last_name: 'ANDION FERNANDEZ', club: 'CIDU UNIVERSIDADE DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CÍRCULO FERROLANO C
+    { tablero: 1, license_number: 3964, first_name: 'MANUEL', last_name: 'GONZALEZ LOPEZ', club: 'CÍRCULO FERROLANO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 25243, first_name: 'LUCIA', last_name: 'LOPEZ FRAGA', club: 'CÍRCULO FERROLANO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 615, first_name: 'DAVID', last_name: 'RAMON LOSADA', club: 'CÍRCULO FERROLANO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 8878, first_name: 'RAQUEL XIAN', last_name: 'CARREGADO GARCIA', club: 'CÍRCULO FERROLANO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 7314, first_name: 'ALEJANDRO', last_name: 'SANCHEZ ROMAR', club: 'CÍRCULO FERROLANO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 14840, first_name: 'JOSE ANTONIO', last_name: 'GARCIA MATO', club: 'CÍRCULO FERROLANO C', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CÍRCULO FERROLANO D
+    { tablero: 1, license_number: 646, first_name: 'ANTONIO', last_name: 'VARGAS DIAZ', club: 'CÍRCULO FERROLANO D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 653, first_name: 'MIGUEL ANGEL', last_name: 'VILAR RODRIGUEZ', club: 'CÍRCULO FERROLANO D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 4734, first_name: 'JORGE', last_name: 'SOUTO PEREZ', club: 'CÍRCULO FERROLANO D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 3968, first_name: 'YAN QING', last_name: 'CHEN LIN', club: 'CÍRCULO FERROLANO D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 5856, first_name: 'JOSE LUIS', last_name: 'PICOS NEBRIL', club: 'CÍRCULO FERROLANO D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 4053, first_name: 'DIEGO', last_name: 'GRAÑA GOMEZ', club: 'CÍRCULO FERROLANO D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 12671, first_name: 'ALEXANDER', last_name: 'SAGRADOV SAHAKYAN', club: 'CÍRCULO FERROLANO D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 12680, first_name: 'SANTIAGO', last_name: 'BARCIA VAZQUEZ', club: 'CÍRCULO FERROLANO D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 12162, first_name: 'NOEL', last_name: 'DE SOLAUN BOUZA', club: 'CÍRCULO FERROLANO D', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CÍRCULO FERROLANO E
+    { tablero: 1, license_number: 10226, first_name: 'JUAN JOSE', last_name: 'MOLINA CABALEIRO', club: 'CÍRCULO FERROLANO E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 665, first_name: 'JOSE', last_name: 'MILLAN SOTO', club: 'CÍRCULO FERROLANO E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 14164, first_name: 'CELESTINO', last_name: 'RUIZ MATAS GARCIA', club: 'CÍRCULO FERROLANO E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 650, first_name: 'LUCIANO', last_name: 'PIÑON PITA', club: 'CÍRCULO FERROLANO E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 4222, first_name: 'QUIRINO', last_name: 'BORES BERMEJO', club: 'CÍRCULO FERROLANO E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 6730, first_name: 'RUBEN', last_name: 'ARROJO LONGA', club: 'CÍRCULO FERROLANO E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 26297, first_name: 'DIEGO', last_name: 'GOMEZ LOPEZ', club: 'CÍRCULO FERROLANO E', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CLÍNICA DEZA ESCUELA LALÍN
+    { tablero: 1, license_number: 1848, first_name: 'HUGO', last_name: 'FACAL MENDEZ', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1847, first_name: 'JUAN JESÚS', last_name: 'SANZ SIXTO', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1853, first_name: 'ANXELA', last_name: 'VIZ VAZQUEZ', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1851, first_name: 'MIGUEL', last_name: 'MOSQUERA FOCINOS', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1852, first_name: 'SALVADOR', last_name: 'CRESPO VARELA', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 6285, first_name: 'PEDRO', last_name: 'RODRIGUEZ GONZALEZ', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 7865, first_name: 'MIGUEL', last_name: 'CUDEIRO GUERREIRO', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 2878, first_name: 'JAVIER', last_name: 'VARELA GARCIA', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 11855, first_name: 'FLORENCIO', last_name: 'NUÑEZ FERNANDEZ', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 12299, first_name: 'JAVIER', last_name: 'CUDEIRO TOURIÑO', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 26377, first_name: 'JUAN JOSE', last_name: 'DONSION HERMIDA', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 22070, first_name: 'JAVIER', last_name: 'GONZALEZ PALLARES', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 4813, first_name: 'ALEX', last_name: 'CRESPO FUENTES', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 7869, first_name: 'GABRIEL', last_name: 'RAMA NOVOA', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 10516, first_name: 'MANUEL', last_name: 'PEREZ PAZOS', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 26376, first_name: 'GERARDO ENRIQUE', last_name: 'DIAZ LOPEZ', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 17, license_number: 25965, first_name: 'JOSE LUIS', last_name: 'JANEIRO SUAREZ', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 18, license_number: 21149, first_name: 'ADRIAN', last_name: 'ESPIÑA PRIETO', club: 'CLÍNICA DEZA ESCUELA LALÍN', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CLUB DE AJEDREZ ALBARIÑO A
+    { tablero: 1, license_number: 10858, first_name: 'ALVARO', last_name: 'NAVIA GONZALEZ', club: 'CLUB DE AJEDREZ ALBARIÑO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1925, first_name: 'MARCO ANTONIO', last_name: 'COSTA FUENTES', club: 'CLUB DE AJEDREZ ALBARIÑO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1929, first_name: 'RUBEN', last_name: 'COSTA TRIGO', club: 'CLUB DE AJEDREZ ALBARIÑO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 24851, first_name: 'SERGIO', last_name: 'OLIVEIRA DIESTE', club: 'CLUB DE AJEDREZ ALBARIÑO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 13087, first_name: 'RODRIGO MATIAS', last_name: 'CARBALLA PENA', club: 'CLUB DE AJEDREZ ALBARIÑO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21420, first_name: 'ALBA', last_name: 'VILAR MARTINEZ', club: 'CLUB DE AJEDREZ ALBARIÑO A', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CLUB DEPORTIVO XADREZ OURENSE D
+    { tablero: 1, license_number: 3942, first_name: 'MARCOS', last_name: 'FERNANDEZ CRIADO', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 2097, first_name: 'DAVID', last_name: 'GONZALEZ GANDARA', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 24444, first_name: 'FRANCISCO JAVIER', last_name: 'IGLESIAS GONZALEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 8390, first_name: 'LAURA', last_name: 'GOMEZ CARREÑO', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 2895, first_name: 'HECTOR LUIS', last_name: 'GOMEZ ASENJO', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 760, first_name: 'FRANCISCO', last_name: 'SOTELO LOPEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 2215, first_name: 'ALBA', last_name: 'RODRIGUEZ VAZQUEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 12209, first_name: 'ALEJANDRO', last_name: 'FIDALGO ALVAREZ', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 21783, first_name: 'ADOLFO', last_name: 'BARBOSA ALVAREZ', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 24773, first_name: 'JUAN ENRIQUE', last_name: 'GONZALEZ MIGUENS', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 12286, first_name: 'XACOBE', last_name: 'TORRES SOTO', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 26664, first_name: 'ALEXANDER', last_name: 'OCAMPO DE SALVADOR', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 26115, first_name: 'EDGAR', last_name: 'RODRIGUEZ SILVA', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 25092, first_name: 'JORGE', last_name: 'ELLACURIAGA GARCIA', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 26597, first_name: 'XERMAN', last_name: 'RODRIGUEZ SERAFIN', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 25590, first_name: 'GUILLERMO', last_name: 'ABELLA AMOR', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 17, license_number: 26222, first_name: 'HUGO', last_name: 'GARCIA DOFORNO', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 18, license_number: 26358, first_name: 'LUIS ANTONIO', last_name: 'BATALLER AGUADO', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 19, license_number: 14444, first_name: 'Jose Carlos', last_name: 'Castro Torres', club: 'CLUB DEPORTIVO XADREZ OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CLUB DEPORTIVO XADREZ OURENSE E
+    { tablero: 1, license_number: 21378, first_name: 'DANIEL', last_name: 'MANRIQUE GARCIA', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 9097, first_name: 'VICTOR', last_name: 'LOPEZ RODRIGUEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 14321, first_name: 'JOEL', last_name: 'CID BARRIO', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 21117, first_name: 'BRAIS', last_name: 'VAZQUEZ FERNANDEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 12207, first_name: 'PABLO', last_name: 'SANTAS RODRIGUEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 26573, first_name: 'JIMENA LAVINIA', last_name: 'ABAD ALONSO', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 8764, first_name: 'ANGEL', last_name: 'FERREIRO ESTEVEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 12853, first_name: 'JOSE LUIS', last_name: 'CONDE CID', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 21439, first_name: 'ROI', last_name: 'FERNANDEZ EXPOSITO', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 14342, first_name: 'MIGUEL', last_name: 'FIDALGO ALVAREZ', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 12267, first_name: 'DANIEL', last_name: 'RODRIGUEZ AVENDAÑO', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 21100, first_name: 'RODRIGO', last_name: 'CID ABREU', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 13630, first_name: 'MARCOS', last_name: 'VARELA FEIJOO', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 12288, first_name: 'XAVI', last_name: 'PENIN RODRIGUEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 21440, first_name: 'ANXO', last_name: 'FERNANDEZ EXPOSITO', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 25455, first_name: 'ADRIAN', last_name: 'CARBALLO DOMINGUEZ', club: 'CLUB DEPORTIVO XADREZ OURENSE E', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CLUB XADREZ ARTEIXO B
+    { tablero: 1, license_number: 21112, first_name: 'Marcos', last_name: 'Martinez Castro', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 12027, first_name: 'HUGO', last_name: 'HERRADOR SEGADE', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 25411, first_name: 'ANDRES', last_name: 'BLANCO RODRIGUEZ', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 7106, first_name: 'PEDRO', last_name: 'VILLANUEVA TERNANDE', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 24815, first_name: 'ABRAHAM', last_name: 'PEREIRA FERNANDEZ', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21601, first_name: 'MARCOS ANTONIO', last_name: 'FERNANDEZ VELO', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 19999, first_name: 'JUAN CARLOS', last_name: 'BARDERAS DE ALMEIDA', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 14224, first_name: 'JOSE ANTONIO', last_name: 'GARCÍA MUÑIZ', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 25217, first_name: 'DAVID', last_name: 'PEREIRA ESCONTRELA', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 25601, first_name: 'DARIO', last_name: 'BECERRA ALVAREZ', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 11384, first_name: 'OSKAR', last_name: 'HERMIDA GARCIA', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 26220, first_name: 'ALVARO', last_name: 'RODRIGUEZ FERNANDEZ', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 21602, first_name: 'JOAN', last_name: 'PEREZ BERTOMEU', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 25414, first_name: 'SAMUEL', last_name: 'TURNES SILVA', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 24881, first_name: 'IKER', last_name: 'POMBO MOURO', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 25600, first_name: 'CANDELA', last_name: 'PEREZ BERTOMEU', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 17, license_number: 27019, first_name: 'FEDERICO', last_name: 'LOPEZ VOLPE', club: 'CLUB XADREZ ARTEIXO B', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CLUB XADREZ MOS D
+    { tablero: 1, license_number: 11459, first_name: 'HUGO', last_name: 'SOUTO CORREDOURA', club: 'CLUB XADREZ MOS D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 10211, first_name: 'NOA', last_name: 'COSTAS SENLLE', club: 'CLUB XADREZ MOS D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 12524, first_name: 'ALEXANDRE', last_name: 'RODRIGUEZ VIEITO', club: 'CLUB XADREZ MOS D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 12528, first_name: 'MAIA', last_name: 'PEREZ SOUSA', club: 'CLUB XADREZ MOS D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11291, first_name: 'JOAQUIN', last_name: 'CUÑA MOREIRA', club: 'CLUB XADREZ MOS D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21099, first_name: 'ROBERTO', last_name: 'SOUTO LOPEZ', club: 'CLUB XADREZ MOS D', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CLUB XADREZ MOS E
+    { tablero: 1, license_number: 13457, first_name: 'ADRIAN', last_name: 'ARGUDIN FERNANDEZ', club: 'CLUB XADREZ MOS E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 13471, first_name: 'MAURO', last_name: 'CASTRO BARCIELA', club: 'CLUB XADREZ MOS E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 11243, first_name: 'BREIXO', last_name: 'VIDAL SALGUEIRO', club: 'CLUB XADREZ MOS E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 13879, first_name: 'ANTONIO', last_name: 'VILLOT LAGO', club: 'CLUB XADREZ MOS E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 12533, first_name: 'MARIO', last_name: 'BASTOS GONZALEZ', club: 'CLUB XADREZ MOS E', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 14092, first_name: 'ALEJANDRO', last_name: 'ARGUDIN VAZQUEZ', club: 'CLUB XADREZ MOS E', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CLUB XADREZ RIANXO C
+    { tablero: 1, license_number: 5524, first_name: 'DIEGO', last_name: 'CREO ABEIJON', club: 'CLUB XADREZ RIANXO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 26642, first_name: 'PETRU COSMIN', last_name: 'PETRICAN', club: 'CLUB XADREZ RIANXO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 6803, first_name: 'BRAIS', last_name: 'REI FIGUEIRA', club: 'CLUB XADREZ RIANXO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 4401, first_name: 'NESTOR', last_name: 'MARTINEZ DOURADO', club: 'CLUB XADREZ RIANXO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 21960, first_name: 'GABRIEL', last_name: 'EIRAS COLLAZO', club: 'CLUB XADREZ RIANXO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 3572, first_name: 'DENIS', last_name: 'FERNANDEZ MENDEZ', club: 'CLUB XADREZ RIANXO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 2076, first_name: 'RAMON', last_name: 'RODRIGUEZ DOMINGUEZ', club: 'CLUB XADREZ RIANXO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 9646, first_name: 'XOSE RAMON', last_name: 'SUAREZ MARTINEZ', club: 'CLUB XADREZ RIANXO C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 27055, first_name: 'TOBIAS', last_name: 'BETANZOS REGO', club: 'CLUB XADREZ RIANXO C', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CULTURAL DEPORTIVA PORTAS XADREZ B
+    { tablero: 1, license_number: 4922, first_name: 'DANIEL', last_name: 'GONZALEZ MAGARIÑOS', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 9493, first_name: 'PABLO', last_name: 'LEAL FIGUEIRAS', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 6312, first_name: 'ABEL', last_name: 'NIETO LUNA', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11523, first_name: 'FIZ', last_name: 'RIOS PEREZ', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 14029, first_name: 'YERAY', last_name: 'FERNANDEZ OUTON', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 25169, first_name: 'PATRICIA', last_name: 'PEREZ BELOSO', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 24459, first_name: 'LUCAS', last_name: 'FARIÑA VAZQUEZ', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 24464, first_name: 'MANUEL', last_name: 'ABAL SUSAVILA', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 13020, first_name: 'ADAN', last_name: 'POMAR FARIÑA', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 24457, first_name: 'PABLO', last_name: 'ARNAU GONZÁLEZ', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 14031, first_name: 'BRAIS', last_name: 'GONZALEZ FONTAN', club: 'CULTURAL DEPORTIVA PORTAS XADREZ B', division: 'Segunda División', valor: 0, total_points: 0 },
+
+
+    // CXB PORTO DE PAULA
+    { tablero: 1, license_number: 4383, first_name: 'CARLOS', last_name: 'DE PABLOS ARRIBAS', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 7710, first_name: 'NICOLAS', last_name: 'DOMINGUEZ SOUTO', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 13109, first_name: 'MARIO', last_name: 'FERNANDEZ VAZQUEZ', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 22099, first_name: 'LUIS', last_name: 'BALADRON JIMENEZ', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 4786, first_name: 'JAIME', last_name: 'DEL RIO SANCHEZ', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21753, first_name: 'ANTONIO', last_name: 'CEBALLOS ROA', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 7858, first_name: 'JOSE MANUEL', last_name: 'LOPEZ LODEIRO', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 22100, first_name: 'DAVID', last_name: 'BALADRON AREVALO', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 25313, first_name: 'ANGEL', last_name: 'LOPEZ SANCHEZ', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 22091, first_name: 'MARIA ISABEL', last_name: 'SOUTO MEDIN', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 25361, first_name: 'SARA', last_name: 'SEOANE ABELENDA', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 24553, first_name: 'CARMEN', last_name: 'CALVO AREOSA', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 22101, first_name: 'ANGEL', last_name: 'BALADRON AREVALO', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 4787, first_name: 'PABLO', last_name: 'DEL RIO SANCHEZ', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 26083, first_name: 'PABLO', last_name: 'LOPEZ SANCHEZ', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 21769, first_name: 'SERGIO', last_name: 'GABIN VAZQUEZ', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 17, license_number: 26100, first_name: 'RODRIGO', last_name: 'SANTISO RIOS', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 18, license_number: 26213, first_name: 'MARTIÑO', last_name: 'REY REY', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 19, license_number: 26486, first_name: 'MARIO', last_name: 'RODRIGUEZ LOPEZ', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 20, license_number: 21794, first_name: 'JUAN', last_name: 'MIGAL VALIÑO', club: 'CXB PORTO DE PAULA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CXF - ALFAROUSA
+    { tablero: 1, license_number: 930, first_name: 'FRANCISCO JAVIER', last_name: 'BOUZAS COLLAZO', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 24665, first_name: 'PABLO', last_name: 'CHAVES MONTENEGRO', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 24687, first_name: 'JUAN CARLOS', last_name: 'ALVAREZ MIGUENS', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 26191, first_name: 'JUAN MANUEL', last_name: 'REY RODRIGUEZ', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 25339, first_name: 'DIEGO', last_name: 'JAMARDO VENTOSO', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 926, first_name: 'ROBERTO', last_name: 'VIDAL VALTUILLE', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 4659, first_name: 'JESUS', last_name: 'LOSADA BOUZADA', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 929, first_name: 'FRANCISCO JAVIER', last_name: 'BOUZAS RIAL', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 22193, first_name: 'JUAN DIEGO', last_name: 'GONZALEZ SEGADE', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 3461, first_name: 'JUAN ANDRES', last_name: 'BAYON ROLO', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 7003, first_name: 'PABLO', last_name: 'LOBATO REY', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 6792, first_name: 'ARTAI', last_name: 'FERNANDEZ ROMANO', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 6484, first_name: 'RAUL', last_name: 'VAZQUEZ BREA', club: 'CXF - ALFAROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // CXF - CENTRO COMERCIAL AROUSA
+    { tablero: 1, license_number: 1591, first_name: 'JOSE', last_name: 'MANEIRO BLANCO', club: 'CXF - CENTRO COMERCIAL AROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1924, first_name: 'ANTONIO JAVIER', last_name: 'REY AGUIÑO', club: 'CXF - CENTRO COMERCIAL AROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 3624, first_name: 'MANUEL', last_name: 'SUAREZ VALLEJO', club: 'CXF - CENTRO COMERCIAL AROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 8497, first_name: 'JOSE FRANCISCO', last_name: 'DORADO GONZALEZ', club: 'CXF - CENTRO COMERCIAL AROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 5428, first_name: 'EVARISTO', last_name: 'RODRIGUEZ LOPEZ', club: 'CXF - CENTRO COMERCIAL AROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 3621, first_name: 'JOSE ANTONIO', last_name: 'DE SANTIAGO DE SANTIAGO', club: 'CXF - CENTRO COMERCIAL AROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 22081, first_name: 'MARIA', last_name: 'PLANAS I HOMS', club: 'CXF - CENTRO COMERCIAL AROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 4128, first_name: 'JORGE', last_name: 'LEIRO GOMEZ', club: 'CXF - CENTRO COMERCIAL AROUSA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // DORNA VENGARCO B
+    { tablero: 1, license_number: 1921, first_name: 'CARLOS MIGUEL', last_name: 'CHAVES OTERO', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 10506, first_name: 'JUAN', last_name: 'GRAÑA SANTOS', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 7909, first_name: 'WENCESLAO', last_name: 'CHAVES OUBIÑA', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 7908, first_name: 'JOSE MANUEL', last_name: 'RAMOS PILLADO', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 7911, first_name: 'MANUEL', last_name: 'OTERO RIVAS', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 13509, first_name: 'BORJA', last_name: 'DACOSTA NUÑEZ', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 13354, first_name: 'XOEL', last_name: 'FERRO OTERO', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 24512, first_name: 'CIBRAN', last_name: 'MILLAN POZA', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 14025, first_name: 'BREIXO', last_name: 'CHAVES DIOS', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 26109, first_name: 'JORGE', last_name: 'OTERO BESADA', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 25696, first_name: 'LUCAS', last_name: 'BERTOA SALGADO', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 27064, first_name: 'BRAN', last_name: 'DIAZ GOMEZ', club: 'DORNA VENGARCO B', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // E.L.X. ABSOLUTO
+    { tablero: 1, license_number: 7, first_name: 'JESUS MARIA', last_name: 'DEL BARRIO GOMEZ', club: 'E.L.X. ABSOLUTO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 21940, first_name: 'MIGUEL', last_name: 'FERNANDEZ PEREZ', club: 'E.L.X. ABSOLUTO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 14621, first_name: 'LUIS', last_name: 'BARREIRO REBOLO', club: 'E.L.X. ABSOLUTO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 21241, first_name: 'MARCOS', last_name: 'IGLESIAS FLORES', club: 'E.L.X. ABSOLUTO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 13325, first_name: 'SERGIO', last_name: 'CASTRO EXPOSITO', club: 'E.L.X. ABSOLUTO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21952, first_name: 'IAGO', last_name: 'MEILAN NUÑEZ', club: 'E.L.X. ABSOLUTO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 11553, first_name: 'ALDARA', last_name: 'LOMBA FERNANDEZ', club: 'E.L.X. ABSOLUTO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 10252, first_name: 'ANTON', last_name: 'VIZCAINO VAZQUEZ', club: 'E.L.X. ABSOLUTO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 21376, first_name: 'MATEO', last_name: 'LOPEZ MARTINEZ', club: 'E.L.X. ABSOLUTO', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // E.L.X. MILAGROSA
+    { tablero: 1, license_number: 8996, first_name: 'MARTA', last_name: 'QUINTAS FERNANDEZ', club: 'E.L.X. MILAGROSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 8995, first_name: 'PAULA', last_name: 'QUINTAS FERNANDEZ', club: 'E.L.X. MILAGROSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 12973, first_name: 'DANIEL', last_name: 'DIAZ VILLAVERDE', club: 'E.L.X. MILAGROSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 9476, first_name: 'JESUS ALBERTO', last_name: 'QUINTAS GOMEZ', club: 'E.L.X. MILAGROSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 9313, first_name: 'MANUEL', last_name: 'VILARIÑO FREIRE', club: 'E.L.X. MILAGROSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 9334, first_name: 'JUAN', last_name: 'PETEIRA CABANAS', club: 'E.L.X. MILAGROSA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 7313, first_name: 'LUIS MIGUEL', last_name: 'ALFONSO PLAZA', club: 'E.L.X. MILAGROSA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // E.L.X. PANADERÍA FERNANDO VALIN
+    { tablero: 1, license_number: 13191, first_name: 'RICARDO', last_name: 'PEREZ PARDO', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 4081, first_name: 'CARLOS', last_name: 'FREIRE BOUDON', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 4058, first_name: 'FERNANDO', last_name: 'FERNANDEZ FERNANDEZ', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 4059, first_name: 'JOSE', last_name: 'HIERRO CARNICERO', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 5771, first_name: 'MANUEL', last_name: 'MENDEZ LOPEZ', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 5093, first_name: 'JOSE ANTONIO', last_name: 'PEREZ GOMEZ', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 4569, first_name: 'FRANCISCO JOSE', last_name: 'FRANCO MANSO', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 6158, first_name: 'FERNANDO', last_name: 'VALIN CARREIRA', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 9090, first_name: 'PABLO', last_name: 'PETEIRA MOSTEIRRIN', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 24875, first_name: 'LUIS RAMON', last_name: 'MONTERO NUÑEZ', club: 'E.L.X. PANADERÍA FERNANDO VALIN', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ELX CADETE
+    { tablero: 1, license_number: 10265, first_name: 'MARCOS', last_name: 'VEGA VARELA', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 21442, first_name: 'VICTOR', last_name: 'ROUCO RUBIN', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 10531, first_name: 'CARLOS', last_name: 'LOPEZ DIAZ', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 26079, first_name: 'MERLIN', last_name: 'CORROCHANO MILLAN', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 22125, first_name: 'MAURO', last_name: 'MASEDA IGLESIAS', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 14016, first_name: 'MAURO', last_name: 'VAZQUEZ LODEIRO', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25055, first_name: 'RAUL', last_name: 'ENGROBA LOPEZ', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 8368, first_name: 'MARCOS', last_name: 'BUSTO FERNANDEZ', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 11245, first_name: 'JESUS FRANCISCO', last_name: 'BUSTO FERNANDEZ', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 9059, first_name: 'RAQUEL', last_name: 'CADENAS FERNANDEZ', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 14442, first_name: 'JUAN JOSE', last_name: 'CALVO BAREZ', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 10283, first_name: 'NEREA', last_name: 'CAMPO CASTRO', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 13, first_name: 'CESAR', last_name: 'CANDAL COMBA', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 12339, first_name: 'ISABEL', last_name: 'CANOURA ESTEVES', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 22002, first_name: 'MARIA BELEN', last_name: 'CASTRO ARIAS', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 8445, first_name: 'IRIA', last_name: 'CASTRO DIAZ', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 17, license_number: 8450, first_name: 'ANTIA', last_name: 'CASTRO DIAZ', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 18, license_number: 25156, first_name: 'MARIA', last_name: 'CASTRO FERNANDEZ', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 19, license_number: 11518, first_name: 'ANTONIO', last_name: 'CASTRO FREIRE', club: 'ELX CADETE', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ELX Maestros del Parchís
+    { tablero: 1, license_number: 6068, first_name: 'RAMON', last_name: 'COSTEIRA FERNANDEZ', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 21927, first_name: 'MIGUEL ANGEL', last_name: 'DARRIBA LOPEZ', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 26698, first_name: 'GUILLERMO', last_name: 'DE MIGUEL FERRER', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 26737, first_name: 'RAMON', last_name: 'CORROCHANO ROYO', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 26078, first_name: 'DIEGO', last_name: 'BREZMES VILLARAVIZ', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 25648, first_name: 'GABRIEL', last_name: 'MOURIZ SIERRA', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 22094, first_name: 'JESUS', last_name: 'VILLARIÑO MENDEZ', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 9054, first_name: 'JOSE MANUEL', last_name: 'CASTRO MARTINEZ', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 26296, first_name: 'JOSE RAMON', last_name: 'GONZALEZ PIÑEIRO', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 27091, first_name: 'PABLO', last_name: 'SAEZ FERNANDEZ', club: 'ELX Maestros del Parchís', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ESCOLA AMES XADREZ
+    { tablero: 1, license_number: 439, first_name: 'ALBERTO', last_name: 'DIOS QUEIRUGA', club: 'ESCOLA AMES XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 11046, first_name: 'NOEL', last_name: 'CASARES PEDRIDE', club: 'ESCOLA AMES XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 22191, first_name: 'JAVIER', last_name: 'CASARES CABANAS', club: 'ESCOLA AMES XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 21253, first_name: 'UNAI', last_name: 'CASARES PEDRIDE', club: 'ESCOLA AMES XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 24890, first_name: 'PAULO', last_name: 'RODRIGUEZ GARCIA', club: 'ESCOLA AMES XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 26794, first_name: 'TOMAS', last_name: 'MARTINEZ SUAREZ', club: 'ESCOLA AMES XADREZ', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ESCOLA FERROLA DE XADREZ A
+    { tablero: 1, license_number: 26102, first_name: 'MAIKEL', last_name: 'HERNANDEZ CASTELLANOS', club: 'ESCOLA FERROLA DE XADREZ A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 25021, first_name: 'JUAN CARLOS', last_name: 'PONCE RIERA', club: 'ESCOLA FERROLA DE XADREZ A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 584, first_name: 'FERNANDO', last_name: 'ALVARIÑO PITA', club: 'ESCOLA FERROLA DE XADREZ A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 25259, first_name: 'ESTEBAN', last_name: 'PEREIRA GUERRA', club: 'ESCOLA FERROLA DE XADREZ A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 26320, first_name: 'ANTIA', last_name: 'SABIO PRADA', club: 'ESCOLA FERROLA DE XADREZ A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 26357, first_name: 'JAVIER', last_name: 'COLMENARES PEREZ', club: 'ESCOLA FERROLA DE XADREZ A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 24893, first_name: 'DIEGO', last_name: 'VARELA SANCHEZ', club: 'ESCOLA FERROLA DE XADREZ A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 24892, first_name: 'FUHAO', last_name: 'ZHENG', club: 'ESCOLA FERROLA DE XADREZ A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 10462, first_name: 'HECTOR', last_name: 'CABAL ALONSO', club: 'ESCOLA FERROLA DE XADREZ A', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ESCOLA TECNICA DE XADREZ DA CORUÑA
+    { tablero: 1, license_number: 1152, first_name: 'JOSE ANGEL', last_name: 'RODRIGUEZ TOJEIRA', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 13082, first_name: 'RAMIRO', last_name: 'DEL VALLE RODRIGUEZ', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 22090, first_name: 'DAVID', last_name: 'LOPEZ CORRAL', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 25314, first_name: 'PAOLO', last_name: 'RUNGO', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 9769, first_name: 'XABIER', last_name: 'SOLLA GARCIA', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25332, first_name: 'JULIO', last_name: 'TRAVESO NEIRA', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 25315, first_name: 'DAVID', last_name: 'NOVO REGO', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 10787, first_name: 'JORGE', last_name: 'PRIETO CARVALHO', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 11994, first_name: 'JOSE RAMON', last_name: 'PRADO VAZQUEZ', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 9671, first_name: 'JOSE MANUEL', last_name: 'LAMAS PEREZ CEPEDA', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 25330, first_name: 'DAVID', last_name: 'CASTAÑON GADEA', club: 'ESCOLA TECNICA DE XADREZ DA CORUÑA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // LAROCA-NIGRAN A
+    { tablero: 1, license_number: 1183, first_name: 'CONSTANTINO', last_name: 'GONZALEZ LEVICES', club: 'LAROCA-NIGRAN A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1164, first_name: 'SERGIO', last_name: 'LOPEZ PEREZ', club: 'LAROCA-NIGRAN A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 12405, first_name: 'RICARDO', last_name: 'FERNÁNDEZ LÓPEZ', club: 'LAROCA-NIGRAN A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 7126, first_name: 'JOSE MANUEL', last_name: 'BEN ALVAREZ', club: 'LAROCA-NIGRAN A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 5035, first_name: 'AVELINO ALE', last_name: 'IGLESIAS FERNANDEZ', club: 'LAROCA-NIGRAN A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 1166, first_name: 'TOMAS', last_name: 'BERNARDEZ DURAN', club: 'LAROCA-NIGRAN A', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ESCOLA XADREZ CLUBEXA A
+    { tablero: 1, license_number: 152, first_name: 'CELESTINO', last_name: 'REDONDO VARELA', club: 'ESCOLA XADREZ CLUBEXA A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 142, first_name: 'JUAN CARLOS', last_name: 'SISO LALE', club: 'ESCOLA XADREZ CLUBEXA A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 239, first_name: 'JULIO', last_name: 'BUGLIOT LAGE', club: 'ESCOLA XADREZ CLUBEXA A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 9201, first_name: 'JOSE MANUEL', last_name: 'MOSQUEIRA VARELA', club: 'ESCOLA XADREZ CLUBEXA A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 158, first_name: 'MANUEL FULGENCIO', last_name: 'ESTEVE PEREZ', club: 'ESCOLA XADREZ CLUBEXA A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 157, first_name: 'ROBERTO JUAN J.', last_name: 'GARCIA MARTINEZ', club: 'ESCOLA XADREZ CLUBEXA A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 6985, first_name: 'MARIA JOSE', last_name: 'LARA FOLGAR', club: 'ESCOLA XADREZ CLUBEXA A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 24454, first_name: 'FRANCISCO JAVIER', last_name: 'TOBA BLANCO', club: 'ESCOLA XADREZ CLUBEXA A', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ESCOLA XADREZ CULLEREDO A
+    { tablero: 1, license_number: 167, first_name: 'JOSE', last_name: 'FERNANDEZ OTERO', club: 'ESCOLA XADREZ CULLEREDO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 11763, first_name: 'ANGELO', last_name: 'CASSAR PENAS', club: 'ESCOLA XADREZ CULLEREDO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 25213, first_name: 'CARLOS ALBERTO', last_name: 'OSORIO HENAO', club: 'ESCOLA XADREZ CULLEREDO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 9939, first_name: 'FRANCISCO', last_name: 'CANOVAS QUESADA', club: 'ESCOLA XADREZ CULLEREDO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 25599, first_name: 'DAMIÁN', last_name: 'ANEIROS VILA', club: 'ESCOLA XADREZ CULLEREDO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 282, first_name: 'OSCAR', last_name: 'REY REY', club: 'ESCOLA XADREZ CULLEREDO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 26400, first_name: 'JOSE ALBERTO', last_name: 'SOUTO PEREZ', club: 'ESCOLA XADREZ CULLEREDO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 26261, first_name: 'LUIS', last_name: 'PEREIRA PIA', club: 'ESCOLA XADREZ CULLEREDO A', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ESCOLA XADREZ SIGRÁS - CAMBRE A
+    { tablero: 1, license_number: 24667, first_name: 'EDGAR', last_name: 'VELAZQUEZ BALON', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 13859, first_name: 'ESTEBAN ARIEL', last_name: 'MONTES DAVILA', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 6130, first_name: 'ROBERTO', last_name: 'BLANDON PAO', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 25193, first_name: 'RUOWAN', last_name: 'LIN', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 25146, first_name: 'FERNANDO JOSE', last_name: 'GARCIA PEREZ', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 25842, first_name: 'SEBASTIAN', last_name: 'JURADO BONILLA', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 12760, first_name: 'ANGEL', last_name: 'DE BLAS FERNANDEZ', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 26822, first_name: 'PABLO', last_name: 'HERVADA PRESEDO', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 6072, first_name: 'RAFAEL', last_name: 'RECUNA CARRASCO', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE A', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ESCOLA XADREZ SIGRÁS - CAMBRE B
+    { tablero: 1, license_number: 256, first_name: 'JAVIER', last_name: 'CAMPELO BERMUDEZ', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 144, first_name: 'JUAN CARLOS', last_name: 'CALZADO CRIADO', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 7898, first_name: 'RODRIGO JULIO', last_name: 'LOPEZ ROBLES', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 4867, first_name: 'MARCOS', last_name: 'LAIÑO ORDOÑEZ', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 14210, first_name: 'GABRIEL', last_name: 'RODRIGUEZ MORIS', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 265, first_name: 'GUILLERMO', last_name: 'ESTEBAN QUIÑOA', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 2819, first_name: 'DAVID', last_name: 'ESTEBAN FERREIRO', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 13198, first_name: 'HECTOR RAFAEL', last_name: 'ARRESE FABIAN', club: 'ESCOLA XADREZ SIGRÁS - CAMBRE B', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // EXC SUB16
+    { tablero: 1, license_number: 25135, first_name: 'NICOLAS', last_name: 'FERNANDEZ SABAJANES', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 21647, first_name: 'NOEL', last_name: 'LEIS PAZOS', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 22158, first_name: 'DANIEL', last_name: 'SHIMADA RIVAS', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 22153, first_name: 'ANTON', last_name: 'ISASI VAZQUEZ', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 25802, first_name: 'IVAN', last_name: 'SANCHEZ FERNANDEZ', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 26274, first_name: 'MARTIN', last_name: 'FERREIRO VIDAL', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 26275, first_name: 'ALFREDO', last_name: 'DE LA GUARDIA CASTRO', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 26688, first_name: 'MARIO', last_name: 'FERNANDEZ MARTIL', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 22154, first_name: 'XIAN', last_name: 'GONZALEZ VAZQUEZ', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 22025, first_name: 'XABIER', last_name: 'VILLAR ALVITE', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 12057, first_name: 'MIGUEL', last_name: 'MUÑOZ VAZQUEZ', club: 'EXC SUB16', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // EXP-NON á Violencia de Xénero
+    { tablero: 1, license_number: 7830, first_name: 'LUIS JOAQUIN', last_name: 'ALONSO PACHECO', club: 'EXP-NON á Violencia de Xénero', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 13863, first_name: 'VENANCIO', last_name: 'GONZALEZ CAAMAÑO', club: 'EXP-NON á Violencia de Xénero', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 8629, first_name: 'RAFAEL', last_name: 'MARTÍNEZ BLANCO', club: 'EXP-NON á Violencia de Xénero', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 9488, first_name: 'BRAIS', last_name: 'MOREIRA NOVO', club: 'EXP-NON á Violencia de Xénero', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 13650, first_name: 'MATEO', last_name: 'ALONSO NOVAS', club: 'EXP-NON á Violencia de Xénero', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 4374, first_name: 'CARLOS', last_name: 'RIVERA RIVAS', club: 'EXP-NON á Violencia de Xénero', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25457, first_name: 'JAIME', last_name: 'REA LORENZO', club: 'EXP-NON á Violencia de Xénero', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // EXP-UVIGO
+    { tablero: 1, license_number: 25231, first_name: 'MIGUEL', last_name: 'CASADO DIZ', club: 'EXP-UVIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 12938, first_name: 'MARTIN', last_name: 'MOREIRA NOVO', club: 'EXP-UVIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 22211, first_name: 'TEO DAVID', last_name: 'RODRIGUEZ GOMEZ', club: 'EXP-UVIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 22220, first_name: 'ANDRES', last_name: 'CACABELOS VAZQUEZ', club: 'EXP-UVIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 25228, first_name: 'ALVARO', last_name: 'SEOANE GARCIA', club: 'EXP-UVIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 12918, first_name: 'JACOBO', last_name: 'OTERO IGLESIAS', club: 'EXP-UVIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 26543, first_name: 'MIGUEL', last_name: 'CASADO JIMENEZ', club: 'EXP-UVIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // GRUPO BAZAN B
+    { tablero: 1, license_number: 734, first_name: 'JUAN CARLOS', last_name: 'ABELLA CRUZ', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 21074, first_name: 'ALEJANDRO', last_name: 'GARCIA DIAZ', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 7780, first_name: 'ALBERTO', last_name: 'HERRERA GUTIERREZ', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 9949, first_name: 'VICENTE', last_name: 'LOPEZ FRAGA', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11650, first_name: 'ADOLFO ANTONIO', last_name: 'MOSCOSO RIVAS', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 581, first_name: 'JAVIER', last_name: 'CARTELLE CUDILLERO', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 704, first_name: 'JUAN CARLOS', last_name: 'PORTO LOPEZ', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 9461, first_name: 'ISIDORO', last_name: 'GARCIA AMOR', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 9782, first_name: 'OSCAR', last_name: 'MARTINEZ SERANTES', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 585, first_name: 'JOSE MANUEL', last_name: 'TENREIRO CALVO', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 578, first_name: 'JUAN VICENTE', last_name: 'RODRIGUEZ REY', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 735, first_name: 'RUBEN', last_name: 'DOMINGUEZ GARCIA', club: 'GRUPO BAZAN B', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // LAROCA-NIGRAN C
+    { tablero: 1, license_number: 12539, first_name: 'ERIK', last_name: 'ROADE MONTENEGRO', club: 'LAROCA-NIGRAN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1176, first_name: 'LUA', last_name: 'ALVAREZ DOMINGUEZ', club: 'LAROCA-NIGRAN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1173, first_name: 'AGUSTIN', last_name: 'ALVAREZ GONZALEZ', club: 'LAROCA-NIGRAN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 5037, first_name: 'JUAN MANUEL', last_name: 'REPRESA GARAZO', club: 'LAROCA-NIGRAN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1184, first_name: 'JOSE MANUEL', last_name: 'ARAUJO VALVERDE', club: 'LAROCA-NIGRAN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 9950, first_name: 'JORGE', last_name: 'CARNEIRO PENEDO', club: 'LAROCA-NIGRAN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 21811, first_name: 'SERGIO', last_name: 'VILAS ALONSO', club: 'LAROCA-NIGRAN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 1188, first_name: 'FRANCISCO JAVIER', last_name: 'VAZQUEZ ALONSO', club: 'LAROCA-NIGRAN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 1168, first_name: 'RAFAEL', last_name: 'SIMOES GONZALEZ', club: 'LAROCA-NIGRAN C', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // LAROCA-NIGRAN D
+    { tablero: 1, license_number: 21816, first_name: 'CESAR', last_name: 'GONZALEZ GUISANDE', club: 'LAROCA-NIGRAN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 26043, first_name: 'RAFAEL', last_name: 'LLANTADA ALONSO', club: 'LAROCA-NIGRAN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 26150, first_name: 'ROBERT JAMES', last_name: 'HALLISEY', club: 'LAROCA-NIGRAN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11864, first_name: 'JOSE MANUEL', last_name: 'FERNANDEZ RODRIGUEZ', club: 'LAROCA-NIGRAN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 14449, first_name: 'PEDRO', last_name: 'LEYENDA DA SILVA', club: 'LAROCA-NIGRAN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 1169, first_name: 'CARLOS', last_name: 'CARREIRA FERNANDEZ', club: 'LAROCA-NIGRAN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25067, first_name: 'IKER', last_name: 'SUEIRO COTO', club: 'LAROCA-NIGRAN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 27042, first_name: 'ANDRES', last_name: 'PEREZ CABALEIRO', club: 'LAROCA-NIGRAN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 25993, first_name: 'RICARDO', last_name: 'TOMA FREITAG', club: 'LAROCA-NIGRAN D', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // LICEO DE NOIA
+    { tablero: 1, license_number: 8036, first_name: 'ANDRES', last_name: 'VIDAL FERNANDEZ', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 14163, first_name: 'IVAN', last_name: 'GONZALEZ OVIEDO', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 24926, first_name: 'XOEL', last_name: 'ROO PEREZ', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11200, first_name: 'CARLOS', last_name: 'CALO BLANCO', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 14639, first_name: 'MARIA TERESA', last_name: 'CAMEAN PAZ', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 11633, first_name: 'EMMA', last_name: 'CERNADAS CAMEAN', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 9789, first_name: 'XENXO', last_name: 'BARREIRO PEREZ', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 9792, first_name: 'XOEL', last_name: 'BARREIRO PEREZ', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 10499, first_name: 'ANGEL', last_name: 'PAZ PEREZ', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 25928, first_name: 'JESUS', last_name: 'ROMERO HERNANDEZ', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 392, first_name: 'JOSE MATIAS', last_name: 'REGUEIRA BOO', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 21499, first_name: 'ALBERTO JOSE', last_name: 'CERNADAS VILELA', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 21943, first_name: 'RAUL', last_name: 'GOMEZ FIGUEIRIDO', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 25796, first_name: 'PEDRO', last_name: 'GARCIA VIDAL', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 26085, first_name: 'MANEL', last_name: 'NOGUEIRA FERNANDEZ', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 25961, first_name: 'PAULO', last_name: 'PATIÑO GAGO', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 17, license_number: 25960, first_name: 'MARCOS', last_name: 'PATIÑO GAGO', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 18, license_number: 25782, first_name: 'RAMON', last_name: 'MUIÑOS CASTRO', club: 'LICEO DE NOIA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // LICEO PUEBLENSE
+    { tablero: 1, license_number: 434, first_name: 'ALFONSO', last_name: 'GARCIA BRION', club: 'LICEO PUEBLENSE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 431, first_name: 'MANUEL', last_name: 'BARROS PAZOS', club: 'LICEO PUEBLENSE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 384, first_name: 'MANUEL ANGEL', last_name: 'AMIL BLANCO', club: 'LICEO PUEBLENSE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 385, first_name: 'JAIME ANTONIO', last_name: 'MIGUEZ FIGUEIRIDO', club: 'LICEO PUEBLENSE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 9469, first_name: 'MIGUEL', last_name: 'PRIETO SANCHEZ', club: 'LICEO PUEBLENSE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 14700, first_name: 'MATEO ESTEBAN', last_name: 'DEIVE REGO', club: 'LICEO PUEBLENSE', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // LUCENA CARO CANT'S
+    { tablero: 1, license_number: 1143, first_name: 'SANTIAGO', last_name: 'HERNANDEZ HERAS', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 22037, first_name: 'DANIEL', last_name: 'GONZALEZ DOMINGUEZ', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 21934, first_name: 'ADRIAN', last_name: 'FERVENZA RODRIGUEZ', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 21210, first_name: 'VALENTIN', last_name: 'COSTELA SOBRINO', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 26092, first_name: 'JOAQUÍN', last_name: 'FERNÁNDEZ CARBALLO', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 24677, first_name: 'MOISÉS', last_name: 'RIVERA ALONSO', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 9220, first_name: 'HUGO', last_name: 'LARROCHA LEON', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 26071, first_name: 'PABLO', last_name: 'GONZALEZ RIOS', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 14853, first_name: 'SARA', last_name: 'LIMENS POUTAS', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 21938, first_name: 'LUIS', last_name: 'NIETO GARDE', club: 'LUCENA CARO CANT\'S', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // MILLARENGO CULTURA
+    { tablero: 1, license_number: 455, first_name: 'SIRO', last_name: 'GARCIA TORRES', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 11953, first_name: 'JESUS MANUEL', last_name: 'MOSQUEIRA REY', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 10141, first_name: 'DANIEL', last_name: 'MONTES LAGO', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 13991, first_name: 'JOSE MANUEL', last_name: 'SENDIN RODRIGUEZ', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 14485, first_name: 'ALBERTO', last_name: 'LOSADA VAZQUEZ', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 12157, first_name: 'JESUS', last_name: 'MOSQUEIRA VIDAL', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 9335, first_name: 'MIGUEL', last_name: 'FEIJO DE ARAUJO', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 21848, first_name: 'ANXO', last_name: 'LANDEIRA NOYA', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 21879, first_name: 'ALVARO', last_name: 'FRAGA ARNAIZ', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 26389, first_name: 'DAVID', last_name: 'MORALES VAZQUEZ', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 26584, first_name: 'JORGE BALDOMERO', last_name: 'FERRO CANABAL', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 13139, first_name: 'JUAN', last_name: 'MOSQUEIRA VIDAL', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 25609, first_name: 'YOLANDA', last_name: 'CALVO CARBALLO', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 10140, first_name: 'CARLOS', last_name: 'MONTES CAMPO', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 25610, first_name: 'EVA', last_name: 'MUIÑO GARCIA', club: 'MILLARENGO CULTURA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // MIRKO A
+    { tablero: 1, license_number: 5660, first_name: 'DEJAN', last_name: 'KOLAR', club: 'MIRKO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 169, first_name: 'JELENA', last_name: 'KOLAR', club: 'MIRKO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 202, first_name: 'ALBERTO', last_name: 'SANCHEZ BARDANCA', club: 'MIRKO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 185, first_name: 'HENAR', last_name: 'LORENZO SERRANO', club: 'MIRKO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 22217, first_name: 'MAJA', last_name: 'STRIKOVIC KOLAR', club: 'MIRKO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 2699, first_name: 'SEBASTIAN', last_name: 'BUEDO FERNANDEZ', club: 'MIRKO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 21767, first_name: 'ANDRES', last_name: 'MARTINEZ AVILEZ', club: 'MIRKO A', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 21987, first_name: 'BRAIS', last_name: 'CUBEIRO FERNÁNDEZ', club: 'MIRKO A', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // MISS MATILDE TUY
+    { tablero: 1, license_number: 1292, first_name: 'IVAN', last_name: 'CARRETERO GARCIA', club: 'MISS MATILDE TUY', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 2497, first_name: 'ROBERTO', last_name: 'ESTEVEZ IGLESIAS', club: 'MISS MATILDE TUY', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 25822, first_name: 'VICTOR', last_name: 'TORO GUTIERREZ', club: 'MISS MATILDE TUY', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 4033, first_name: 'MIGUEL', last_name: 'VISCONTI VAAMONDE', club: 'MISS MATILDE TUY', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1058, first_name: 'CARLOS', last_name: 'LIMIA VAZQUEZ', club: 'MISS MATILDE TUY', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 26721, first_name: 'SILVANO', last_name: 'TRONCOSO DA GAMA', club: 'MISS MATILDE TUY', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 10549, first_name: 'TOMAS', last_name: 'GARCIA MARTINEZ', club: 'MISS MATILDE TUY', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 14516, first_name: 'JUAN MANUEL', last_name: 'CAPELAN PEREIRA', club: 'MISS MATILDE TUY', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // MOSEFESA & THE WAILERS
+    { tablero: 1, license_number: 14083, first_name: 'LEANDRO MIGUEL', last_name: 'CHAMORRO FIGUEIRAS', club: 'MOSEFESA & THE WAILERS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1245, first_name: 'LUIS', last_name: 'DURAN SANTIAGO', club: 'MOSEFESA & THE WAILERS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1237, first_name: 'EDUARDO', last_name: 'LORENZO FERNANDEZ', club: 'MOSEFESA & THE WAILERS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1248, first_name: 'ENRIQUE', last_name: 'GARCIA PEREZ', club: 'MOSEFESA & THE WAILERS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1247, first_name: 'ALVARO A.', last_name: 'COLLAZO DOMINGUEZ', club: 'MOSEFESA & THE WAILERS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 1246, first_name: 'MIGUEL ANGEL', last_name: 'VILAR MONTESINOS', club: 'MOSEFESA & THE WAILERS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 1249, first_name: 'RAIMUNDO', last_name: 'LEIROS FIGUEIRAS', club: 'MOSEFESA & THE WAILERS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 6029, first_name: 'EVA', last_name: 'AGUADO FERNANDEZ', club: 'MOSEFESA & THE WAILERS', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 25447, first_name: 'IXAI', last_name: 'SALVO BORDA', club: 'MOSEFESA & THE WAILERS', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // ONCE DE VIGO
+    { tablero: 1, license_number: 2147, first_name: 'FRANCISCO JOSE', last_name: 'LEAL VALDES', club: 'ONCE DE VIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 6438, first_name: 'RAQUEL', last_name: 'GIL VICENTE', club: 'ONCE DE VIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 2597, first_name: 'ANTONIO', last_name: 'MONDELO FIDALGO', club: 'ONCE DE VIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11857, first_name: 'IGNACIO', last_name: 'ROIG MARIÑO', club: 'ONCE DE VIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1867, first_name: 'CARMEN', last_name: 'LAGO CARBALLO', club: 'ONCE DE VIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 25724, first_name: 'DILAN', last_name: 'RODRIGUEZ LIBOURNET', club: 'ONCE DE VIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 10691, first_name: 'MARIA BEGOÑA', last_name: 'FERNANDEZ LAGO', club: 'ONCE DE VIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 10690, first_name: 'CRISTIAN', last_name: 'ARCAS FERNANDEZ', club: 'ONCE DE VIGO', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // PADRÓN C
+    { tablero: 1, license_number: 26714, first_name: 'MANUEL MARIA FONSECA', last_name: 'PAIVA', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 8755, first_name: 'JOSE CARLOS', last_name: 'GESTIDO MARTINEZ', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 424, first_name: 'CONSTANTINO', last_name: 'GOMEZ MEJUTO', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11375, first_name: 'PABLO', last_name: 'DE JESUS FIEIRO', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 634, first_name: 'ADOLFO', last_name: 'DE LA PEÑA LLERANDI', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 5973, first_name: 'MARCOS', last_name: 'LOPEZ LOURO', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 11481, first_name: 'XOSE MANUEL', last_name: 'DE JESUS ENRIQUE', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 3357, first_name: 'ANTONIO', last_name: 'RODRIGUEZ TOUCEDA', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 5991, first_name: 'MANUEL', last_name: 'CASTAÑO CES', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 420, first_name: 'ANTONIO', last_name: 'ESPIÑEIRA CAJARAVILLE', club: 'PADRÓN C', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // PADRÓN D
+    { tablero: 1, license_number: 24525, first_name: 'ANXO', last_name: 'SOUTO ROMERO', club: 'PADRÓN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 9673, first_name: 'CLARA', last_name: 'MENDEZ RIAL', club: 'PADRÓN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 10230, first_name: 'HUGO', last_name: 'ABAÑA MARTIN', club: 'PADRÓN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 24546, first_name: 'NOE', last_name: 'DIZ EITOR', club: 'PADRÓN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 10491, first_name: 'SAUL', last_name: 'ABAÑA MARTIN', club: 'PADRÓN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 5801, first_name: 'JORGE', last_name: 'MENDEZ SOMOZA', club: 'PADRÓN D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25826, first_name: 'LINO', last_name: 'DIZ MAGARIÑOS', club: 'PADRÓN D', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // PIRATA TITO
+    { tablero: 1, license_number: 14559, first_name: 'RUBEN MARCELO', last_name: 'QUEIJO CASTELLANO', club: 'PIRATA TITO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 5680, first_name: 'MANUEL', last_name: 'BLANCO DANS', club: 'PIRATA TITO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 5075, first_name: 'OSCAR', last_name: 'VALCARCEL LOPEZ', club: 'PIRATA TITO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 10728, first_name: 'MARCOS', last_name: 'FERNANDEZ GONZALEZ', club: 'PIRATA TITO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 9730, first_name: 'CARLOS', last_name: 'MOURIÑO PIÑEIRO', club: 'PIRATA TITO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21473, first_name: 'ROB', last_name: 'GALLENKAMP', club: 'PIRATA TITO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 9738, first_name: 'VICTOR', last_name: 'CALDERON MOSTEIRIN', club: 'PIRATA TITO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 8184, first_name: 'JOSE', last_name: 'PARRA VIDAL', club: 'PIRATA TITO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 11867, first_name: 'RAMIRO CARLOS', last_name: 'DEL VALLE VAZQUEZ', club: 'PIRATA TITO', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // REGATAS DE PERILLO
+    { tablero: 1, license_number: 1427, first_name: 'GRACIELA', last_name: 'REDONDO ARGUELLES', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 319, first_name: 'EDDA GEORGINA', last_name: 'BELTRAN ORTIZ', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 11983, first_name: 'ANGELA', last_name: 'CASTIÑEIRA GONZALEZ', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 10470, first_name: 'EDUARDO LUIS', last_name: 'GIMENEZ FERNANDEZ', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11184, first_name: 'EDUARDO XAVIER', last_name: 'GIMENEZ BARGIELA', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21957, first_name: 'FERNANDO', last_name: 'JANEIRO PEREIRA', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25772, first_name: 'SAMIR ALEXANDER', last_name: 'CRUZ GARCIA', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 26542, first_name: 'BREIXO', last_name: 'LOPEZ PRIETO', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 22199, first_name: 'XOEL', last_name: 'JANEIRO ANDUJAR', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 22202, first_name: 'ALESSANDRO', last_name: 'POMBO MORAN', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 24486, first_name: 'PAOLO', last_name: 'COLOMBIANO CARRO', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 22200, first_name: 'ALEXANDRA', last_name: 'JANEIRO ANDUJAR', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 26538, first_name: 'HECTOR', last_name: 'MOSQUERA SANCHEZ', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 22207, first_name: 'VERA', last_name: 'FERNANDEZ-OBANZA DURAN', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 22206, first_name: 'IAGO', last_name: 'VAZQUEZ IZQUIERDO', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 22203, first_name: 'MATEO', last_name: 'VARELA ROMAUS', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 17, license_number: 26541, first_name: 'SABELA', last_name: 'VAZQUEZ IZQUIERDO', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 18, license_number: 26539, first_name: 'HECTOR', last_name: 'SUAREZ REY', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 19, license_number: 26537, first_name: 'JAVIER', last_name: 'RODRIGUEZ NOVOA', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 20, license_number: 26540, first_name: 'MANUEL', last_name: 'MENDEZ CASAL', club: 'REGATAS DE PERILLO', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // UNIVERSITARIO DE OURENSE D
+    { tablero: 1, license_number: 2415, first_name: 'AMADOR', last_name: 'FIGUEIRAL LISTON', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1303, first_name: 'JOSE MANUEL', last_name: 'NOVOA BLANCO', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 14303, first_name: 'ANTON', last_name: 'LORENZO MOSQUERA', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 22062, first_name: 'VICTOR', last_name: 'LOPEZ DOPAZO', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 4795, first_name: 'RAUL', last_name: 'MARTINEZ PEÑA', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 14920, first_name: 'SAMUEL', last_name: 'ABREU PRADO', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 26405, first_name: 'ARTURO FRANCISCO', last_name: 'CONDE FEIJOO', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 13969, first_name: 'CLARA', last_name: 'MONTERO BLANCO', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 25810, first_name: 'ALVARO', last_name: 'SANTANA GUILARTE', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 13202, first_name: 'SEBASTIAN', last_name: 'RODRIGUEZ PALOMANES', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 22173, first_name: 'MANUEL', last_name: 'ARIAS ESTEVEZ', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 11882, first_name: 'JULIO CESAR', last_name: 'PEREZ CARCACIA', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 26469, first_name: 'ANTONIO', last_name: 'PIÑEIRO IGLESIAS', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 26404, first_name: 'FERNANDO JOSE', last_name: 'ABALDE PEREZ', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 25532, first_name: 'RAFAEL', last_name: 'LOPEZ VILLAPOL', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 24586, first_name: 'BRAIS', last_name: 'VIDAL MARTIN', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 17, license_number: 1304, first_name: 'FAVIO', last_name: 'FUENTES DOMINGUEZ', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 18, license_number: 7928, first_name: 'HUGO', last_name: 'ALCALDE GONZALEZ', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 19, license_number: 9618, first_name: 'GABRIEL', last_name: 'ALCALDE GONZALEZ', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 20, license_number: 26403, first_name: 'IZAN', last_name: 'GOZALEZ OTERO', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 21, license_number: 22174, first_name: 'CRISTINA', last_name: 'PEREZ NOVO', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 22, license_number: 26977, first_name: 'ALEJANDRO', last_name: 'CONDE PEREIRO', club: 'UNIVERSITARIO DE OURENSE D', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // VILLA DE BOUZAS B
+    { tablero: 1, license_number: 21926, first_name: 'DANIEL', last_name: 'ALONSO LOPEZ', club: 'VILLA DE BOUZAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 4890, first_name: 'ROBERTO', last_name: 'FERNANDEZ ALONSO', club: 'VILLA DE BOUZAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 4576, first_name: 'JOSE ISRAEL', last_name: 'RODRIGUEZ PLANA', club: 'VILLA DE BOUZAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 11422, first_name: 'FRANCISCO', last_name: 'OTERO OTERO', club: 'VILLA DE BOUZAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 13824, first_name: 'XENXO', last_name: 'GONZALEZ MARQUEZ', club: 'VILLA DE BOUZAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 13821, first_name: 'XOSE MANOEL', last_name: 'PADRON VILLAR', club: 'VILLA DE BOUZAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 1120, first_name: 'JUAN CARLOS', last_name: 'BLANCO LAGO', club: 'VILLA DE BOUZAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 4114, first_name: 'JOSE MANUEL', last_name: 'GONZALEZ FERNANDEZ', club: 'VILLA DE BOUZAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 26830, first_name: 'JUAN JOSE', last_name: 'BLAS VALVERDE', club: 'VILLA DE BOUZAS B', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ ALBATROS B
+    { tablero: 1, license_number: 8321, first_name: 'FRANCISCO', last_name: 'ALONSO DORADO', club: 'XADREZ ALBATROS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 12816, first_name: 'DIEGO', last_name: 'LIMA GONZALEZ', club: 'XADREZ ALBATROS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 11364, first_name: 'KHALED', last_name: 'OUNES BAZ', club: 'XADREZ ALBATROS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 1055, first_name: 'RAFAEL', last_name: 'COUTO GONZALEZ', club: 'XADREZ ALBATROS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1713, first_name: 'CARLOS ALBERTO', last_name: 'REBOREDO OTERO', club: 'XADREZ ALBATROS B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 6364, first_name: 'ALEJANDRO', last_name: 'MARTINEZ RODRIGUEZ', club: 'XADREZ ALBATROS B', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ ALBATROS C
+    { tablero: 1, license_number: 1059, first_name: 'VLADIMIR', last_name: 'STOUJINSKI', club: 'XADREZ ALBATROS C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 10030, first_name: 'PABLO', last_name: 'GONZALEZ TOUZA', club: 'XADREZ ALBATROS C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 12553, first_name: 'SAMUEL', last_name: 'LOMBA ADROVER', club: 'XADREZ ALBATROS C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 3659, first_name: 'ANTONIO JESUS', last_name: 'LOMBA BAZ', club: 'XADREZ ALBATROS C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 13364, first_name: 'SAMUEL', last_name: 'VERDE VICENTE', club: 'XADREZ ALBATROS C', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 11361, first_name: 'ISMAEL', last_name: 'ALONSO GONZALEZ', club: 'XADREZ ALBATROS C', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ ALTAMIRA
+    { tablero: 1, license_number: 14296, first_name: 'DARIO', last_name: 'HERMIDA CABALEIRO', club: 'XADREZ ALTAMIRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1061, first_name: 'ISIDRO LUIS', last_name: 'DURAN RODRIGUEZ', club: 'XADREZ ALTAMIRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 1080, first_name: 'ARTURO', last_name: 'GONZALEZ GIL', club: 'XADREZ ALTAMIRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 3661, first_name: 'JOSE', last_name: 'QUINTAS ALONSO', club: 'XADREZ ALTAMIRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 1082, first_name: 'MANUEL ALBERTO', last_name: 'FERNANDEZ ALONSO', club: 'XADREZ ALTAMIRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 4533, first_name: 'ABRAHAN', last_name: 'RODRIGUEZ BARROS', club: 'XADREZ ALTAMIRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 13289, first_name: 'CRISTIAN', last_name: 'RODRIGUEZ VAQUEIRO', club: 'XADREZ ALTAMIRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 26990, first_name: 'JUAN JOSE', last_name: 'VIDALES POUSA', club: 'XADREZ ALTAMIRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 25286, first_name: 'JESSICA LIZ', last_name: 'MENDOZA WINDER', club: 'XADREZ ALTAMIRA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ BUEU B MANUEL MORALES
+    { tablero: 1, license_number: 6978, first_name: 'JUAN CARLOS', last_name: 'RUA GAYO', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 12067, first_name: 'ALBERTO', last_name: 'PEREZ COSTA', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 856, first_name: 'DIEGO', last_name: 'RIVAS MARIÑO', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 862, first_name: 'ANTONIO JOSE', last_name: 'ANADON MAÑEZ', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 4190, first_name: 'JOSE MANUEL', last_name: 'GONZALEZ CALVAR', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 25646, first_name: 'SALVADOR', last_name: 'GOMEZ GARCIA', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 10929, first_name: 'MANUEL', last_name: 'MORALES FERNANDEZ', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 6241, first_name: 'MANUEL', last_name: 'SANCHEZ FERNANDEZ', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 8622, first_name: 'ANTONIO', last_name: 'CRESPO RIVEIRA', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 8621, first_name: 'ENRIQUE', last_name: 'NOVAS CASTRO', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 6244, first_name: 'ARTURO', last_name: 'FUENTES CID', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 863, first_name: 'ABEL', last_name: 'QUIROGA TRIGO', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 4899, first_name: 'UXIA', last_name: 'BARREIRO RODRIGUEZ', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 21030, first_name: 'VALERIE', last_name: 'LEDET PIÑEIRO', club: 'XADREZ BUEU B MANUEL MORALES', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ CUM LAUDE
+    { tablero: 1, license_number: 1953, first_name: 'JOSE MANUEL', last_name: 'PROL LUSQUIÑOS', club: 'XADREZ CUM LAUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 25738, first_name: 'JULIAN ARMANDO', last_name: 'ORTIZ CARDENAS', club: 'XADREZ CUM LAUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 13200, first_name: 'JULIAN ARMANDO', last_name: 'ORTIZ RODRIGUEZ', club: 'XADREZ CUM LAUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 13934, first_name: 'JOSE MANUEL', last_name: 'LOIS MAGDALENA', club: 'XADREZ CUM LAUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 13001, first_name: 'MARCOS', last_name: 'RINCON MARTINEZ', club: 'XADREZ CUM LAUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 13986, first_name: 'RAUL', last_name: 'OTERO ARGIBAY', club: 'XADREZ CUM LAUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 1657, first_name: 'HECTOR MARIO', last_name: 'BEDOYA RAMOS', club: 'XADREZ CUM LAUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 27020, first_name: 'JORGE', last_name: 'FERREIRO NARANJO', club: 'XADREZ CUM LAUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 27035, first_name: 'YORGELIS ANGELINA', last_name: 'MARTINEZ RAMIREZ', club: 'XADREZ CUM LAUDE', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ IRINDO - FRUTAS FONDO
+    { tablero: 1, license_number: 2061, first_name: 'JUAN MANUEL', last_name: 'DIAZ GARCIA', club: 'XADREZ IRINDO - FRUTAS FONDO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 25755, first_name: 'LUIS BRAULIO', last_name: 'ALVAREZ ASTRAY', club: 'XADREZ IRINDO - FRUTAS FONDO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 535, first_name: 'OSCAR', last_name: 'FONDO BUSTO', club: 'XADREZ IRINDO - FRUTAS FONDO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 12243, first_name: 'JORGE', last_name: 'SONEIRA MUIÑO', club: 'XADREZ IRINDO - FRUTAS FONDO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 21610, first_name: 'DANIEL', last_name: 'AMEIJENDA BLANCO', club: 'XADREZ IRINDO - FRUTAS FONDO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 14894, first_name: 'ALFONSO', last_name: 'MARQUEZ VAZQUEZ', club: 'XADREZ IRINDO - FRUTAS FONDO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 21147, first_name: 'CARLOS', last_name: 'MOURELLE MALLO', club: 'XADREZ IRINDO - FRUTAS FONDO', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ NEMENZO
+    { tablero: 1, license_number: 14643, first_name: 'MANUEL', last_name: 'GONZALEZ REGAL', club: 'XADREZ NEMENZO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 5658, first_name: 'MARIO', last_name: 'GARCIA VILAS', club: 'XADREZ NEMENZO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 409, first_name: 'IGNACIO', last_name: 'SORDO TOUZA', club: 'XADREZ NEMENZO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 412, first_name: 'ALFONSO', last_name: 'FERNANDEZ MATIAS', club: 'XADREZ NEMENZO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 9804, first_name: 'BERNARDINO', last_name: 'BLANCO RIAL', club: 'XADREZ NEMENZO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 9491, first_name: 'ALEJANDRO', last_name: 'LIÑARES PUENTE', club: 'XADREZ NEMENZO', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 26918, first_name: 'JAVIER', last_name: 'VAZQUEZ LAMAS', club: 'XADREZ NEMENZO', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ OROSO - TAMBRE
+    { tablero: 1, license_number: 11901, first_name: 'JUAN CARLOS', last_name: 'COUSELO FERNANDEZ', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 8339, first_name: 'JUAN RAMON', last_name: 'SALGUEIRO AGUIRRE', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 11937, first_name: 'IVAN', last_name: 'BLANCO CALVIÑO', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 21942, first_name: 'ENMA', last_name: 'CAMPELO MALLO', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11774, first_name: 'HECTOR', last_name: 'ROMERO MARTINEZ', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 8667, first_name: 'JOSE MANUEL', last_name: 'MOSQUERA CARNEIRO', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 8665, first_name: 'JOSE ANTONIO', last_name: 'PENA DOSIL', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 9598, first_name: 'SERGIO', last_name: 'GARCIA MAZAS', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 9614, first_name: 'XOSE MANUEL', last_name: 'GOMEZ PAZOS', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 9601, first_name: 'NICOLAS SANTIAGO', last_name: 'GOMEZ FORJAN', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 11310, first_name: 'RUTH TERESA', last_name: 'CHAO GARCIA', club: 'XADREZ OROSO - TAMBRE', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA
+    { tablero: 1, license_number: 14245, first_name: 'MIGUEL', last_name: 'GONZALEZ DAVILA', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 1782, first_name: 'MIGUEL', last_name: 'JUAN MORADO', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 26359, first_name: 'ANTONIO', last_name: 'SALAS FERNÁNDEZ', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 9453, first_name: 'BELARMINO', last_name: 'GARCIA CAMIÑA', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 10364, first_name: 'CARLOS', last_name: 'COSTAL FERNANDEZ', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 3865, first_name: 'DARIO', last_name: 'DOMINGUEZ CERTAL', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 9856, first_name: 'MODESTO', last_name: 'VICENTE RODRIGUEZ', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 9975, first_name: 'BELARMINO', last_name: 'GARCÍA MARTÍNEZ', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 8140, first_name: 'FRANCISCO', last_name: 'GONZALEZ QUINTELA', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 26475, first_name: 'ANDRES', last_name: 'GONZALEZ DANS', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 25290, first_name: 'NICOLAS', last_name: 'ALONSO LORENZO', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 25289, first_name: 'PABLO', last_name: 'GONZALEZ DOMINGUEZ', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 25294, first_name: 'NORMAN ALBERTO', last_name: 'LAGO ALONSO', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 14560, first_name: 'ANGELA MARÍA', last_name: 'CORNLOUER MARTÍNEZ', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 7698, first_name: 'FRANCISCO', last_name: 'GONZALEZ RODIÑO', club: 'XADREZ PONTEAREAS A - TAPERIA RESTAURANTE NOSA TERRA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XADREZ POUSADA
+    { tablero: 1, license_number: 6495, first_name: 'DIEGO', last_name: 'PIÑEIRO NUÑEZ', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 3233, first_name: 'JOSE LUIS', last_name: 'MOURIÑO MIGUENS', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 4573, first_name: 'SAMUEL', last_name: 'OZORES SIEIRA', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 4574, first_name: 'RAFAEL', last_name: 'TORRADO VITURRO', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 11226, first_name: 'STANISLAV', last_name: 'SVUB', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 13355, first_name: 'ADRIAN', last_name: 'CANDELA IGLESIAS', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 8258, first_name: 'SAMUEL', last_name: 'SILVA MUÑIZ', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 11287, first_name: 'SENEN', last_name: 'GARCIA BAO', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 9128, first_name: 'MARIO', last_name: 'OUTEIRAL PAZ', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 13232, first_name: 'ALVARO', last_name: 'PIÑEIRO REY', club: 'XADREZ POUSADA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XDM - GRUPO OCA
+    { tablero: 1, license_number: 209, first_name: 'LUIS EDISON', last_name: 'PATIÑO LOPEZ', club: 'XDM - GRUPO OCA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 213, first_name: 'FRANCISCO MANUE', last_name: 'CONDE DOMINGUEZ', club: 'XDM - GRUPO OCA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 21062, first_name: 'DAVID', last_name: 'PEREZ CUNS', club: 'XDM - GRUPO OCA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 7670, first_name: 'CARLOS ALBERT', last_name: 'CASTEDO DE CASTRO', club: 'XDM - GRUPO OCA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 6596, first_name: 'ADRIAN', last_name: 'MARTINEZ INSUA', club: 'XDM - GRUPO OCA', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 21846, first_name: 'ADRIAN', last_name: 'QUEVEDO PEREZ', club: 'XDM - GRUPO OCA', division: 'Segunda División', valor: 0, total_points: 0 },
+
+    // XIRIA GARAYSA CARBALLO B
+    { tablero: 1, license_number: 7528, first_name: 'ANTHONY', last_name: 'GONSALVES CUNHA', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 2, license_number: 549, first_name: 'MIGUEL', last_name: 'CANEDO ZAPATA', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 3, license_number: 11393, first_name: 'UXIA', last_name: 'MARROZOS LOUREIRO', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 4, license_number: 12065, first_name: 'SERGIO', last_name: 'CAAMAÑO NOVO', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 5, license_number: 22073, first_name: 'JORGE', last_name: 'VARELA QUEIJO', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 6, license_number: 12389, first_name: 'SERGIO', last_name: 'VILACOBA CASAL', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 7, license_number: 25916, first_name: 'SAUL', last_name: 'ABELENDA SUAREZ', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 8, license_number: 12063, first_name: 'PABLO', last_name: 'ANTELO PAREDES', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 9, license_number: 25144, first_name: 'MARIO', last_name: 'GARCIA FELIPEZ', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 10, license_number: 12832, first_name: 'ROI', last_name: 'PUGA RAMA', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 11, license_number: 26529, first_name: 'MATEO', last_name: 'FUENTES RAMA', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 12, license_number: 14108, first_name: 'PABLO', last_name: 'POSE PEREIRA', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 13, license_number: 14112, first_name: 'MATEO', last_name: 'VECIÑO BALSAS', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 14, license_number: 27012, first_name: 'BRIAN', last_name: 'CALVO GUNDIN', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 15, license_number: 27049, first_name: 'OLIVER', last_name: 'MENDEZ GARCIA', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 },
+    { tablero: 16, license_number: 562, first_name: 'JOSE RAMON', last_name: 'POMBO RAMA', club: 'XIRIA GARAYSA CARBALLO B', division: 'Segunda División', valor: 0, total_points: 0 }
 
      // Fin de la lista
   ];

@@ -1,31 +1,64 @@
 /* src/components/Navbar.css */
 
-/* Asegúrate de que los estilos sean consistentes */
-.ml-auto {
-    margin-left: auto !important;
-  }
-  
-  /* Estilos personalizados para Navbar */
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .nav-link {
-    color: #ffffff !important;
-  }
-  
-  .nav-link:hover {
-    color: #dddddd !important;
-  }
-  
-  .button-outline-light {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-  }
-  
-  .button-outline-light:hover {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
+/* Modern Navbar Styles */
+.modern-navbar {
+  background: linear-gradient(90deg, #1f1c2c, #928dab);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+.navbar-brand:hover {
+  color: #f0a500 !important;
+}
+
+.nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #f0a500 !important;
+}
+
+.button-outline-light {
+  border: 1px solid #f0a500;
+  color: #f0a500;
+  margin-left: 1rem;
+}
+
+.button-outline-light:hover {
+  background-color: #f0a500;
+  color: #ffffff;
+}
+
+.user-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#user-dropdown .dropdown-menu {
+  background-color: #1f1c2c;
+  border: none;
+}
+
+#user-dropdown .dropdown-item {
+  color: #ffffff !important;
+}
+
+#user-dropdown .dropdown-item:hover {
+  background-color: #f0a500;
+  color: #ffffff !important;
+}
