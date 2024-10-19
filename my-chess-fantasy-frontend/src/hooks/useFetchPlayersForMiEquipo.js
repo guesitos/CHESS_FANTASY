@@ -1,5 +1,3 @@
-// src/hooks/useFetchPlayersForMiEquipo.js
-
 import { useState, useEffect } from 'react';
 
 const useFetchPlayersForMiEquipo = () => {
@@ -7,11 +5,10 @@ const useFetchPlayersForMiEquipo = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Función para obtener todos los jugadores desde la base de datos
   const fetchPlayers = async () => {
     setIsLoading(true);
     setError(null);
-    const url = `${process.env.REACT_APP_API_URL}/chess_players/search?limit=1000`; // Ajusta el límite según sea necesario
+    const url = `${process.env.REACT_APP_API_URL}/chess_players/search?limit=1000`;
 
     try {
       const response = await fetch(url);
@@ -19,7 +16,9 @@ const useFetchPlayersForMiEquipo = () => {
         throw new Error('Error al obtener los jugadores');
       }
       const data = await response.json();
-      setPlayers(data.players);
+      console.log('Datos de jugadores recibidos:', data);
+      setPlayers(data.players || []); // Asegúrate de que "players" sea un array
+
     } catch (error) {
       console.error('Error al obtener los jugadores:', error);
       setError('Hubo un problema al obtener los jugadores. Por favor, intenta de nuevo.');
@@ -30,7 +29,6 @@ const useFetchPlayersForMiEquipo = () => {
 
   useEffect(() => {
     fetchPlayers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { players, isLoading, error };
