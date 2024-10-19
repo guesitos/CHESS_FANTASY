@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import useFetchPlayersForMiEquipo from '../hooks/useFetchPlayersForMiEquipo';
 import './MiEquipo.css';
 import { Form } from 'react-bootstrap';
-import defaultPlayerImage from '../assets/default-player.png'; // Asegúrate de tener una imagen por defecto
+import defaultPlayerImage from '../assets/default-player.png';
+import clubLogo from '../assets/club-logo.png';
 
 function MiEquipo() {
   // Obtener jugadores para cada división
@@ -55,6 +56,14 @@ function MiEquipo() {
       [role]: prevState[role].map((p, i) => (i === index ? player : p)),
     }));
     handleClosePopup();
+  };
+
+  // Función para eliminar la selección de un jugador
+  const handleRemovePlayer = (role, index) => {
+    setSelectedPlayers(prevState => ({
+      ...prevState,
+      [role]: prevState[role].map((p, i) => (i === index ? null : p)),
+    }));
   };
 
   const getPlayersForDivision = (division) => {
@@ -110,16 +119,42 @@ function MiEquipo() {
                 <div
                   key={`rey-${index}`}
                   className="mi-equipo-player-card mi-equipo-rey"
-                  onClick={() => handleOpenPopup('reyes', 'División de Honor', index)}
                 >
                   <span className="mi-equipo-piece-icon">♔</span>
                   {player ? (
                     <div className="mi-equipo-player-info">
-                      <p>{`${player.first_name} ${player.last_name}`}</p>
-                      <p>{player.club}</p>
+                      {/* Información del club */}
+                      <div className="club-info">
+                        <img src={clubLogo} alt="Club" className="club-logo" />
+                        <span className="division-tag">
+                          {player.division === 'División de Honor' ? 'DH' :
+                            player.division === 'Preferente' ? 'Pr' :
+                            player.division === 'Primera División' ? '1a' :
+                            player.division === 'Segunda División' ? '2a' :
+                            player.division}
+                        </span>
+                      </div>
+
+                      {/* Foto del jugador */}
+                      <div className="player-photo">
+                        <img
+                          src={player.photo_url || defaultPlayerImage}
+                          alt="Jugador"
+                          className="player-image"
+                        />
+                        <span className="tablero-number">{player.tablero}</span>
+                      </div>
+
+                      {/* Detalles del jugador */}
+                      <div className="player-details">
+                        <p>{`${player.first_name} ${player.last_name}`}</p>
+                        <p>Club: {player.club || '-'}</p>
+                        <p>ELO FIDE: {player.elo_fide || '-'}</p>
+                      </div>
+                      <button className="mi-equipo-remove-button" onClick={() => handleRemovePlayer('reyes', index)}>Eliminar selección</button>
                     </div>
                   ) : (
-                    <p className="mi-equipo-select-player">Seleccionar Rey</p>
+                    <p className="mi-equipo-select-player" onClick={() => handleOpenPopup('reyes', 'División de Honor', index)}>Seleccionar Rey</p>
                   )}
                 </div>
               ))}
@@ -127,16 +162,42 @@ function MiEquipo() {
                 <div
                   key={`dama-${index}`}
                   className="mi-equipo-player-card mi-equipo-dama"
-                  onClick={() => handleOpenPopup('damas', 'División de Honor', index)}
                 >
                   <span className="mi-equipo-piece-icon">♕</span>
                   {player ? (
                     <div className="mi-equipo-player-info">
-                      <p>{`${player.first_name} ${player.last_name}`}</p>
-                      <p>{player.club}</p>
+                      {/* Información del club */}
+                      <div className="club-info">
+                        <img src={clubLogo} alt="Club" className="club-logo" />
+                        <span className="division-tag">
+                          {player.division === 'División de Honor' ? 'DH' :
+                            player.division === 'Preferente' ? 'Pr' :
+                            player.division === 'Primera División' ? '1a' :
+                            player.division === 'Segunda División' ? '2a' :
+                            player.division}
+                        </span>
+                      </div>
+
+                      {/* Foto del jugador */}
+                      <div className="player-photo">
+                        <img
+                          src={player.photo_url || defaultPlayerImage}
+                          alt="Jugador"
+                          className="player-image"
+                        />
+                        <span className="tablero-number">{player.tablero}</span>
+                      </div>
+
+                      {/* Detalles del jugador */}
+                      <div className="player-details">
+                        <p>{`${player.first_name} ${player.last_name}`}</p>
+                        <p>Club: {player.club || '-'}</p>
+                        <p>ELO FIDE: {player.elo_fide || '-'}</p>
+                      </div>
+                      <button className="mi-equipo-remove-button" onClick={() => handleRemovePlayer('damas', index)}>Eliminar selección</button>
                     </div>
                   ) : (
-                    <p className="mi-equipo-select-player">Seleccionar Dama</p>
+                    <p className="mi-equipo-select-player" onClick={() => handleOpenPopup('damas', 'División de Honor', index)}>Seleccionar Dama</p>
                   )}
                 </div>
               ))}
@@ -151,16 +212,42 @@ function MiEquipo() {
                 <div
                   key={`torre-${index}`}
                   className="mi-equipo-player-card mi-equipo-torre"
-                  onClick={() => handleOpenPopup('torres', 'Preferente', index)}
                 >
                   <span className="mi-equipo-piece-icon">♖</span>
                   {player ? (
                     <div className="mi-equipo-player-info">
-                      <p>{`${player.first_name} ${player.last_name}`}</p>
-                      <p>{player.club}</p>
+                      {/* Información del club */}
+                      <div className="club-info">
+                        <img src={clubLogo} alt="Club" className="club-logo" />
+                        <span className="division-tag">
+                          {player.division === 'División de Honor' ? 'DH' :
+                            player.division === 'Preferente' ? 'Pr' :
+                            player.division === 'Primera División' ? '1a' :
+                            player.division === 'Segunda División' ? '2a' :
+                            player.division}
+                        </span>
+                      </div>
+
+                      {/* Foto del jugador */}
+                      <div className="player-photo">
+                        <img
+                          src={player.photo_url || defaultPlayerImage}
+                          alt="Jugador"
+                          className="player-image"
+                        />
+                        <span className="tablero-number">{player.tablero}</span>
+                      </div>
+
+                      {/* Detalles del jugador */}
+                      <div className="player-details">
+                        <p>{`${player.first_name} ${player.last_name}`}</p>
+                        <p>Club: {player.club || '-'}</p>
+                        <p>ELO FIDE: {player.elo_fide || '-'}</p>
+                      </div>
+                      <button className="mi-equipo-remove-button" onClick={() => handleRemovePlayer('torres', index)}>Eliminar selección</button>
                     </div>
                   ) : (
-                    <p className="mi-equipo-select-player">Seleccionar Torre</p>
+                    <p className="mi-equipo-select-player" onClick={() => handleOpenPopup('torres', 'Preferente', index)}>Seleccionar Torre</p>
                   )}
                 </div>
               ))}
@@ -175,16 +262,42 @@ function MiEquipo() {
                 <div
                   key={`alfil-${index}`}
                   className="mi-equipo-player-card mi-equipo-alfil"
-                  onClick={() => handleOpenPopup('alfiles', 'Primera División', index)}
                 >
                   <span className="mi-equipo-piece-icon">♗</span>
                   {player ? (
                     <div className="mi-equipo-player-info">
-                      <p>{`${player.first_name} ${player.last_name}`}</p>
-                      <p>{player.club}</p>
+                      {/* Información del club */}
+                      <div className="club-info">
+                        <img src={clubLogo} alt="Club" className="club-logo" />
+                        <span className="division-tag">
+                          {player.division === 'División de Honor' ? 'DH' :
+                            player.division === 'Preferente' ? 'Pr' :
+                            player.division === 'Primera División' ? '1a' :
+                            player.division === 'Segunda División' ? '2a' :
+                            player.division}
+                        </span>
+                      </div>
+
+                      {/* Foto del jugador */}
+                      <div className="player-photo">
+                        <img
+                          src={player.photo_url || defaultPlayerImage}
+                          alt="Jugador"
+                          className="player-image"
+                        />
+                        <span className="tablero-number">{player.tablero}</span>
+                      </div>
+
+                      {/* Detalles del jugador */}
+                      <div className="player-details">
+                        <p>{`${player.first_name} ${player.last_name}`}</p>
+                        <p>Club: {player.club || '-'}</p>
+                        <p>ELO FIDE: {player.elo_fide || '-'}</p>
+                      </div>
+                      <button className="mi-equipo-remove-button" onClick={() => handleRemovePlayer('alfiles', index)}>Eliminar selección</button>
                     </div>
                   ) : (
-                    <p className="mi-equipo-select-player">Seleccionar Alfil</p>
+                    <p className="mi-equipo-select-player" onClick={() => handleOpenPopup('alfiles', 'Primera División', index)}>Seleccionar Alfil</p>
                   )}
                 </div>
               ))}
@@ -192,16 +305,42 @@ function MiEquipo() {
                 <div
                   key={`caballo-${index}`}
                   className="mi-equipo-player-card mi-equipo-caballo"
-                  onClick={() => handleOpenPopup('caballos', 'Primera División', index)}
                 >
                   <span className="mi-equipo-piece-icon">♘</span>
                   {player ? (
                     <div className="mi-equipo-player-info">
-                      <p>{`${player.first_name} ${player.last_name}`}</p>
-                      <p>{player.club}</p>
+                      {/* Información del club */}
+                      <div className="club-info">
+                        <img src={clubLogo} alt="Club" className="club-logo" />
+                        <span className="division-tag">
+                          {player.division === 'División de Honor' ? 'DH' :
+                            player.division === 'Preferente' ? 'Pr' :
+                            player.division === 'Primera División' ? '1a' :
+                            player.division === 'Segunda División' ? '2a' :
+                            player.division}
+                        </span>
+                      </div>
+
+                      {/* Foto del jugador */}
+                      <div className="player-photo">
+                        <img
+                          src={player.photo_url || defaultPlayerImage}
+                          alt="Jugador"
+                          className="player-image"
+                        />
+                        <span className="tablero-number">{player.tablero}</span>
+                      </div>
+
+                      {/* Detalles del jugador */}
+                      <div className="player-details">
+                        <p>{`${player.first_name} ${player.last_name}`}</p>
+                        <p>Club: {player.club || '-'}</p>
+                        <p>ELO FIDE: {player.elo_fide || '-'}</p>
+                      </div>
+                      <button className="mi-equipo-remove-button" onClick={() => handleRemovePlayer('caballos', index)}>Eliminar selección</button>
                     </div>
                   ) : (
-                    <p className="mi-equipo-select-player">Seleccionar Caballo</p>
+                    <p className="mi-equipo-select-player" onClick={() => handleOpenPopup('caballos', 'Primera División', index)}>Seleccionar Caballo</p>
                   )}
                 </div>
               ))}
@@ -216,16 +355,42 @@ function MiEquipo() {
                 <div
                   key={`peon-${index}`}
                   className="mi-equipo-player-card mi-equipo-peon"
-                  onClick={() => handleOpenPopup('peones', 'Segunda División', index)}
                 >
                   <span className="mi-equipo-piece-icon">♙</span>
                   {player ? (
                     <div className="mi-equipo-player-info">
-                      <p>{`${player.first_name} ${player.last_name}`}</p>
-                      <p>{player.club}</p>
+                      {/* Información del club */}
+                      <div className="club-info">
+                        <img src={clubLogo} alt="Club" className="club-logo" />
+                        <span className="division-tag">
+                          {player.division === 'División de Honor' ? 'DH' :
+                            player.division === 'Preferente' ? 'Pr' :
+                            player.division === 'Primera División' ? '1a' :
+                            player.division === 'Segunda División' ? '2a' :
+                            player.division}
+                        </span>
+                      </div>
+
+                      {/* Foto del jugador */}
+                      <div className="player-photo">
+                        <img
+                          src={player.photo_url || defaultPlayerImage}
+                          alt="Jugador"
+                          className="player-image"
+                        />
+                        <span className="tablero-number">{player.tablero}</span>
+                      </div>
+
+                      {/* Detalles del jugador */}
+                      <div className="player-details">
+                        <p>{`${player.first_name} ${player.last_name}`}</p>
+                        <p>Club: {player.club || '-'}</p>
+                        <p>ELO FIDE: {player.elo_fide || '-'}</p>
+                      </div>
+                      <button className="mi-equipo-remove-button" onClick={() => handleRemovePlayer('peones', index)}>Eliminar selección</button>
                     </div>
                   ) : (
-                    <p className="mi-equipo-select-player">Seleccionar Peón</p>
+                    <p className="mi-equipo-select-player" onClick={() => handleOpenPopup('peones', 'Segunda División', index)}>Seleccionar Peón</p>
                   )}
                 </div>
               ))}
