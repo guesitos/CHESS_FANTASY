@@ -12,7 +12,7 @@ const searchPlayers = async (req, res) => {
 
   const offset = (page - 1) * limit;
 
-  let query = `SELECT *, CASE WHEN elo_fide = 'NotRated' THEN 0 ELSE CAST(elo_fide AS SIGNED) END AS elo_fide_numeric FROM players WHERE 1=1`;
+  let query = `SELECT *, CASE WHEN elo_fide = 'Notrated' THEN 0 ELSE CAST(elo_fide AS SIGNED) END AS elo_fide_numeric FROM players WHERE 1=1`;
   const params = [];
 
   if (searchTerm && searchTerm.trim() !== '') {
@@ -97,12 +97,12 @@ const searchPlayers = async (req, res) => {
     }
 
     if (eloMin && eloMin.trim() !== '') {
-      totalPlayersQuery += ` AND CASE WHEN elo_fide = 'NotRated' THEN 0 ELSE CAST(elo_fide AS SIGNED) END >= ?`;
+      totalPlayersQuery += ` AND CASE WHEN elo_fide = 'Notrated' THEN 0 ELSE CAST(elo_fide AS SIGNED) END >= ?`;
       totalParams.push(Number(eloMin));
     }
 
     if (eloMax && eloMax.trim() !== '') {
-      totalPlayersQuery += ` AND CASE WHEN elo_fide = 'NotRated' THEN 0 ELSE CAST(elo_fide AS SIGNED) END <= ?`;
+      totalPlayersQuery += ` AND CASE WHEN elo_fide = 'Notrated' THEN 0 ELSE CAST(elo_fide AS SIGNED) END <= ?`;
       totalParams.push(Number(eloMax));
     }
 
@@ -279,66 +279,88 @@ const setNotRatedPlayersValorToZero = async () => {
     connection = await poolPlayers.getConnection();
     console.log('Conexión a la base de datos obtenida para actualizar valor de jugadores Notrated');
 
-    // Verifica primero si existen jugadores NotRated
-    const [notRatedPlayers] = await connection.query(
+    // Verifica primero si existen jugadores Notrated
+    const [notratedPlayers] = await connection.query(
       "SELECT COUNT(*) as count FROM players WHERE elo_fide = 'Notrated'"
     );
 
-    if (notRatedPlayers[0].count > 0) {
+    if (notratedPlayers[0].count > 0) {
       const [result] = await connection.query(
         "UPDATE players SET valor = 0 WHERE elo_fide = 'Notrated'"
       );
-      console.log(`Se han actualizado ${result.affectedRows} jugadores NotRated a valor 0.`);
+      console.log(`Se han actualizado ${result.affectedRows} jugadores Notrated a valor 0.`);
     } else {
       console.log('No hay jugadores con elo_fide "Notrated" para actualizar.');
     }
   } catch (error) {
-    console.error('Error al actualizar valor de jugadores NotRated:', error);
+    console.error('Error al actualizar valor de jugadores Notrated:', error);
   } finally {
     if (connection) connection.release();
     console.log('Conexión a la base de datos liberada después de actualizar valor de jugadores Notrated');
   }
 };
 
-// Función para actualizar el ELO FIDE y valor de mercado de todos los jugadores
 const updateAllPlayersEloValor = async () => {
   let connection;
 
   try {
     connection = await poolPlayers.getConnection();
-    console.log('Conexión a la base de datos obtenida para actualizar el ELO FIDE y valor de mercado');
+    console.log('Conexión a la base de datos obtenida para actualizar el ELO FIDE y valor de mercado'); 
 
-    // Seleccionar solo jugadores con fide_id numérico y no NULL ni vacío
+    // Paso 1: Actualizar el 'elo_fide' de todos los jugadores
     const [players] = await connection.query(`
       SELECT fide_id FROM players 
       WHERE fide_id IS NOT NULL AND fide_id != '' AND fide_id REGEXP '^[0-9]+$'
     `);
-
+    
     for (const player of players) {
       const fideId = player.fide_id;
-      
+    
       // Obtener el ELO FIDE
       const eloFide = await getPlayerElo(fideId);
-      
-      // Actualizar los jugadores con ELO 'NotRated' a valor 0
-      if (eloFide === 'Notrated') {
-        await setNotRatedPlayersValorToZero();
-        console.log(`Jugadores con elo_fide "Notrated" actualizados a valor 0.`);
-      }
-
-      // Obtener el valor de mercado utilizando el script Python
-      const valor = await getPlayerValor(fideId);
-      
-      if (eloFide !== null && valor !== null) {
+    
+      if (eloFide !== null) {
         await connection.query(
-          'UPDATE players SET elo_fide = ?, valor = ?, first_name = UPPER(first_name), last_name = UPPER(last_name) WHERE fide_id = ?',
-          [eloFide, valor, fideId]
+          'UPDATE players SET elo_fide = ?, first_name = UPPER(first_name), last_name = UPPER(last_name) WHERE fide_id = ?',
+          [eloFide, fideId]
         );
-        console.log(`Actualizado fide_id: ${fideId} - ELO FIDE: ${eloFide}, Valor: ${valor}`);
+        console.log(`Actualizado fide_id: ${fideId} - ELO FIDE: ${eloFide}`);
       } else {
-        console.log(`No se pudo actualizar fide_id: ${fideId} - ELO FIDE: ${eloFide}, Valor: ${valor}`);
+        console.log(`No se pudo obtener ELO FIDE para fide_id: ${fideId}`);
       }
     }
+    
+    // Paso 2: Establecer 'elo_fide' a 0 para jugadores 'Notrated'
+    await connection.query(
+      "UPDATE players SET elo_fide = 0 WHERE LOWER(elo_fide) = 'notrated'"
+    );
+    console.log('Se ha establecido elo_fide = 0 para jugadores con elo_fide = Notrated.');
+    
+    // Paso 3: Actualizar 'valor' para todos los jugadores con 'elo_fide' numérico
+    const [allPlayers] = await connection.query(`
+      SELECT fide_id, elo_fide FROM players 
+      WHERE fide_id IS NOT NULL AND fide_id != '' AND fide_id REGEXP '^[0-9]+$'
+    `);
+    
+    for (const player of allPlayers) {
+      const fideId = player.fide_id;
+      const eloFide = parseInt(player.elo_fide, 10); // Asegurarse de que elo_fide es numérico
+    
+      // Obtener el valor de mercado utilizando el script Python
+      const valor = await getPlayerValor(fideId, eloFide);
+    
+      if (valor !== null) {
+        await connection.query(
+          'UPDATE players SET valor = ? WHERE fide_id = ?',
+          [valor, fideId]
+        );
+        console.log(`Actualizado fide_id: ${fideId} - Valor: ${valor}`);
+      } else {
+        console.log(`No se pudo obtener valor para fide_id: ${fideId}`);
+      }
+    }
+    
+
   } catch (error) {
     console.error('Error al actualizar el ELO FIDE y valor de mercado de los jugadores:', error);
   } finally {
@@ -346,6 +368,7 @@ const updateAllPlayersEloValor = async () => {
     console.log('Conexión a la base de datos liberada después de la actualización del ELO FIDE y valor de mercado');
   }
 };
+
 
 // Función para obtener todos los jugadores sin depender de req y res
 async function fetchAllPlayers() {
