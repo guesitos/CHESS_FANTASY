@@ -1,6 +1,10 @@
+// src/components/MiEquipo.js
+
 import React, { useState } from 'react';
 import useFetchPlayersForMiEquipo from '../hooks/useFetchPlayersForMiEquipo';
 import './MiEquipo.css';
+import { Form } from 'react-bootstrap';
+import defaultPlayerImage from '../assets/default-player.png'; // Asegúrate de tener una imagen por defecto
 
 function MiEquipo() {
   // Obtener jugadores para cada división
@@ -19,23 +23,36 @@ function MiEquipo() {
   });
 
   // Estado para el pop-up
-  const [showPopup, setShowPopup] = useState({ visible: false, role: '', division: '' });
+  const [showPopup, setShowPopup] = useState({ visible: false, role: '', division: '', index: null });
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedClub, setSelectedClub] = useState('');
+  const [eloMin, setEloMin] = useState('');
+  const [eloMax, setEloMax] = useState('');
+  const [selectedTablero, setSelectedTablero] = useState('');
+  const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
 
   // Función para abrir el pop-up de selección
-  const handleOpenPopup = (role, division) => {
-    setShowPopup({ visible: true, role, division });
+  const handleOpenPopup = (role, division, index) => {
+    setShowPopup({ visible: true, role, division, index });
+    setSearchTerm(''); // Reiniciar el término de búsqueda al abrir el pop-up
+    setSelectedClub(''); // Reiniciar club al abrir pop-up
+    setSelectedTablero(''); // Reiniciar tablero al abrir pop-up
+    setEloMin('');
+    setEloMax('');
   };
 
   // Función para cerrar el pop-up
   const handleClosePopup = () => {
-    setShowPopup({ visible: false, role: '', division: '' });
+    setShowPopup({ visible: false, role: '', division: '', index: null });
+    setShowAdvancedSearch(false);
   };
 
   // Función para seleccionar un jugador en el pop-up
-  const handleSelectPlayer = (index, player) => {
+  const handleSelectPlayer = (player) => {
+    const { role, index } = showPopup;
     setSelectedPlayers(prevState => ({
       ...prevState,
-      [showPopup.role]: prevState[showPopup.role].map((p, i) => (i === index ? player : p)),
+      [role]: prevState[role].map((p, i) => (i === index ? player : p)),
     }));
     handleClosePopup();
   };
@@ -55,6 +72,28 @@ function MiEquipo() {
     }
   };
 
+  // Obtener opciones únicas de Club y Tablero
+  const uniqueClubs = [...new Set(getPlayersForDivision(showPopup.division)
+    .map(player => player.club)
+    .filter(club => club != null))];
+
+  const uniqueTableros = [...new Set(getPlayersForDivision(showPopup.division)
+    .map(player => player.tablero)
+    .filter(tablero => tablero != null))]
+    .map(tablero => String(tablero))
+    .sort((a, b) => a - b);
+
+  // Filtrar los jugadores según todos los filtros seleccionados
+  const filteredPlayers = getPlayersForDivision(showPopup.division).filter(player => {
+    const fullName = `${player.first_name} ${player.last_name}`.toLowerCase();
+    const matchesSearchTerm = fullName.includes(searchTerm.toLowerCase());
+    const matchesClub = selectedClub ? player.club === selectedClub : true;
+    const matchesEloMin = eloMin ? player.elo_fide >= parseInt(eloMin, 10) : true;
+    const matchesEloMax = eloMax ? player.elo_fide <= parseInt(eloMax, 10) : true;
+    const matchesTablero = selectedTablero ? String(player.tablero) === selectedTablero : true;
+    return matchesSearchTerm && matchesClub && matchesEloMin && matchesEloMax && matchesTablero;
+  });
+
   return (
     <div className="mi-equipo-container">
       <h1 className="mi-equipo-title">Alineación de la Jornada</h1>
@@ -71,7 +110,7 @@ function MiEquipo() {
                 <div
                   key={`rey-${index}`}
                   className="mi-equipo-player-card mi-equipo-rey"
-                  onClick={() => handleOpenPopup('reyes', 'División de Honor')}
+                  onClick={() => handleOpenPopup('reyes', 'División de Honor', index)}
                 >
                   <span className="mi-equipo-piece-icon">♔</span>
                   {player ? (
@@ -88,7 +127,7 @@ function MiEquipo() {
                 <div
                   key={`dama-${index}`}
                   className="mi-equipo-player-card mi-equipo-dama"
-                  onClick={() => handleOpenPopup('damas', 'División de Honor')}
+                  onClick={() => handleOpenPopup('damas', 'División de Honor', index)}
                 >
                   <span className="mi-equipo-piece-icon">♕</span>
                   {player ? (
@@ -112,7 +151,7 @@ function MiEquipo() {
                 <div
                   key={`torre-${index}`}
                   className="mi-equipo-player-card mi-equipo-torre"
-                  onClick={() => handleOpenPopup('torres', 'Preferente')}
+                  onClick={() => handleOpenPopup('torres', 'Preferente', index)}
                 >
                   <span className="mi-equipo-piece-icon">♖</span>
                   {player ? (
@@ -136,7 +175,7 @@ function MiEquipo() {
                 <div
                   key={`alfil-${index}`}
                   className="mi-equipo-player-card mi-equipo-alfil"
-                  onClick={() => handleOpenPopup('alfiles', 'Primera División')}
+                  onClick={() => handleOpenPopup('alfiles', 'Primera División', index)}
                 >
                   <span className="mi-equipo-piece-icon">♗</span>
                   {player ? (
@@ -153,7 +192,7 @@ function MiEquipo() {
                 <div
                   key={`caballo-${index}`}
                   className="mi-equipo-player-card mi-equipo-caballo"
-                  onClick={() => handleOpenPopup('caballos', 'Primera División')}
+                  onClick={() => handleOpenPopup('caballos', 'Primera División', index)}
                 >
                   <span className="mi-equipo-piece-icon">♘</span>
                   {player ? (
@@ -177,7 +216,7 @@ function MiEquipo() {
                 <div
                   key={`peon-${index}`}
                   className="mi-equipo-player-card mi-equipo-peon"
-                  onClick={() => handleOpenPopup('peones', 'Segunda División')}
+                  onClick={() => handleOpenPopup('peones', 'Segunda División', index)}
                 >
                   <span className="mi-equipo-piece-icon">♙</span>
                   {player ? (
@@ -199,15 +238,75 @@ function MiEquipo() {
       {showPopup.visible && (
         <div className="mi-equipo-popup-container">
           <div className="mi-equipo-popup-content">
-            <h3>Seleccionar {showPopup.role}</h3>
-            <button className="mi-equipo-close-popup" onClick={handleClosePopup}>
-              X
+            <button className="mi-equipo-close-popup" onClick={handleClosePopup} aria-label="Cerrar pop-up">
+              &times;
             </button>
+            <h3>Seleccionar {showPopup.role}</h3>
+            <input
+              type="text"
+              className="mi-equipo-search-input"
+              placeholder="Buscar jugador..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button onClick={() => setShowAdvancedSearch(!showAdvancedSearch)} className="mi-equipo-advanced-search-button">
+              Búsqueda avanzada
+            </button>
+            {showAdvancedSearch && (
+              <div className="mi-equipo-advanced-search-container">
+                <Form className="filters-form">
+                  <Form.Group controlId="formClubFilter" className="filter-group">
+                    <Form.Label>Club</Form.Label>
+                    <Form.Control
+                      as="select"
+                      value={selectedClub}
+                      onChange={(e) => setSelectedClub(e.target.value)}
+                    >
+                      <option value="">Todos</option>
+                      {uniqueClubs.map((club, index) => (
+                        <option key={index} value={club}>{club}</option>
+                      ))}
+                    </Form.Control>
+                  </Form.Group>
+                  <Form.Group controlId="formEloMinFilter" className="filter-group">
+                    <Form.Label>ELO mínimo</Form.Label>
+                    <Form.Control
+                      type="number"
+                      placeholder="ELO mínimo"
+                      value={eloMin}
+                      onChange={(e) => setEloMin(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Form.Group controlId="formEloMaxFilter" className="filter-group">
+                    <Form.Label>ELO máximo</Form.Label>
+                    <Form.Control
+                      type="number"
+                      placeholder="ELO máximo"
+                      value={eloMax}
+                      onChange={(e) => setEloMax(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Form.Group controlId="formTableroFilter" className="filter-group">
+                    <Form.Label>Tablero</Form.Label>
+                    <Form.Control
+                      as="select"
+                      value={selectedTablero}
+                      onChange={(e) => setSelectedTablero(e.target.value)}
+                    >
+                      <option value="">Todos</option>
+                      {uniqueTableros.map((tablero, index) => (
+                        <option key={index} value={tablero}>{tablero}</option>
+                      ))}
+                    </Form.Control>
+                  </Form.Group>
+                </Form>
+              </div>
+            )}
             <ul className="mi-equipo-ul">
-              {getPlayersForDivision(showPopup.division).map(player => (
+              {filteredPlayers.map(player => (
                 <li key={player.id} className="mi-equipo-li">
                   <button
-                    onClick={() => handleSelectPlayer(showPopup.role, player)}
+                    onClick={() => handleSelectPlayer(player)}
                     disabled={Object.values(selectedPlayers).flat().includes(player)}
                   >
                     {player.first_name} {player.last_name} - {player.club}

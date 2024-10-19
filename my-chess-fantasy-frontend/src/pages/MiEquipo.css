@@ -1,3 +1,6 @@
+/* src/components/MiEquipo.css */
+
+/* Estilos generales */
 .mi-equipo-container {
   padding: 20px;
   max-width: 1000px;
@@ -68,37 +71,106 @@
   font-size: 0.9em;
 }
 
+/* Estilos para el pop-up */
 .mi-equipo-popup-container {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para resaltar el pop-up */
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000; /* Asegura que el pop-up esté sobre otros elementos */
 }
 
 .mi-equipo-popup-content {
-  background-color: #2e2e2e;
-  padding: 20px;
-  border-radius: 10px;
-  width: 400px;
+  background-color: #1e1e2e; /* Mantiene la coherencia con el fondo principal */
+  padding: 25px;
+  border-radius: 12px;
+  width: 500px; /* Ancho aumentado para mejor visibilidad */
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mi-equipo-popup-content h3 {
+  color: #ffdd57;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Verdana', sans-serif;
 }
 
 .mi-equipo-close-popup {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   background: none;
   border: none;
-  font-size: 1.2em;
-  color: white;
+  font-size: 1.5em;
+  color: #ffdd57;
   cursor: pointer;
+}
+
+.mi-equipo-search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+}
+
+.mi-equipo-advanced-search-button {
+  background-color: #ffdd57;
+  color: #1e1e2e;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+}
+
+.mi-equipo-advanced-search-button:hover {
+  background-color: #e6c84d;
+}
+
+.mi-equipo-advanced-search-container {
+  margin-bottom: 20px;
+}
+
+.filters-form .filter-group {
+  margin-bottom: 15px;
+}
+
+.filters-form .filter-group label {
+  color: #ffdd57;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.filters-form .filter-group input,
+.filters-form .filter-group select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1em;
 }
 
 .mi-equipo-ul {
@@ -108,4 +180,47 @@
 
 .mi-equipo-li {
   margin-bottom: 10px;
+}
+
+.mi-equipo-li button {
+  width: 100%;
+  background-color: #343a40;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mi-equipo-li button:hover {
+  background-color: #4a4a54;
+}
+
+.mi-equipo-li button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Scrollbar personalizado */
+.mi-equipo-popup-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mi-equipo-popup-content::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+.mi-equipo-popup-content::-webkit-scrollbar-thumb {
+  background-color: #ffdd57;
+  border-radius: 4px;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .mi-equipo-popup-content {
+    width: 90%;
+    padding: 20px;
+  }
 }
